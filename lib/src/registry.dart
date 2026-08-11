@@ -51,6 +51,7 @@ import 'rules/common/avoid_unnecessary_super.dart';
 import 'rules/common/avoid_unreachable_for_loop.dart';
 import 'rules/common/avoid_wildcard_cases_with_enums.dart';
 import 'rules/common/avoid_wildcard_cases_with_sealed_classes.dart';
+import 'rules/common/function_always_returns_null.dart';
 import 'rules/common/no_equal_conditions.dart';
 import 'rules/common/no_equal_nested_conditions.dart';
 import 'rules/common/no_equal_switch_case.dart';
@@ -109,6 +110,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnreachableForLoop.new,
   AvoidWildcardCasesWithEnums.new,
   AvoidWildcardCasesWithSealedClasses.new,
+  FunctionAlwaysReturnsNull.new,
   NoEqualConditions.new,
   NoEqualNestedConditions.new,
   NoEqualSwitchCase.new,

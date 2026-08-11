@@ -1914,7 +1914,7 @@
       "configurable": true,
       "severity": "warning",
       "phase": 3,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
