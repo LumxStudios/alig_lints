@@ -42,6 +42,7 @@ custom_lint:
     - avoid-misused-set-literals
     - avoid-multi-assignment
     - avoid-nested-shorthands
+    - avoid-not-encodable-in-to-json
     - avoid-only-rethrow
     - avoid-passing-self-as-argument
     - avoid-redundant-else

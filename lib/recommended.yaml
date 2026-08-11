@@ -37,6 +37,7 @@ custom_lint:
     - avoid-missing-enum-constant-in-map
     - avoid-misused-set-literals
     - avoid-multi-assignment
+    - avoid-not-encodable-in-to-json
     - avoid-only-rethrow
     - avoid-passing-self-as-argument
     - avoid-redundant-positional-field-name
