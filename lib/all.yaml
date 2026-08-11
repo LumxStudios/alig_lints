@@ -27,6 +27,7 @@ custom_lint:
     - avoid-duplicate-test-assertions
     - avoid-empty-setstate
     - avoid-empty-spread
+    - avoid-enum-values-by-index
     - avoid-equal-expressions
     - avoid-explicit-pattern-field-name
     - avoid-keywords-in-wildcard-pattern

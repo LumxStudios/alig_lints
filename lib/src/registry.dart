@@ -20,6 +20,7 @@ import 'rules/common/avoid_duplicate_switch_case_conditions.dart';
 import 'rules/common/avoid_duplicate_test_assertions.dart';
 import 'rules/flutter/avoid_empty_setstate.dart';
 import 'rules/common/avoid_empty_spread.dart';
+import 'rules/common/avoid_enum_values_by_index.dart';
 import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_explicit_pattern_field_name.dart';
 import 'rules/common/avoid_keywords_in_wildcard_pattern.dart';
@@ -92,6 +93,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidDuplicateTestAssertions.new,
   AvoidEmptySetstate.new,
   AvoidEmptySpread.new,
+  AvoidEnumValuesByIndex.new,
   AvoidEqualExpressions.new,
   AvoidExplicitPatternFieldName.new,
   AvoidKeywordsInWildcardPattern.new,
