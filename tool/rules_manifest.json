@@ -1674,8 +1674,8 @@
       "severity": "warning",
       "phase": 2,
       "status": "todo",
-      "needsSpec": false,
-      "notes": ""
+      "needsSpec": true,
+      "notes": "Unclear which construct is targeted. \"Pattern variable declaration\" is the `var (a, b) = ...` statement form, but \"does not affect the type of an existing local variable\" reads like a non-narrowing type pattern in a case/if-case. The rule is also configurable and the option is not inferable."
     },
     {
       "name": "avoid-unnecessary-reassignment",
