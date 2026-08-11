@@ -30,6 +30,7 @@ custom_lint:
     - avoid-enum-values-by-index
     - avoid-equal-expressions
     - avoid-missing-enum-constant-in-map
+    - avoid-misused-set-literals
     - avoid-multi-assignment
     - avoid-only-rethrow
     - avoid-passing-self-as-argument

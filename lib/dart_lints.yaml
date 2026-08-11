@@ -9,6 +9,10 @@ analyzer:
     strict-raw-types: true
   errors:
     todo: ignore
+    # Covered by alig_lints' own avoid-misused-set-literals, which reports the
+    # same mistake in methods and closures too — the built-in warning only
+    # examines top-level functions. Enabling both would double-report those.
+    unnecessary_set_literal: ignore
 
 linter:
   rules:

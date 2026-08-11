@@ -33,6 +33,7 @@ custom_lint:
     - avoid-keywords-in-wildcard-pattern
     - avoid-map-keys-contains
     - avoid-missing-enum-constant-in-map
+    - avoid-misused-set-literals
     - avoid-multi-assignment
     - avoid-nested-shorthands
     - avoid-only-rethrow
