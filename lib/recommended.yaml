@@ -60,6 +60,7 @@ custom_lint:
     - avoid-unnecessary-overrides
     - avoid-unnecessary-reassignment
     - avoid-unnecessary-statements
+    - avoid-unnecessary-type-assertions
     - avoid-unreachable-for-loop
     - avoid-unsafe-collection-methods
     - avoid-wildcard-cases-with-enums

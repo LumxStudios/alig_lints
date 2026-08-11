@@ -76,6 +76,7 @@ custom_lint:
     - avoid-unnecessary-return
     - avoid-unnecessary-statements
     - avoid-unnecessary-super
+    - avoid-unnecessary-type-assertions
     - avoid-unreachable-for-loop
     - avoid-unsafe-collection-methods
     - avoid-wildcard-cases-with-enums

@@ -69,6 +69,7 @@ import 'rules/common/avoid_unnecessary_reassignment.dart';
 import 'rules/common/avoid_unnecessary_return.dart';
 import 'rules/common/avoid_unnecessary_statements.dart';
 import 'rules/common/avoid_unnecessary_super.dart';
+import 'rules/common/avoid_unnecessary_type_assertions.dart';
 import 'rules/common/avoid_unreachable_for_loop.dart';
 import 'rules/common/avoid_unsafe_collection_methods.dart';
 import 'rules/common/avoid_wildcard_cases_with_enums.dart';
@@ -165,6 +166,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnnecessaryReturn.new,
   AvoidUnnecessaryStatements.new,
   AvoidUnnecessarySuper.new,
+  AvoidUnnecessaryTypeAssertions.new,
   AvoidUnreachableForLoop.new,
   AvoidUnsafeCollectionMethods.new,
   AvoidWildcardCasesWithEnums.new,

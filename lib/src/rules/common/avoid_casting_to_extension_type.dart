@@ -1,13 +1,13 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/type.dart';
-import 'package:analyzer/dart/element/type_system.dart';
 import 'package:analyzer/diagnostic/diagnostic.dart';
 import 'package:analyzer/error/error.dart' hide LintCode;
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../common/alig_rule.dart';
+import '../../common/type_utils.dart';
 
 const _meta = AligRuleMeta(
   name: 'avoid-casting-to-extension-type',
@@ -82,12 +82,6 @@ ConstructorElement? _unnamedConstructorOf(InterfaceType type) {
   return null;
 }
 
-/// The type system of the library [node] belongs to.
-TypeSystem? _typeSystemOf(AstNode node) => node
-    .thisOrAncestorOfType<CompilationUnit>()
-    ?.declaredFragment
-    ?.element
-    .typeSystem;
 
 class _UseConstructor extends DartFix {
   @override
@@ -114,7 +108,7 @@ class _UseConstructor extends DartFix {
 
       // Without this the rewrite would swap one error for another.
       final valueType = node.expression.staticType;
-      final typeSystem = _typeSystemOf(node);
+      final typeSystem = typeSystemOf(node);
       if (valueType == null || typeSystem == null) return;
       if (!typeSystem.isAssignableTo(
         valueType,
