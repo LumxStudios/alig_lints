@@ -21,3 +21,13 @@ SourceRange lineRangeOf(AstNode node, CustomLintResolver resolver) {
 
   return SourceRange(start, end - start);
 }
+
+/// The range that removes [node] along with the separator and whitespace
+/// between it and whatever precedes it, which ends at [previousEnd].
+///
+/// Use this instead of [lineRangeOf] when [node] is one element of a list —
+/// a cascade section, argument, or collection element — because the line it sits
+/// on may also carry punctuation belonging to the enclosing construct, such as
+/// the `;` terminating a cascade.
+SourceRange rangeFollowing(int previousEnd, AstNode node) =>
+    SourceRange(previousEnd, node.end - previousEnd);

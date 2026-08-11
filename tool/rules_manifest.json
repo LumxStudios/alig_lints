@@ -232,8 +232,8 @@
       "severity": "warning",
       "phase": 1,
       "status": "todo",
-      "needsSpec": false,
-      "notes": ""
+      "needsSpec": true,
+      "notes": "Detection scope and fix behaviour both unclear. Does it cover numeric range contradictions (a > 5 && a < 3) or only direct negation (a && !a)? And what does the quick-fix change, given a contradiction has no single safe rewrite?"
     },
     {
       "name": "avoid-default-tostring",
@@ -282,7 +282,7 @@
       "configurable": true,
       "severity": "warning",
       "phase": 1,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
