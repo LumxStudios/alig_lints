@@ -23,3 +23,4 @@ custom_lint:
     - avoid-self-assignment
     - avoid-self-compare
     - avoid-unnecessary-compare-to
+    - no-equal-conditions
