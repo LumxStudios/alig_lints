@@ -8,6 +8,7 @@ analyzer:
 custom_lint:
   enable_all_lint_rules: false
   rules:
+    - avoid-accessing-collections-by-constant-index
     - avoid-assignments-as-conditions
     - avoid-cascade-after-if-null
     - avoid-conditions-with-boolean-literals
