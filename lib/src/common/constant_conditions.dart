@@ -69,6 +69,24 @@ bool? _comparisonValueOf(BinaryExpression node, String operator) {
   };
 }
 
+/// Whether [expression] is built entirely from literals written in place.
+///
+/// Recurses through parentheses, unary operators and binary operators, so
+/// `1`, `-1`, `1 + 1` and `2 > 1` all count while `count > 1` does not. As with
+/// [constantBoolValueOf], `const` variables are not resolved.
+bool isSyntacticConstant(Expression expression) {
+  final node = expression.unParenthesized;
+
+  if (node is Literal) return node is! StringInterpolation;
+  if (node is PrefixExpression) return isSyntacticConstant(node.operand);
+  if (node is BinaryExpression) {
+    return isSyntacticConstant(node.leftOperand) &&
+        isSyntacticConstant(node.rightOperand);
+  }
+
+  return false;
+}
+
 /// The value of [expression] when it is a literal of a comparable kind.
 Object? _literalValueOf(Expression expression) => switch (expression
     .unParenthesized) {

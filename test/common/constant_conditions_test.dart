@@ -48,4 +48,20 @@ void main() {
   test('does not compare literals of different kinds as ordered', () {
     expect(valueOf("1 < 'a'"), isNull);
   });
+
+  constantChecks();
+}
+
+void constantChecks() {
+  test('isSyntacticConstant recurses through operators', () {
+    expect(isSyntacticConstant(parseExpression('1')), isTrue);
+    expect(isSyntacticConstant(parseExpression('-1')), isTrue);
+    expect(isSyntacticConstant(parseExpression('1 + 1')), isTrue);
+    expect(isSyntacticConstant(parseExpression("'a'")), isTrue);
+    expect(isSyntacticConstant(parseExpression('true')), isTrue);
+    expect(isSyntacticConstant(parseExpression('count')), isFalse);
+    expect(isSyntacticConstant(parseExpression('count + 1')), isFalse);
+    expect(isSyntacticConstant(parseExpression("'a\$count'")), isFalse);
+    expect(isSyntacticConstant(parseExpression('kDebugMode')), isFalse);
+  });
 }

@@ -6,6 +6,7 @@ import 'rules/common/avoid_cascade_after_if_null.dart';
 import 'rules/common/avoid_conditions_with_boolean_literals.dart';
 import 'rules/common/avoid_constant_assert_conditions.dart';
 import 'rules/common/avoid_constant_conditions.dart';
+import 'rules/common/avoid_constant_switches.dart';
 import 'rules/common/avoid_duplicate_cascades.dart';
 import 'rules/common/avoid_duplicate_constant_values.dart';
 import 'rules/common/avoid_duplicate_exports.dart';
@@ -51,6 +52,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidConditionsWithBooleanLiterals.new,
   AvoidConstantAssertConditions.new,
   AvoidConstantConditions.new,
+  AvoidConstantSwitches.new,
   AvoidDuplicateCascades.new,
   AvoidDuplicateConstantValues.new,
   AvoidDuplicateExports.new,

@@ -13,6 +13,7 @@ custom_lint:
     - avoid-conditions-with-boolean-literals
     - avoid-constant-assert-conditions
     - avoid-constant-conditions
+    - avoid-constant-switches
     - avoid-duplicate-cascades
     - avoid-duplicate-constant-values
     - avoid-duplicate-exports
