@@ -18,4 +18,5 @@ custom_lint:
     - avoid-duplicate-switch-case-conditions
     - avoid-duplicate-test-assertions
     - avoid-empty-setstate
+    - avoid-equal-expressions
     - avoid-self-assignment

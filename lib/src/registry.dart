@@ -11,6 +11,7 @@ import 'rules/common/avoid_duplicate_patterns.dart';
 import 'rules/common/avoid_duplicate_switch_case_conditions.dart';
 import 'rules/common/avoid_duplicate_test_assertions.dart';
 import 'rules/flutter/avoid_empty_setstate.dart';
+import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_self_assignment.dart';
 
 /// Every implemented rule in this package.
@@ -25,5 +26,6 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidDuplicateSwitchCaseConditions.new,
   AvoidDuplicateTestAssertions.new,
   AvoidEmptySetstate.new,
+  AvoidEqualExpressions.new,
   AvoidSelfAssignment.new,
 ];
