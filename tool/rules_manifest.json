@@ -418,7 +418,7 @@
       "configurable": false,
       "severity": "warning",
       "phase": 5,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },

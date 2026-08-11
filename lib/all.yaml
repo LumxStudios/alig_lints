@@ -28,6 +28,7 @@ custom_lint:
     - avoid-duplicate-patterns
     - avoid-duplicate-switch-case-conditions
     - avoid-duplicate-test-assertions
+    - avoid-dynamic
     - avoid-empty-setstate
     - avoid-empty-spread
     - avoid-enum-values-by-index

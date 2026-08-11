@@ -4,6 +4,7 @@ extension type Label.wrap(String text) {}
 
 extension type Boxed<T>(T value) {}
 
+// expect_lint: avoid-dynamic
 void casts(Object object, int number, dynamic anything) {
   // expect_lint: avoid-casting-to-extension-type
   print(number as Meters);
