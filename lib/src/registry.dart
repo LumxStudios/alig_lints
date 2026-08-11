@@ -28,6 +28,7 @@ import 'rules/common/avoid_enum_values_by_index.dart';
 import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_explicit_pattern_field_name.dart';
 import 'rules/common/avoid_future_tostring.dart';
+import 'rules/common/avoid_inferrable_type_arguments.dart';
 import 'rules/common/avoid_keywords_in_wildcard_pattern.dart';
 import 'rules/common/avoid_map_keys_contains.dart';
 import 'rules/common/avoid_missing_enum_constant_in_map.dart';
@@ -115,6 +116,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidEqualExpressions.new,
   AvoidExplicitPatternFieldName.new,
   AvoidFutureTostring.new,
+  AvoidInferrableTypeArguments.new,
   AvoidKeywordsInWildcardPattern.new,
   AvoidMapKeysContains.new,
   AvoidMissingEnumConstantInMap.new,

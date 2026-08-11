@@ -35,6 +35,7 @@ custom_lint:
     - avoid-equal-expressions
     - avoid-explicit-pattern-field-name
     - avoid-future-tostring
+    - avoid-inferrable-type-arguments
     - avoid-keywords-in-wildcard-pattern
     - avoid-map-keys-contains
     - avoid-missing-enum-constant-in-map

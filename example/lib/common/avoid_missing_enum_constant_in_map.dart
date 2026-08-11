@@ -26,11 +26,13 @@ const complete = <Status, String>{
 const byName = <String, int>{'a': 1};
 
 // A computed key means the contents are not statically known.
+// expect_lint: avoid-inferrable-type-arguments
 Map<Status, String> computed(Status current) => <Status, String>{
       current: 'current',
     };
 
 // A spread hides what is in the map.
+// expect_lint: avoid-inferrable-type-arguments
 Map<Status, String> spread(Map<Status, String> extra) => <Status, String>{
       Status.active: 'active',
       ...extra,

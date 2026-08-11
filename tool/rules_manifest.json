@@ -571,8 +571,8 @@
       "severity": "warning",
       "phase": 5,
       "status": "todo",
-      "needsSpec": false,
-      "notes": ""
+      "needsSpec": true,
+      "notes": "Name and description describe two different checks: a nullable representation type versus a missing implements clause. Needs one triggering and one non-triggering example."
     },
     {
       "name": "avoid-inconsistent-digit-separators",
@@ -603,7 +603,7 @@
       "configurable": true,
       "severity": "info",
       "phase": 5,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
