@@ -2,6 +2,7 @@
 
 import 'common/alig_rule.dart';
 import 'rules/common/avoid_assignments_as_conditions.dart';
+import 'rules/common/avoid_cascade_after_if_null.dart';
 import 'rules/common/avoid_duplicate_cascades.dart';
 import 'rules/common/avoid_duplicate_constant_values.dart';
 import 'rules/common/avoid_duplicate_exports.dart';
@@ -43,6 +44,7 @@ import 'rules/common/no_equal_then_else.dart';
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
   AvoidAssignmentsAsConditions.new,
+  AvoidCascadeAfterIfNull.new,
   AvoidDuplicateCascades.new,
   AvoidDuplicateConstantValues.new,
   AvoidDuplicateExports.new,
