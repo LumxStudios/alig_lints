@@ -1,3 +1,7 @@
+// This file demonstrates a different rule; its uses of first/last/single
+// are incidental.
+// ignore_for_file: avoid-unsafe-collection-methods
+
 String? firstArg(List<String> args) {
   for (final arg in args) {
     print(arg);

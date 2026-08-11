@@ -1,3 +1,7 @@
+// This file demonstrates a different rule; its uses of first/last/single
+// are incidental.
+// ignore_for_file: avoid-unsafe-collection-methods
+
 void emptyThen(List<int> items) {
   if (items.isEmpty) {
     // expect_lint: avoid-unreachable-for-loop
