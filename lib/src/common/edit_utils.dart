@@ -7,17 +7,37 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 ///
 /// Deleting `node.sourceRange` for a statement leaves an empty,
 /// whitespace-only line behind; deleting this range removes the line entirely.
-SourceRange lineRangeOf(AstNode node, CustomLintResolver resolver) {
+/// Set [absorbFollowingBlankLines] when removing a statement that a blank line
+/// separated from what follows. That blank line existed to space the statement
+/// from its neighbour; left behind, it becomes stray leading whitespace at the
+/// top of the block.
+SourceRange lineRangeOf(
+  AstNode node,
+  CustomLintResolver resolver, {
+  bool absorbFollowingBlankLines = false,
+}) {
   final lineInfo = resolver.lineInfo;
-  final contentLength = resolver.source.contents.data.length;
+  final source = resolver.source.contents.data;
 
   final startLine = lineInfo.getLocation(node.offset).lineNumber;
   final endLine = lineInfo.getLocation(node.end).lineNumber;
 
   final start = lineInfo.getOffsetOfLine(startLine - 1);
-  final end = endLine < lineInfo.lineCount
-      ? lineInfo.getOffsetOfLine(endLine)
-      : contentLength;
+  var line = endLine;
+  var end =
+      line < lineInfo.lineCount ? lineInfo.getOffsetOfLine(line) : source.length;
+
+  if (absorbFollowingBlankLines) {
+    while (line < lineInfo.lineCount) {
+      final nextEnd = line + 1 < lineInfo.lineCount
+          ? lineInfo.getOffsetOfLine(line + 1)
+          : source.length;
+      if (source.substring(end, nextEnd).trim().isNotEmpty) break;
+
+      end = nextEnd;
+      line++;
+    }
+  }
 
   return SourceRange(start, end - start);
 }

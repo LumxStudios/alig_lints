@@ -1,0 +1,48 @@
+bool check() => true;
+
+int classify(int value) {
+  // expect_lint: avoid-unnecessary-if
+  if (value > 0) {
+    return 0;
+  }
+
+  return 0;
+}
+
+void earlyExit(int value) {
+  // expect_lint: avoid-unnecessary-if
+  if (value < 0) {
+    return;
+  }
+
+  return;
+}
+
+int sideEffectCondition(int value) {
+  // Reported, but not auto-fixed: dropping the if would drop the call.
+  // expect_lint: avoid-unnecessary-if
+  if (check()) {
+    return 1;
+  }
+
+  return 1;
+}
+
+int keepsIf(int value) {
+  if (value > 0) {
+    return 1;
+  }
+
+  return 0;
+}
+
+int extraWork(int value) {
+  // The then branch does more than return, so the if is not redundant.
+  if (value > 0) {
+    print('positive');
+
+    return 0;
+  }
+
+  return 0;
+}
