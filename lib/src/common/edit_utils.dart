@@ -32,18 +32,38 @@ SourceRange lineRangeOf(AstNode node, CustomLintResolver resolver) {
 SourceRange rangeFollowing(int previousEnd, AstNode node) =>
     SourceRange(previousEnd, node.end - previousEnd);
 
-/// The range that removes [node] from a comma-separated list.
+/// The range that removes [node] from a comma-separated list, leaving the list's
+/// punctuation valid.
 ///
-/// When [node] is the only thing on its line the whole line goes, trailing comma
-/// included, so no blank line is left behind. Otherwise only [node] and the
-/// comma and spacing following it are removed, leaving its neighbours on that
-/// line untouched.
+/// - When a comma follows [node], that comma goes with it. If [node] was then
+///   the only thing on its line, the line goes too, so no blank line is left
+///   behind.
+/// - When no comma follows — [node] is the last item and the list has no
+///   trailing comma — the *preceding* comma is removed instead. Absorbing the
+///   following text would delete the list's closing punctuation.
 SourceRange rangeRemovingListItem(AstNode node, CustomLintResolver resolver) {
   final source = resolver.source.contents.data;
 
-  var end = node.end;
+  var afterSpaces = node.end;
+  while (afterSpaces < source.length && _isBlank(source[afterSpaces])) {
+    afterSpaces++;
+  }
+  final hasFollowingComma =
+      afterSpaces < source.length && source[afterSpaces] == ',';
+
+  if (!hasFollowingComma) {
+    var start = node.offset;
+    while (start > 0 && _isBlank(source[start - 1])) {
+      start--;
+    }
+    if (start > 0 && source[start - 1] == ',') start--;
+
+    return SourceRange(start, node.end - start);
+  }
+
+  var end = afterSpaces + 1;
   while (end < source.length &&
-      (source[end] == ',' || source[end] == ' ' || source[end] == '\t')) {
+      (source[end] == ' ' || source[end] == '\t')) {
     end++;
   }
 
@@ -52,8 +72,7 @@ SourceRange rangeRemovingListItem(AstNode node, CustomLintResolver resolver) {
     lineStart--;
   }
 
-  final nothingBefore =
-      source.substring(lineStart, node.offset).trim().isEmpty;
+  final nothingBefore = source.substring(lineStart, node.offset).trim().isEmpty;
   final nothingAfter = end >= source.length || source[end] == '\n';
 
   if (nothingBefore && nothingAfter) {
@@ -64,3 +83,21 @@ SourceRange rangeRemovingListItem(AstNode node, CustomLintResolver resolver) {
 
   return SourceRange(node.offset, end - node.offset);
 }
+
+/// The range covering [node] together with the whitespace immediately before it.
+///
+/// Use this to delete an optional clause — a `with`, `implements` or `on` clause
+/// — without leaving a double space behind.
+SourceRange rangeWithLeadingSpace(AstNode node, CustomLintResolver resolver) {
+  final source = resolver.source.contents.data;
+
+  var start = node.offset;
+  while (start > 0 && _isBlank(source[start - 1])) {
+    start--;
+  }
+
+  return SourceRange(start, node.end - start);
+}
+
+bool _isBlank(String character) =>
+    character == ' ' || character == '\t' || character == '\n';

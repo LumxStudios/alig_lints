@@ -6,6 +6,7 @@ import 'rules/common/avoid_duplicate_constant_values.dart';
 import 'rules/common/avoid_duplicate_exports.dart';
 import 'rules/common/avoid_duplicate_initializers.dart';
 import 'rules/common/avoid_duplicate_map_keys.dart';
+import 'rules/common/avoid_duplicate_mixins.dart';
 import 'rules/flutter/avoid_empty_setstate.dart';
 import 'rules/common/avoid_self_assignment.dart';
 
@@ -16,6 +17,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidDuplicateExports.new,
   AvoidDuplicateInitializers.new,
   AvoidDuplicateMapKeys.new,
+  AvoidDuplicateMixins.new,
   AvoidEmptySetstate.new,
   AvoidSelfAssignment.new,
 ];
