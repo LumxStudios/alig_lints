@@ -5,6 +5,7 @@ import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../common/alig_rule.dart';
 import '../../common/ast_equality.dart';
+import '../../common/null_checks.dart';
 
 const _meta = AligRuleMeta(
   name: 'prefer-null-aware-elements',
@@ -42,31 +43,16 @@ class PreferNullAwareElements extends AligRule {
     context.registry.addIfElement((node) {
       if (node.elseElement != null) return;
 
-      final tested = _nonNullCheckSubjectOf(node.expression);
+      final tested = nonNullCheckSubjectOf(node.expression);
       if (tested == null) return;
 
       final element = _valueElementOf(node.thenElement);
       if (element == null) return;
-      if (!areEquivalent(_withoutBang(element), tested)) return;
+      if (!areEquivalent(withoutNullAssertion(element), tested)) return;
 
       reporter.atNode(node, code);
     });
   }
-}
-
-/// The value `condition` asserts is non-null, or `null`.
-Expression? _nonNullCheckSubjectOf(Expression condition) {
-  final node = condition.unParenthesized;
-  if (node is! BinaryExpression) return null;
-  if (node.operator.lexeme != '!=') return null;
-
-  final left = node.leftOperand.unParenthesized;
-  final right = node.rightOperand.unParenthesized;
-
-  if (right is NullLiteral) return left;
-  if (left is NullLiteral) return right;
-
-  return null;
 }
 
 /// The expression an element contributes, for a plain element or a map entry.
@@ -75,12 +61,3 @@ Expression? _valueElementOf(CollectionElement element) => switch (element) {
       Expression() => element,
       _ => null,
     };
-
-/// [expression] with a trailing `!` removed.
-Expression _withoutBang(Expression expression) {
-  final node = expression.unParenthesized;
-
-  return node is PostfixExpression && node.operator.lexeme == '!'
-      ? node.operand
-      : node;
-}

@@ -78,6 +78,7 @@ custom_lint:
     - prefer-correct-for-loop-increment
     - prefer-iterable-of
     - prefer-null-aware-elements
+    - prefer-null-aware-spread
     - prefer-parentheses-with-if-null
     - prefer-returning-shorthands
     - prefer-shorthands-with-enums

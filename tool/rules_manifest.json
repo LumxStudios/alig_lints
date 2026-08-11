@@ -2289,7 +2289,7 @@
       "configurable": false,
       "severity": "info",
       "phase": 4,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
