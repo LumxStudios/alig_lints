@@ -33,6 +33,7 @@ custom_lint:
     - avoid-redundant-pragma-inline
     - avoid-self-assignment
     - avoid-self-compare
+    - avoid-throw-in-catch-block
     - avoid-unnecessary-if
     - avoid-unnecessary-late-fields
     - avoid-unnecessary-local-variable
