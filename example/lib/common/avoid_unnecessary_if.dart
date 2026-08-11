@@ -15,6 +15,8 @@ void earlyExit(int value) {
     return;
   }
 
+  // Also a real finding: a trailing bare return in a void function.
+  // expect_lint: avoid-unnecessary-return
   return;
 }
 

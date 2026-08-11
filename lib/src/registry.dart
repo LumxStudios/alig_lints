@@ -30,6 +30,7 @@ import 'rules/common/avoid_unnecessary_local_variable.dart';
 import 'rules/common/avoid_unnecessary_negations.dart';
 import 'rules/common/avoid_unnecessary_overrides.dart';
 import 'rules/common/avoid_unnecessary_reassignment.dart';
+import 'rules/common/avoid_unnecessary_return.dart';
 import 'rules/common/no_equal_conditions.dart';
 import 'rules/common/no_equal_nested_conditions.dart';
 import 'rules/common/no_equal_switch_case.dart';
@@ -67,6 +68,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnnecessaryNegations.new,
   AvoidUnnecessaryOverrides.new,
   AvoidUnnecessaryReassignment.new,
+  AvoidUnnecessaryReturn.new,
   NoEqualConditions.new,
   NoEqualNestedConditions.new,
   NoEqualSwitchCase.new,
