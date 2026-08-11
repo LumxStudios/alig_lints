@@ -11,5 +11,6 @@ custom_lint:
     - avoid-duplicate-cascades
     - avoid-duplicate-constant-values
     - avoid-duplicate-exports
+    - avoid-duplicate-initializers
     - avoid-empty-setstate
     - avoid-self-assignment
