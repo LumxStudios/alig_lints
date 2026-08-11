@@ -11,6 +11,16 @@ cd "$(dirname "$0")/.."
 logs=$(mktemp -d)
 trap 'rm -rf "$logs"' EXIT
 
+# Regenerating first makes the gate self-consistent: a rule marked done in the
+# manifest but missing from the registry would otherwise pass analyze and tests
+# while never running in the golden suites.
+if ! dart run tool/generate.dart >"$logs/generate" 2>&1; then
+  printf 'FAIL  generate\n'
+  sed 's/^/      /' "$logs/generate"
+  exit 1
+fi
+sed 's/^/      /' "$logs/generate"
+
 dart analyze >"$logs/analyze" 2>&1 &
 analyze=$!
 

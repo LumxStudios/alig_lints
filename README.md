@@ -49,13 +49,13 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**41 / 181 rules implemented** — 3 awaiting clarification
+**42 / 181 rules implemented** — 3 awaiting clarification
 
 | Phase | Done |
 |---|---|
 | 1 | 19 / 21 |
 | 2 | 17 / 18 |
-| 3 | 4 / 32 |
+| 3 | 5 / 32 |
 | 4 | 0 / 16 |
 | 5 | 0 / 22 |
 | 6 | 0 / 8 |
@@ -75,7 +75,8 @@ inferred from the available specification are listed in
 - `dart run tool/next.dart` prints the next rule to implement.
 - `dart run tool/list_phase.dart <n>` shows one phase's status.
 - `dart run tool/generate.dart` regenerates `lib/src/registry.dart`, the
-  presets and the table above.
+  presets and the table above. `tool/verify.sh` runs it first, so marking a rule
+  done in the manifest is enough.
 - `./tool/verify.sh` is the full gate: analyze, tests and both golden suites,
   run in parallel. Prints the log only for the parts that failed.
 - Individually: `dart analyze`, `dart test`,
