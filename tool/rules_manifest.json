@@ -535,8 +535,8 @@
       "severity": "warning",
       "phase": 1,
       "status": "todo",
-      "needsSpec": false,
-      "notes": ""
+      "needsSpec": true,
+      "notes": "\"Excessive\" is undefined and the rule is not configurable, so it is not an operand-count threshold. Candidate readings: boolean absorption (a && (a || b)), relational subsumption (x > 5 && x > 3), or repetition across if/else-if chains. Each needs a different implementation and a different fix."
     },
     {
       "name": "avoid-explicit-pattern-field-name",
@@ -965,7 +965,7 @@
       "configurable": false,
       "severity": "warning",
       "phase": 1,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },

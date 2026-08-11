@@ -19,4 +19,5 @@ custom_lint:
     - avoid-duplicate-test-assertions
     - avoid-empty-setstate
     - avoid-equal-expressions
+    - avoid-passing-self-as-argument
     - avoid-self-assignment
