@@ -12,6 +12,7 @@ custom_lint:
     - avoid-always-null-parameters
     - avoid-assignments-as-conditions
     - avoid-cascade-after-if-null
+    - avoid-casting-to-extension-type
     - avoid-collection-equality-checks
     - avoid-conditions-with-boolean-literals
     - avoid-constant-assert-conditions
