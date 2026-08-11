@@ -27,6 +27,7 @@ custom_lint:
     - avoid-empty-spread
     - avoid-equal-expressions
     - avoid-explicit-pattern-field-name
+    - avoid-keywords-in-wildcard-pattern
     - avoid-passing-self-as-argument
     - avoid-redundant-else
     - avoid-redundant-pragma-inline
