@@ -2420,8 +2420,8 @@
       "severity": "info",
       "phase": 3,
       "status": "todo",
-      "needsSpec": false,
-      "notes": ""
+      "needsSpec": true,
+      "notes": "Entirely driven by a configured list of classes; the option key is not stated. With no list the rule can never fire, so unlike the other configurable rules there is no useful default behaviour to ship."
     },
     {
       "name": "prefer-shorthands-with-enums",
