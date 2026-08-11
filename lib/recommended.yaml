@@ -9,6 +9,7 @@ custom_lint:
   enable_all_lint_rules: false
   rules:
     - avoid-accessing-collections-by-constant-index
+    - avoid-always-null-parameters
     - avoid-assignments-as-conditions
     - avoid-cascade-after-if-null
     - avoid-collection-equality-checks

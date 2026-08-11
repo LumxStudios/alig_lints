@@ -2,6 +2,7 @@
 
 import 'common/alig_rule.dart';
 import 'rules/common/avoid_accessing_collections_by_constant_index.dart';
+import 'rules/common/avoid_always_null_parameters.dart';
 import 'rules/common/avoid_assignments_as_conditions.dart';
 import 'rules/common/avoid_cascade_after_if_null.dart';
 import 'rules/common/avoid_collection_equality_checks.dart';
@@ -84,6 +85,7 @@ import 'rules/common/prefer_wildcard_pattern.dart';
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
   AvoidAccessingCollectionsByConstantIndex.new,
+  AvoidAlwaysNullParameters.new,
   AvoidAssignmentsAsConditions.new,
   AvoidCascadeAfterIfNull.new,
   AvoidCollectionEqualityChecks.new,
