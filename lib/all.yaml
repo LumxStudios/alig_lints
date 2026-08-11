@@ -31,6 +31,7 @@ custom_lint:
     - avoid-equal-expressions
     - avoid-explicit-pattern-field-name
     - avoid-keywords-in-wildcard-pattern
+    - avoid-map-keys-contains
     - avoid-multi-assignment
     - avoid-nested-shorthands
     - avoid-only-rethrow
