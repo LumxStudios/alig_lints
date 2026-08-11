@@ -2,5 +2,8 @@
 
 import 'common/alig_rule.dart';
 
+
 /// Every implemented rule in this package.
-const List<AligRuleFactory> aligRuleFactories = [];
+const List<AligRuleFactory> aligRuleFactories = [
+
+];
