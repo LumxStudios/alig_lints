@@ -60,6 +60,7 @@ import 'rules/common/no_equal_switch_case.dart';
 import 'rules/common/no_equal_switch_expression_cases.dart';
 import 'rules/common/no_equal_then_else.dart';
 import 'rules/common/prefer_correct_for_loop_increment.dart';
+import 'rules/common/prefer_parentheses_with_if_null.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -122,4 +123,5 @@ const List<AligRuleFactory> aligRuleFactories = [
   NoEqualSwitchExpressionCases.new,
   NoEqualThenElse.new,
   PreferCorrectForLoopIncrement.new,
+  PreferParenthesesWithIfNull.new,
 ];
