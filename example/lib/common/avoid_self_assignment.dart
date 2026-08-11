@@ -27,6 +27,10 @@ class Nested {
 
 void main() {
   var a = 1;
+
+  // Incidental to this rule but a real finding: 2 is overwritten below without
+  // ever being read.
+  // expect_lint: avoid-unnecessary-reassignment
   var b = 2;
 
   // expect_lint: avoid-self-assignment

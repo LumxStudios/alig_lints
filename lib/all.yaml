@@ -36,6 +36,7 @@ custom_lint:
     - avoid-unnecessary-local-variable
     - avoid-unnecessary-negations
     - avoid-unnecessary-overrides
+    - avoid-unnecessary-reassignment
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case
