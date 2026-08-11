@@ -64,6 +64,7 @@ import 'rules/common/prefer_parentheses_with_if_null.dart';
 import 'rules/common/prefer_returning_shorthands.dart';
 import 'rules/common/prefer_shorthands_with_enums.dart';
 import 'rules/common/prefer_shorthands_with_static_fields.dart';
+import 'rules/common/prefer_simpler_boolean_expressions.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -130,4 +131,5 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferReturningShorthands.new,
   PreferShorthandsWithEnums.new,
   PreferShorthandsWithStaticFields.new,
+  PreferSimplerBooleanExpressions.new,
 ];

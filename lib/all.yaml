@@ -71,3 +71,4 @@ custom_lint:
     - prefer-returning-shorthands
     - prefer-shorthands-with-enums
     - prefer-shorthands-with-static-fields
+    - prefer-simpler-boolean-expressions
