@@ -38,6 +38,7 @@ custom_lint:
     - avoid-unnecessary-overrides
     - avoid-unnecessary-reassignment
     - avoid-unnecessary-return
+    - avoid-unnecessary-statements
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case

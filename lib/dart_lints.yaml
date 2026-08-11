@@ -161,7 +161,10 @@ linter:
     # - unnecessary_overrides
     - unnecessary_parenthesis
     - unnecessary_raw_strings
-    - unnecessary_statements
+    # Covered by alig_lints' own avoid-unnecessary-statements. Enabling both
+    # would put two warnings on one statement. Re-enable this and disable the
+    # custom rule if you prefer the built-in.
+    # - unnecessary_statements
     - unnecessary_string_escapes
     - unnecessary_string_interpolations
     - unnecessary_this
