@@ -25,3 +25,4 @@ custom_lint:
     - avoid-unnecessary-compare-to
     - no-equal-conditions
     - no-equal-nested-conditions
+    - no-equal-switch-case
