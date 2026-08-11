@@ -49,11 +49,11 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**8 / 181 rules implemented** — 1 awaiting clarification
+**9 / 181 rules implemented** — 1 awaiting clarification
 
 | Phase | Done |
 |---|---|
-| 1 | 7 / 21 |
+| 1 | 8 / 21 |
 | 2 | 0 / 18 |
 | 3 | 0 / 32 |
 | 4 | 0 / 16 |

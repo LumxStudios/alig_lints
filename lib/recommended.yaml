@@ -14,5 +14,6 @@ custom_lint:
     - avoid-duplicate-initializers
     - avoid-duplicate-map-keys
     - avoid-duplicate-mixins
+    - avoid-duplicate-patterns
     - avoid-empty-setstate
     - avoid-self-assignment
