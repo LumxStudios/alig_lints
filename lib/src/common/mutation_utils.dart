@@ -11,14 +11,26 @@ import 'package:analyzer/dart/element/element.dart';
 /// point of interest still suppresses the report. That costs some true positives
 /// and rules out false ones, which is the right trade for a lint.
 bool isMutatedWithin(AstNode region, Expression expression) {
-  final read = _ReferencedElements();
-  expression.accept(read);
-  if (read.elements.isEmpty) return false;
+  final read = elementsReadBy(expression);
+  if (read.isEmpty) return false;
 
-  final written = _WrittenElements();
-  region.accept(written);
+  return read.intersection(elementsWrittenBy(region)).isNotEmpty;
+}
 
-  return read.elements.intersection(written.elements).isNotEmpty;
+/// The declarations [node] reads.
+Set<Element> elementsReadBy(AstNode node) {
+  final visitor = _ReferencedElements();
+  node.accept(visitor);
+
+  return visitor.elements;
+}
+
+/// The declarations [node] writes to.
+Set<Element> elementsWrittenBy(AstNode node) {
+  final visitor = _WrittenElements();
+  node.accept(visitor);
+
+  return visitor.elements;
 }
 
 /// Collects the declarations an expression reads.

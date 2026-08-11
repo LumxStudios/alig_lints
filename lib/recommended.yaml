@@ -52,3 +52,4 @@ custom_lint:
     - no-equal-switch-case
     - no-equal-switch-expression-cases
     - no-equal-then-else
+    - prefer-correct-for-loop-increment
