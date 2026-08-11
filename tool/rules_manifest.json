@@ -2758,7 +2758,7 @@
       "configurable": false,
       "severity": "warning",
       "phase": 7,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
