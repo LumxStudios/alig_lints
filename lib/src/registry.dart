@@ -21,6 +21,7 @@ import 'rules/common/avoid_empty_spread.dart';
 import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_explicit_pattern_field_name.dart';
 import 'rules/common/avoid_keywords_in_wildcard_pattern.dart';
+import 'rules/common/avoid_multi_assignment.dart';
 import 'rules/common/avoid_passing_self_as_argument.dart';
 import 'rules/common/avoid_redundant_else.dart';
 import 'rules/common/avoid_redundant_pragma_inline.dart';
@@ -70,6 +71,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidEqualExpressions.new,
   AvoidExplicitPatternFieldName.new,
   AvoidKeywordsInWildcardPattern.new,
+  AvoidMultiAssignment.new,
   AvoidPassingSelfAsArgument.new,
   AvoidRedundantElse.new,
   AvoidRedundantPragmaInline.new,

@@ -26,6 +26,7 @@ custom_lint:
     - avoid-empty-setstate
     - avoid-empty-spread
     - avoid-equal-expressions
+    - avoid-multi-assignment
     - avoid-passing-self-as-argument
     - avoid-redundant-pragma-inline
     - avoid-self-assignment
