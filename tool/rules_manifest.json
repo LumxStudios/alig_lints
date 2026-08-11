@@ -2118,9 +2118,9 @@
       "configurable": false,
       "severity": "info",
       "phase": 4,
-      "status": "todo",
+      "status": "covered",
       "needsSpec": false,
-      "notes": ""
+      "notes": "The built-in prefer_contains lint reports all six indexOf containment spellings on List and String, measured. Only lastIndexOf is left uncovered."
     },
     {
       "name": "prefer-correct-callback-field-name",
