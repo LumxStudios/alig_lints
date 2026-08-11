@@ -31,3 +31,36 @@ SourceRange lineRangeOf(AstNode node, CustomLintResolver resolver) {
 /// the `;` terminating a cascade.
 SourceRange rangeFollowing(int previousEnd, AstNode node) =>
     SourceRange(previousEnd, node.end - previousEnd);
+
+/// The range that removes [node] from a comma-separated list.
+///
+/// When [node] is the only thing on its line the whole line goes, trailing comma
+/// included, so no blank line is left behind. Otherwise only [node] and the
+/// comma and spacing following it are removed, leaving its neighbours on that
+/// line untouched.
+SourceRange rangeRemovingListItem(AstNode node, CustomLintResolver resolver) {
+  final source = resolver.source.contents.data;
+
+  var end = node.end;
+  while (end < source.length &&
+      (source[end] == ',' || source[end] == ' ' || source[end] == '\t')) {
+    end++;
+  }
+
+  var lineStart = node.offset;
+  while (lineStart > 0 && source.codeUnitAt(lineStart - 1) != 0x0a) {
+    lineStart--;
+  }
+
+  final nothingBefore =
+      source.substring(lineStart, node.offset).trim().isEmpty;
+  final nothingAfter = end >= source.length || source[end] == '\n';
+
+  if (nothingBefore && nothingAfter) {
+    final withNewline = end < source.length ? end + 1 : end;
+
+    return SourceRange(lineStart, withNewline - lineStart);
+  }
+
+  return SourceRange(node.offset, end - node.offset);
+}
