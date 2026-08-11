@@ -64,6 +64,7 @@ custom_lint:
     - avoid-unnecessary-type-casts
     - avoid-unreachable-for-loop
     - avoid-unrelated-type-assertions
+    - avoid-unrelated-type-casts
     - avoid-unsafe-collection-methods
     - avoid-wildcard-cases-with-enums
     - avoid-wildcard-cases-with-sealed-classes

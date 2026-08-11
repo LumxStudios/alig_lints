@@ -73,6 +73,7 @@ import 'rules/common/avoid_unnecessary_type_assertions.dart';
 import 'rules/common/avoid_unnecessary_type_casts.dart';
 import 'rules/common/avoid_unreachable_for_loop.dart';
 import 'rules/common/avoid_unrelated_type_assertions.dart';
+import 'rules/common/avoid_unrelated_type_casts.dart';
 import 'rules/common/avoid_unsafe_collection_methods.dart';
 import 'rules/common/avoid_wildcard_cases_with_enums.dart';
 import 'rules/common/avoid_wildcard_cases_with_sealed_classes.dart';
@@ -172,6 +173,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnnecessaryTypeCasts.new,
   AvoidUnreachableForLoop.new,
   AvoidUnrelatedTypeAssertions.new,
+  AvoidUnrelatedTypeCasts.new,
   AvoidUnsafeCollectionMethods.new,
   AvoidWildcardCasesWithEnums.new,
   AvoidWildcardCasesWithSealedClasses.new,
