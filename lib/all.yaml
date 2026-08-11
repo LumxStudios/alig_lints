@@ -68,3 +68,4 @@ custom_lint:
     - no-equal-then-else
     - prefer-correct-for-loop-increment
     - prefer-parentheses-with-if-null
+    - prefer-returning-shorthands
