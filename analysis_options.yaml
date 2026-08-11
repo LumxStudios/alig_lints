@@ -9,6 +9,8 @@ analyzer:
   exclude:
     - example/**
     - example_flutter/**
+    # Fixtures are intentionally bad code fed to the rules under test.
+    - test/fixtures/**
 
 linter:
   rules:
