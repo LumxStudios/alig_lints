@@ -1,5 +1,8 @@
 bool check() => true;
 
+// Both findings hold here and suggest different repairs: drop the redundant if,
+// or make the branches return different things.
+// expect_lint: function-always-returns-same-value
 int classify(int value) {
   // expect_lint: avoid-unnecessary-if
   if (value > 0) {
@@ -20,6 +23,7 @@ void earlyExit(int value) {
   return;
 }
 
+// expect_lint: function-always-returns-same-value
 int sideEffectCondition(int value) {
   // Reported, but not auto-fixed: dropping the if would drop the call.
   // expect_lint: avoid-unnecessary-if
@@ -38,6 +42,7 @@ int keepsIf(int value) {
   return 0;
 }
 
+// expect_lint: function-always-returns-same-value
 int extraWork(int value) {
   // The then branch does more than return, so the if is not redundant.
   if (value > 0) {

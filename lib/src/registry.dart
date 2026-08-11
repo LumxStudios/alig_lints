@@ -52,6 +52,7 @@ import 'rules/common/avoid_unreachable_for_loop.dart';
 import 'rules/common/avoid_wildcard_cases_with_enums.dart';
 import 'rules/common/avoid_wildcard_cases_with_sealed_classes.dart';
 import 'rules/common/function_always_returns_null.dart';
+import 'rules/common/function_always_returns_same_value.dart';
 import 'rules/common/no_equal_conditions.dart';
 import 'rules/common/no_equal_nested_conditions.dart';
 import 'rules/common/no_equal_switch_case.dart';
@@ -111,6 +112,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidWildcardCasesWithEnums.new,
   AvoidWildcardCasesWithSealedClasses.new,
   FunctionAlwaysReturnsNull.new,
+  FunctionAlwaysReturnsSameValue.new,
   NoEqualConditions.new,
   NoEqualNestedConditions.new,
   NoEqualSwitchCase.new,
