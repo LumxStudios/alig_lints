@@ -25,3 +25,4 @@ custom_lint:
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case
+    - no-equal-switch-expression-cases

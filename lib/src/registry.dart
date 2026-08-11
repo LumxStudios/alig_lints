@@ -19,6 +19,7 @@ import 'rules/common/avoid_unnecessary_compare_to.dart';
 import 'rules/common/no_equal_conditions.dart';
 import 'rules/common/no_equal_nested_conditions.dart';
 import 'rules/common/no_equal_switch_case.dart';
+import 'rules/common/no_equal_switch_expression_cases.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -40,4 +41,5 @@ const List<AligRuleFactory> aligRuleFactories = [
   NoEqualConditions.new,
   NoEqualNestedConditions.new,
   NoEqualSwitchCase.new,
+  NoEqualSwitchExpressionCases.new,
 ];
