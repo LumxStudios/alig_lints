@@ -1442,9 +1442,9 @@
       "configurable": false,
       "severity": "warning",
       "phase": 4,
-      "status": "todo",
+      "status": "covered",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Emptiness-style length checks are all reported by the built-in prefer_is_empty, measured across List, String and Map. If the rule instead means a length check made redundant by a neighbouring isEmpty/isNotEmpty, that is not covered and should be written — see doc/LIMITATIONS.md."
     },
     {
       "name": "avoid-unnecessary-local-late",
