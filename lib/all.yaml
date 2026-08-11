@@ -70,3 +70,4 @@ custom_lint:
     - prefer-parentheses-with-if-null
     - prefer-returning-shorthands
     - prefer-shorthands-with-enums
+    - prefer-shorthands-with-static-fields

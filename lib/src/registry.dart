@@ -63,6 +63,7 @@ import 'rules/common/prefer_correct_for_loop_increment.dart';
 import 'rules/common/prefer_parentheses_with_if_null.dart';
 import 'rules/common/prefer_returning_shorthands.dart';
 import 'rules/common/prefer_shorthands_with_enums.dart';
+import 'rules/common/prefer_shorthands_with_static_fields.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -128,4 +129,5 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferParenthesesWithIfNull.new,
   PreferReturningShorthands.new,
   PreferShorthandsWithEnums.new,
+  PreferShorthandsWithStaticFields.new,
 ];

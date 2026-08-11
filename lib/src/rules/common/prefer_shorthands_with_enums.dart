@@ -1,6 +1,5 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/element/element.dart';
-import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/diagnostic/diagnostic.dart';
 import 'package:analyzer/error/error.dart' hide LintCode;
 import 'package:analyzer/error/listener.dart';
@@ -8,6 +7,7 @@ import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../common/alig_rule.dart';
+import '../../common/shorthand_context.dart';
 
 const _meta = AligRuleMeta(
   name: 'prefer-shorthands-with-enums',
@@ -64,7 +64,7 @@ class PreferShorthandsWithEnums extends AligRule {
 SourceRange? _redundantEnumNameRangeOf(PrefixedIdentifier node) {
   final enumElement = _enumElementOf(node);
   if (enumElement == null) return null;
-  if (!_expectedTypeIs(node, enumElement)) return null;
+  if (!expectedTypeIs(node, enumElement)) return null;
 
   return SourceRange(node.prefix.offset, node.prefix.length);
 }
@@ -81,63 +81,6 @@ InterfaceElement? _enumElementOf(PrefixedIdentifier node) {
 
   return prefixElement;
 }
-
-/// Whether the position [node] sits in already expects [enumElement].
-bool _expectedTypeIs(Expression node, InterfaceElement enumElement) {
-  final parent = node.parent;
-
-  // `status == Status.active`. This has to come before the parameter check:
-  // `==` is a method, so an operand reports a corresponding parameter of type
-  // Object, which would end the search on the wrong answer.
-  if (parent is BinaryExpression) {
-    final operator = parent.operator.lexeme;
-    if (operator != '==' && operator != '!=') return false;
-
-    final other =
-        parent.leftOperand == node ? parent.rightOperand : parent.leftOperand;
-
-    return _isThisEnum(other.staticType, enumElement);
-  }
-
-  // `Job(status: Status.active)` and positional arguments alike.
-  final expression = parent is NamedExpression ? parent : node;
-  final parameter = expression.correspondingParameter;
-  if (parameter != null) return _isThisEnum(parameter.type, enumElement);
-
-  // `Status current = Status.paused;`
-  if (parent is VariableDeclaration) {
-    final declaration = parent.parent;
-    if (declaration is VariableDeclarationList) {
-      final type = declaration.type?.type;
-      if (type != null) return _isThisEnum(type, enumElement);
-    }
-
-    return false;
-  }
-
-  // `current = Status.paused;`
-  if (parent is AssignmentExpression && parent.rightHandSide == node) {
-    return _isThisEnum(parent.writeType, enumElement);
-  }
-
-  // `case Status.active:` and `Status.active => ...`
-  if (parent is ConstantPattern) {
-    return _isThisEnum(_switchSubjectTypeOf(parent), enumElement);
-  }
-
-  return false;
-}
-
-/// The static type of the switch subject enclosing [node], if any.
-DartType? _switchSubjectTypeOf(AstNode node) {
-  final expression = node.thisOrAncestorOfType<SwitchExpression>();
-  if (expression != null) return expression.expression.staticType;
-
-  return node.thisOrAncestorOfType<SwitchStatement>()?.expression.staticType;
-}
-
-bool _isThisEnum(DartType? type, InterfaceElement enumElement) =>
-    type is InterfaceType && type.element == enumElement;
 
 class _UseShorthand extends DartFix {
   @override
