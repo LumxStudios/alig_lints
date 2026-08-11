@@ -53,6 +53,7 @@ custom_lint:
     - avoid-redundant-pragma-inline
     - avoid-self-assignment
     - avoid-self-compare
+    - avoid-stream-tostring
     - avoid-throw-in-catch-block
     - avoid-unconditional-break
     - avoid-unnecessary-call

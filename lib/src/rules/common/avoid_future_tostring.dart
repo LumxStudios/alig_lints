@@ -1,9 +1,9 @@
-import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/error/error.dart' hide LintCode;
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../common/alig_rule.dart';
+import '../../common/stringification.dart';
 
 const _meta = AligRuleMeta(
   name: 'avoid-future-tostring',
@@ -47,32 +47,11 @@ class AvoidFutureTostring extends AligRule {
     DiagnosticReporter reporter,
     CustomLintContext context,
   ) {
-    context.registry.addMethodInvocation((node) {
-      if (node.methodName.name != 'toString') return;
-      if (node.argumentList.arguments.isNotEmpty) return;
-
-      final target = node.realTarget;
-      if (target == null || !_isFuture(target.staticType)) return;
-
-      reporter.atNode(node, code);
-    });
-
-    context.registry.addInterpolationExpression((node) {
-      if (!_isFuture(node.expression.staticType)) return;
-
-      reporter.atNode(node, code);
-    });
+    reportStringificationsOf(
+      context,
+      reporter,
+      code,
+      matches: (type) => implementsType(type, (it) => it.isDartAsyncFuture),
+    );
   }
-}
-
-/// Whether [type] is `Future` or something that implements it.
-bool _isFuture(DartType? type) {
-  if (type is! InterfaceType) return false;
-  if (type.isDartAsyncFuture) return true;
-
-  for (final supertype in type.allSupertypes) {
-    if (supertype.isDartAsyncFuture) return true;
-  }
-
-  return false;
 }

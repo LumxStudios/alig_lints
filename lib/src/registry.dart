@@ -46,6 +46,7 @@ import 'rules/common/avoid_redundant_positional_field_name.dart';
 import 'rules/common/avoid_redundant_pragma_inline.dart';
 import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
+import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
 import 'rules/common/avoid_unconditional_break.dart';
 import 'rules/common/avoid_unnecessary_call.dart';
@@ -138,6 +139,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidRedundantPragmaInline.new,
   AvoidSelfAssignment.new,
   AvoidSelfCompare.new,
+  AvoidStreamTostring.new,
   AvoidThrowInCatchBlock.new,
   AvoidUnconditionalBreak.new,
   AvoidUnnecessaryCall.new,
