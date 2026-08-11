@@ -77,5 +77,8 @@ custom_lint:
     - no-equal-switch-expression-cases
     - no-equal-then-else
     - prefer-correct-for-loop-increment
+    - prefer-correct-json-casts
+    - prefer-explicit-function-type
     - prefer-iterable-of
     - prefer-parentheses-with-if-null
+    - prefer-specifying-future-value-type

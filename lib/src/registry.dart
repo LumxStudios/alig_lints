@@ -87,6 +87,8 @@ import 'rules/common/no_equal_switch_expression_cases.dart';
 import 'rules/common/no_equal_then_else.dart';
 import 'rules/common/prefer_any_or_every.dart';
 import 'rules/common/prefer_correct_for_loop_increment.dart';
+import 'rules/common/prefer_correct_json_casts.dart';
+import 'rules/common/prefer_explicit_function_type.dart';
 import 'rules/common/prefer_iterable_of.dart';
 import 'rules/common/prefer_null_aware_elements.dart';
 import 'rules/common/prefer_null_aware_spread.dart';
@@ -96,6 +98,7 @@ import 'rules/common/prefer_shorthands_with_enums.dart';
 import 'rules/common/prefer_shorthands_with_static_fields.dart';
 import 'rules/common/prefer_simpler_boolean_expressions.dart';
 import 'rules/common/prefer_simpler_patterns_null_check.dart';
+import 'rules/common/prefer_specifying_future_value_type.dart';
 import 'rules/common/prefer_switch_with_enums.dart';
 import 'rules/common/prefer_wildcard_pattern.dart';
 
@@ -187,6 +190,8 @@ const List<AligRuleFactory> aligRuleFactories = [
   NoEqualThenElse.new,
   PreferAnyOrEvery.new,
   PreferCorrectForLoopIncrement.new,
+  PreferCorrectJsonCasts.new,
+  PreferExplicitFunctionType.new,
   PreferIterableOf.new,
   PreferNullAwareElements.new,
   PreferNullAwareSpread.new,
@@ -196,6 +201,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferShorthandsWithStaticFields.new,
   PreferSimplerBooleanExpressions.new,
   PreferSimplerPatternsNullCheck.new,
+  PreferSpecifyingFutureValueType.new,
   PreferSwitchWithEnums.new,
   PreferWildcardPattern.new,
 ];

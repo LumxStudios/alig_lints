@@ -48,7 +48,7 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**97 / 181 rules implemented** — 5 awaiting clarification, 5 covered by the analyzer itself
+**100 / 181 rules implemented** — 5 awaiting clarification, 5 covered by the analyzer itself
 
 | Phase | Done |
 |---|---|
@@ -56,7 +56,7 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 | 2 | 17 / 18 |
 | 3 | 31 / 32 |
 | 4 | 16 / 16 |
-| 5 | 18 / 22 |
+| 5 | 21 / 22 |
 | 6 | 0 / 8 |
 | 7 | 1 / 22 |
 | 8 | 0 / 7 |
