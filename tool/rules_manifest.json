@@ -117,9 +117,9 @@
       "configurable": false,
       "severity": "warning",
       "phase": 4,
-      "status": "todo",
+      "status": "covered",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Dart's type system rejects the methods typed E, and the built-in collection_methods_unrelated_type lint — enabled in dart_lints.yaml — reports the ones typed Object?. Only containsAll is left uncovered."
     },
     {
       "name": "avoid-commented-out-code",
