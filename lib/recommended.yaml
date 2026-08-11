@@ -46,6 +46,7 @@ custom_lint:
     - avoid-wildcard-cases-with-sealed-classes
     - function-always-returns-null
     - function-always-returns-same-value
+    - no-empty-block
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case
