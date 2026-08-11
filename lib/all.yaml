@@ -47,6 +47,7 @@ custom_lint:
     - avoid-nullable-tostring
     - avoid-only-rethrow
     - avoid-passing-self-as-argument
+    - avoid-recursive-tostring
     - avoid-redundant-else
     - avoid-redundant-positional-field-name
     - avoid-redundant-pragma-inline

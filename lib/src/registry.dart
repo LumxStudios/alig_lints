@@ -40,6 +40,7 @@ import 'rules/common/avoid_nullable_interpolation.dart';
 import 'rules/common/avoid_nullable_tostring.dart';
 import 'rules/common/avoid_only_rethrow.dart';
 import 'rules/common/avoid_passing_self_as_argument.dart';
+import 'rules/common/avoid_recursive_tostring.dart';
 import 'rules/common/avoid_redundant_else.dart';
 import 'rules/common/avoid_redundant_positional_field_name.dart';
 import 'rules/common/avoid_redundant_pragma_inline.dart';
@@ -131,6 +132,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidNullableTostring.new,
   AvoidOnlyRethrow.new,
   AvoidPassingSelfAsArgument.new,
+  AvoidRecursiveTostring.new,
   AvoidRedundantElse.new,
   AvoidRedundantPositionalFieldName.new,
   AvoidRedundantPragmaInline.new,
