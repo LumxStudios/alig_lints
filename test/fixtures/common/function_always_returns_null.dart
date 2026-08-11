@@ -6,6 +6,8 @@ String? expressionBody() => null;
 
 String? everyBranch(bool flag) {
   if (flag) {
+    print('flagged');
+
     return null;
   }
 

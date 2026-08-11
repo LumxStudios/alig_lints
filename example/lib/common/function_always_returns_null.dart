@@ -9,6 +9,8 @@ String? expressionBody() => null;
 // expect_lint: function-always-returns-null
 String? everyBranch(bool flag) {
   if (flag) {
+    print('flagged');
+
     return null;
   }
 

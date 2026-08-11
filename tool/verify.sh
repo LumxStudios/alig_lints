@@ -47,4 +47,9 @@ for pair in "analyze:$analyze" "test:$test_pid" "example:$example" \
   fi
 done
 
+# A single unambiguous verdict on the last line. Piping this script through
+# `tail` hides its exit code from a following `&&`, so the verdict has to be
+# visible in the output itself.
+printf '%s\n' "$([ $status -eq 0 ] && echo 'GATE: PASS' || echo 'GATE: FAIL')"
+
 exit $status

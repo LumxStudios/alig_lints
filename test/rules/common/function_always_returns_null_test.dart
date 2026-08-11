@@ -10,7 +10,7 @@ void main() {
     await expectRuleReports(
       FunctionAlwaysReturnsNull(CustomLintConfigs.empty),
       'test/fixtures/common/function_always_returns_null.dart',
-      onLines: [1, 5, 7, 15, 20],
+      onLines: [1, 5, 7, 17, 22],
     );
   });
 }

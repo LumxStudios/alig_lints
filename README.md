@@ -77,7 +77,9 @@ inferred from the available specification are listed in
   presets and the table above. `tool/verify.sh` runs it first, so marking a rule
   done in the manifest is enough.
 - `./tool/verify.sh` is the full gate: analyze, tests and both golden suites,
-  run in parallel. Prints the log only for the parts that failed.
+  run in parallel. Prints the log only for the parts that failed, and ends with
+  `GATE: PASS` or `GATE: FAIL`. Do not chain a commit after a piped run of it —
+  the pipe hides the exit code, so read the verdict line instead.
 - Individually: `dart analyze`, `dart test`,
   `(cd example && dart run custom_lint)` for the `common` rule goldens, and
   `(cd example_flutter && dart run custom_lint)` for the Flutter ones.
