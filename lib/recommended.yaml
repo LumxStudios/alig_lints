@@ -11,6 +11,7 @@ custom_lint:
     - avoid-accessing-collections-by-constant-index
     - avoid-assignments-as-conditions
     - avoid-cascade-after-if-null
+    - avoid-collection-equality-checks
     - avoid-conditions-with-boolean-literals
     - avoid-constant-assert-conditions
     - avoid-constant-conditions
