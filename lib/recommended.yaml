@@ -40,6 +40,7 @@ custom_lint:
     - avoid-self-compare
     - avoid-throw-in-catch-block
     - avoid-unconditional-break
+    - avoid-unnecessary-collections
     - avoid-unnecessary-if
     - avoid-unnecessary-late-fields
     - avoid-unnecessary-local-variable

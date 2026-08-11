@@ -46,6 +46,7 @@ custom_lint:
     - avoid-throw-in-catch-block
     - avoid-unconditional-break
     - avoid-unnecessary-call
+    - avoid-unnecessary-collections
     - avoid-unnecessary-compare-to
     - avoid-unnecessary-conditionals
     - avoid-unnecessary-continue
