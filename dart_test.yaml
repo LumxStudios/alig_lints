@@ -1,0 +1,5 @@
+# Every rule test resolves a fixture through the analyzer, which costs seconds
+# rather than milliseconds. Under the parallelism the runner picks by default,
+# that pushed individual tests past the 30-second default and made the suite
+# fail on load rather than on defects, so the budget is raised here.
+timeout: 3m

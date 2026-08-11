@@ -18,6 +18,7 @@ custom_lint:
     - avoid-constant-assert-conditions
     - avoid-constant-conditions
     - avoid-constant-switches
+    - avoid-default-tostring
     - avoid-duplicate-cascades
     - avoid-duplicate-constant-values
     - avoid-duplicate-exports
