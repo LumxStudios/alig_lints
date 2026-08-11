@@ -26,6 +26,7 @@ import 'rules/common/avoid_nested_shorthands.dart';
 import 'rules/common/avoid_only_rethrow.dart';
 import 'rules/common/avoid_passing_self_as_argument.dart';
 import 'rules/common/avoid_redundant_else.dart';
+import 'rules/common/avoid_redundant_positional_field_name.dart';
 import 'rules/common/avoid_redundant_pragma_inline.dart';
 import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
@@ -78,6 +79,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidOnlyRethrow.new,
   AvoidPassingSelfAsArgument.new,
   AvoidRedundantElse.new,
+  AvoidRedundantPositionalFieldName.new,
   AvoidRedundantPragmaInline.new,
   AvoidSelfAssignment.new,
   AvoidSelfCompare.new,

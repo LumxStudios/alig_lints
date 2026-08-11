@@ -29,6 +29,7 @@ custom_lint:
     - avoid-multi-assignment
     - avoid-only-rethrow
     - avoid-passing-self-as-argument
+    - avoid-redundant-positional-field-name
     - avoid-redundant-pragma-inline
     - avoid-self-assignment
     - avoid-self-compare
