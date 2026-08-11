@@ -22,10 +22,9 @@ const _meta = AligRuleMeta(
 /// that starts at the `throw`, hiding where the failure actually came from.
 /// `rethrow` keeps the original.
 ///
-/// Throwing a *different* exception is left alone. `throw WrappedError(e)` is a
-/// deliberate choice to present a different failure to the caller, and DCM's
-/// broader wording — "a throw expression inside a catch block" — would flag that
-/// too. See `doc/LIMITATIONS.md`.
+/// Throwing a *different* exception is left alone: `throw WrappedError(e)` is a
+/// deliberate choice to present a different failure to the caller. See
+/// `doc/LIMITATIONS.md`.
 class AvoidThrowInCatchBlock extends AligRule {
   /// Warns when a catch block rethrows by throwing.
   AvoidThrowInCatchBlock(CustomLintConfigs configs)

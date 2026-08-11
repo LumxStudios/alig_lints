@@ -1,5 +1,5 @@
 {
-  "source": "Rules _ DCM - Code Quality Tool for Flutter Developers.html (dcm.dev/docs/rules/?presets=recommended, captured 2026-08-11)",
+  "source": "Rule catalogue captured locally on 2026-08-11. The captured page is not part of this repository; this file is the source of truth.",
   "totalRules": 181,
   "rules": [
     {
@@ -10,7 +10,6 @@
         "correctness",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-accessing-collections-by-constant-index/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -28,7 +27,6 @@
         "maintainability",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-always-null-parameters/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -47,7 +45,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-assignments-as-conditions/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -64,7 +61,6 @@
         "correctness",
         "control-flow"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-cascade-after-if-null/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -82,7 +78,6 @@
         "cwe",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-casting-to-extension-type/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -100,7 +95,6 @@
         "cwe",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-collection-equality-checks/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -119,7 +113,6 @@
         "types",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-collection-methods-with-unrelated-types/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -136,7 +129,6 @@
         "maintainability",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-commented-out-code/",
       "hasFix": true,
       "configurable": true,
       "severity": "warning",
@@ -155,7 +147,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-conditions-with-boolean-literals/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -172,7 +163,6 @@
         "correctness",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-constant-assert-conditions/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -190,7 +180,6 @@
         "conditions",
         "unused-code"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-constant-conditions/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -208,7 +197,6 @@
         "conditions",
         "unused-code"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-constant-switches/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -226,7 +214,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-contradictory-expressions/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -243,7 +230,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-default-tostring/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -260,7 +246,6 @@
         "correctness",
         "imports"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-double-slash-imports/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -277,7 +262,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-cascades/",
       "hasFix": true,
       "configurable": true,
       "severity": "warning",
@@ -294,7 +278,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-constant-values/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -312,7 +295,6 @@
         "cwe",
         "imports"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-exports/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -330,7 +312,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-initializers/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -348,7 +329,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-map-keys/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -365,7 +345,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-mixins/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -384,7 +363,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-patterns/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -402,7 +380,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-switch-case-conditions/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -420,7 +397,6 @@
         "cwe",
         "testing"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-test-assertions/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -438,7 +414,6 @@
         "correctness",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-dynamic/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -456,7 +431,6 @@
         "cwe",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-empty-spread/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -474,7 +448,6 @@
         "cwe",
         "testing"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-empty-test-groups/",
       "hasFix": true,
       "configurable": true,
       "severity": "warning",
@@ -491,7 +464,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-enum-values-by-index/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -510,7 +482,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-equal-expressions/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -529,7 +500,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-excessive-expressions/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -546,7 +516,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-explicit-pattern-field-name/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -564,7 +533,6 @@
         "cwe",
         "async"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-future-tostring/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -581,7 +549,6 @@
         "correctness",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-generics-shadowing/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -599,7 +566,6 @@
         "maintainability",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-implicitly-nullable-extension-types/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -616,7 +582,6 @@
         "readability",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-inconsistent-digit-separators/",
       "hasFix": false,
       "configurable": false,
       "severity": "info",
@@ -634,7 +599,6 @@
         "consistency",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-inferrable-type-arguments/",
       "hasFix": true,
       "configurable": true,
       "severity": "info",
@@ -650,7 +614,6 @@
       "tags": [
         "readability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-keywords-in-wildcard-pattern/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -667,7 +630,6 @@
         "correctness",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-late-final-reassignment/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -684,7 +646,6 @@
         "performance",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-map-keys-contains/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -700,7 +661,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-missed-calls/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -717,7 +677,6 @@
         "correctness",
         "error-handing"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-missing-completer-stack-trace/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -734,7 +693,6 @@
         "correctness",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-missing-enum-constant-in-map/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -750,7 +708,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-misused-set-literals/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -767,7 +724,6 @@
         "correctness",
         "testing"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-misused-test-matchers/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -786,7 +742,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-multi-assignment/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -803,7 +758,6 @@
         "correctness",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-nested-futures/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -820,7 +774,6 @@
         "readability",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-nested-records/",
       "hasFix": false,
       "configurable": true,
       "severity": "info",
@@ -837,7 +790,6 @@
         "maintainability",
         "readability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-nested-shorthands/",
       "hasFix": false,
       "configurable": false,
       "severity": "info",
@@ -854,7 +806,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-never-passed-parameters/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -871,7 +822,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-not-encodable-in-to-json/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -887,7 +837,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-nullable-interpolation/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -905,7 +854,6 @@
         "cwe",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-nullable-tostring/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -923,7 +871,6 @@
         "cwe",
         "error-handing"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-only-rethrow/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -942,7 +889,6 @@
         "cwe",
         "async"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-passing-async-when-sync-expected/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -960,7 +906,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-passing-self-as-argument/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -976,7 +921,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-recursive-tostring/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -994,7 +938,6 @@
         "correctness",
         "async"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-redundant-async/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1011,7 +954,6 @@
         "control-flow",
         "readability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-redundant-else/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1027,7 +969,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-redundant-positional-field-name/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1043,7 +984,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-redundant-pragma-inline/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1060,7 +1000,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-referencing-discarded-variables/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1077,7 +1016,6 @@
         "correctness",
         "naming"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-renaming-representation-getters/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1094,7 +1032,6 @@
         "correctness",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-self-assignment/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1112,7 +1049,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-self-compare/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1128,7 +1064,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-shadowed-extension-methods/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1144,7 +1079,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-shadowing/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -1161,7 +1095,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-stream-tostring/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1178,7 +1111,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-suspicious-global-reference/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1194,7 +1126,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-suspicious-super-overrides/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1211,7 +1142,6 @@
         "correctness",
         "error-handing"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-throw-in-catch-block/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1229,7 +1159,6 @@
         "cwe",
         "error-handing"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-throw-objects-without-tostring/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1247,7 +1176,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unassigned-fields/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1265,7 +1193,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unassigned-late-fields/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1283,7 +1210,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unassigned-stream-subscriptions/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1301,7 +1227,6 @@
         "error-handing",
         "async"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-uncaught-future-errors/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1319,7 +1244,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unconditional-break/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1335,7 +1259,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unknown-pragma/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1351,7 +1274,6 @@
       "tags": [
         "readability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-call/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1368,7 +1290,6 @@
         "correctness",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-collections/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1386,7 +1307,6 @@
         "consistency",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-compare-to/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1405,7 +1325,6 @@
         "readability",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-conditionals/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1422,7 +1341,6 @@
         "control-flow",
         "readability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-continue/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1439,7 +1357,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-enum-arguments/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1456,7 +1373,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-extends/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1473,7 +1389,6 @@
         "maintainability",
         "async"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-futures/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1490,7 +1405,6 @@
         "control-flow",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-if/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1508,7 +1422,6 @@
         "assignments",
         "unused-code"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-late-fields/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1525,7 +1438,6 @@
         "correctness",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-length-check/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1543,7 +1455,6 @@
         "nullability",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-local-late/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1561,7 +1472,6 @@
         "maintainability",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-local-variable/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1579,7 +1489,6 @@
         "maintainability",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-negations/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1597,7 +1506,6 @@
         "collections",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-null-aware-elements/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1615,7 +1523,6 @@
         "maintainability",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-nullable-parameters/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1633,7 +1540,6 @@
         "maintainability",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-nullable-return-type/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1650,7 +1556,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-overrides/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1668,7 +1573,6 @@
         "unused-code",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-patterns/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -1687,7 +1591,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-reassignment/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1704,7 +1607,6 @@
         "control-flow",
         "readability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-return/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1722,7 +1624,6 @@
         "control-flow",
         "unused-code"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-statements/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1739,7 +1640,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-super/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -1758,7 +1658,6 @@
         "cwe",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-type-assertions/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1777,7 +1676,6 @@
         "cwe",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-type-casts/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1795,12 +1693,11 @@
         "collections",
         "unused-code"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unreachable-for-loop/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
       "phase": 3,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
@@ -1813,7 +1710,6 @@
         "cwe",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unrelated-type-assertions/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -1831,7 +1727,6 @@
         "cwe",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unrelated-type-casts/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -1848,7 +1743,6 @@
         "correctness",
         "memory-leak"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unremovable-callbacks-in-listeners/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -1867,7 +1761,6 @@
         "cwe",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unsafe-collection-methods/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1886,7 +1779,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unused-assignment/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -1904,7 +1796,6 @@
         "unused-code",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unused-generics/",
       "hasFix": true,
       "configurable": true,
       "severity": "warning",
@@ -1920,7 +1811,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unused-instances/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -1938,7 +1828,6 @@
         "assignments",
         "unused-code"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unused-local-variable/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1956,7 +1845,6 @@
         "unused-code",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-unused-parameters/",
       "hasFix": true,
       "configurable": true,
       "severity": "warning",
@@ -1973,7 +1861,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-wildcard-cases-with-enums/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -1990,7 +1877,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/avoid-wildcard-cases-with-sealed-classes/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2007,7 +1893,6 @@
         "memory-leak",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/dispose-class-fields/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -2025,7 +1910,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/function-always-returns-null/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -2043,7 +1927,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/function-always-returns-same-value/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2060,7 +1943,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/match-base-class-default-value/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2079,7 +1961,6 @@
         "maintainability",
         "naming"
       ],
-      "url": "https://dcm.dev/docs/rules/common/match-getter-setter-field-names/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2097,7 +1978,6 @@
         "readability",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/move-variable-closer-to-its-usage/",
       "hasFix": false,
       "configurable": true,
       "severity": "info",
@@ -2114,7 +1994,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/no-empty-block/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2133,7 +2012,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/no-equal-conditions/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2151,7 +2029,6 @@
         "cwe",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/no-equal-nested-conditions/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2170,7 +2047,6 @@
         "maintainability",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/no-equal-switch-case/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2189,7 +2065,6 @@
         "maintainability",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/no-equal-switch-expression-cases/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2207,7 +2082,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/no-equal-then-else/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2224,7 +2098,6 @@
         "readability",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-any-or-every/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2241,7 +2114,6 @@
         "readability",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-contains/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2259,7 +2131,6 @@
         "consistency",
         "naming"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-correct-callback-field-name/",
       "hasFix": false,
       "configurable": true,
       "severity": "info",
@@ -2277,7 +2148,6 @@
         "cwe",
         "assignments"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-correct-for-loop-increment/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2296,7 +2166,6 @@
         "cwe",
         "types"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-correct-json-casts/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2314,7 +2183,6 @@
         "testing",
         "naming"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-correct-test-file-name/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2331,7 +2199,6 @@
         "performance",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-declaring-const-constructor/",
       "hasFix": true,
       "configurable": true,
       "severity": "info",
@@ -2349,7 +2216,6 @@
         "consistency",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-explicit-function-type/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2367,7 +2233,6 @@
         "cwe",
         "collections"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-iterable-of/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2386,7 +2251,6 @@
         "maintainability",
         "naming"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-match-file-name/",
       "hasFix": true,
       "configurable": true,
       "severity": "info",
@@ -2404,7 +2268,6 @@
         "collections",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-null-aware-elements/",
       "hasFix": false,
       "configurable": true,
       "severity": "info",
@@ -2422,7 +2285,6 @@
         "collections",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-null-aware-spread/",
       "hasFix": false,
       "configurable": false,
       "severity": "info",
@@ -2438,7 +2300,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-overriding-parent-equality/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2455,7 +2316,6 @@
         "control-flow",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-parentheses-with-if-null/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2473,7 +2333,6 @@
         "consistency",
         "naming"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-prefixed-global-constants/",
       "hasFix": false,
       "configurable": true,
       "severity": "info",
@@ -2490,7 +2349,6 @@
         "maintainability",
         "encapsulation"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-private-extension-type-field/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2508,7 +2366,6 @@
         "correctness",
         "error-handing"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-public-exception-classes/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2526,7 +2383,6 @@
         "cwe",
         "async"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-return-await/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2543,7 +2399,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-returning-shorthands/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2560,7 +2415,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-shorthands-with-constructors/",
       "hasFix": true,
       "configurable": true,
       "severity": "info",
@@ -2577,7 +2431,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-shorthands-with-enums/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2594,7 +2447,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-shorthands-with-static-fields/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2612,7 +2464,6 @@
         "maintainability",
         "conditions"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-simpler-boolean-expressions/",
       "hasFix": false,
       "configurable": false,
       "severity": "info",
@@ -2630,7 +2481,6 @@
         "maintainability",
         "nullability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-simpler-patterns-null-check/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2648,7 +2498,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-specific-cases-first/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2666,7 +2515,6 @@
         "async",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-specifying-future-value-type/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2684,7 +2532,6 @@
         "readability",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-switch-with-enums/",
       "hasFix": false,
       "configurable": true,
       "severity": "info",
@@ -2702,7 +2549,6 @@
         "testing",
         "naming"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-unique-test-names/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -2719,7 +2565,6 @@
         "readability",
         "consistency"
       ],
-      "url": "https://dcm.dev/docs/rules/common/prefer-wildcard-pattern/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2736,7 +2581,6 @@
         "memory-leak",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/always-remove-listener/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2753,7 +2597,6 @@
         "correctness",
         "cwe"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-empty-setstate/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2769,7 +2612,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-flexible-outside-flex/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2786,7 +2628,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-incomplete-copy-with/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2802,7 +2643,6 @@
       "tags": [
         "performance"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-incorrect-image-opacity/",
       "hasFix": true,
       "configurable": false,
       "severity": "info",
@@ -2818,7 +2658,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-missing-controller/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2835,7 +2674,6 @@
         "correctness",
         "accessibility"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-missing-image-alt/",
       "hasFix": true,
       "configurable": true,
       "severity": "warning",
@@ -2852,7 +2690,6 @@
         "control-flow",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-mounted-in-setstate/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2868,7 +2705,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-recursive-widget-calls/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2884,7 +2720,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-state-constructors/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2901,7 +2736,6 @@
         "memory-leak",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-undisposed-instances/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -2919,7 +2753,6 @@
         "maintainability",
         "unused-code"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-unnecessary-gesture-detector/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2936,7 +2769,6 @@
         "correctness",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-unnecessary-overrides-in-state/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -2953,7 +2785,6 @@
         "correctness",
         "performance"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-unnecessary-setstate/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -2970,7 +2801,6 @@
         "readability",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/avoid-unnecessary-stateful-widgets/",
       "hasFix": false,
       "configurable": false,
       "severity": "info",
@@ -2986,7 +2816,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/check-for-equals-in-render-object-setters/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -3002,7 +2831,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/consistent-update-render-object/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -3019,7 +2847,6 @@
         "memory-leak",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/dispose-fields/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",
@@ -3037,7 +2864,6 @@
         "correctness",
         "async"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/pass-existing-future-to-future-builder/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -3055,7 +2881,6 @@
         "correctness",
         "async"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/pass-existing-stream-to-stream-builder/",
       "hasFix": false,
       "configurable": false,
       "severity": "warning",
@@ -3072,7 +2897,6 @@
         "performance",
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/prefer-dedicated-media-query-methods/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -3089,7 +2913,6 @@
         "readability",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/prefer-single-widget-per-file/",
       "hasFix": false,
       "configurable": true,
       "severity": "info",
@@ -3106,7 +2929,6 @@
         "readability",
         "maintainability"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/prefer-spacing/",
       "hasFix": false,
       "configurable": false,
       "severity": "info",
@@ -3122,7 +2944,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/proper-super-calls/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -3138,7 +2959,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/use-closest-build-context/",
       "hasFix": true,
       "configurable": false,
       "severity": "warning",
@@ -3154,7 +2974,6 @@
       "tags": [
         "correctness"
       ],
-      "url": "https://dcm.dev/docs/rules/flutter/use-setstate-synchronously/",
       "hasFix": false,
       "configurable": true,
       "severity": "warning",

@@ -41,6 +41,7 @@ custom_lint:
     - avoid-unnecessary-overrides
     - avoid-unnecessary-reassignment
     - avoid-unnecessary-statements
+    - avoid-unreachable-for-loop
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case

@@ -1,8 +1,7 @@
 # alig_lints
 
-Custom analysis rules for Dart and Flutter, reimplementing the DCM
-"recommended" rule set on top of [`custom_lint`], plus a bundled selection of
-built-in Dart lints.
+Custom analysis rules for Dart and Flutter, built on [`custom_lint`], plus a
+bundled selection of built-in Dart lints.
 
 [`custom_lint`]: https://pub.dev/packages/custom_lint
 
@@ -49,13 +48,13 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**52 / 181 rules implemented** — 3 awaiting clarification
+**53 / 181 rules implemented** — 3 awaiting clarification
 
 | Phase | Done |
 |---|---|
 | 1 | 19 / 21 |
 | 2 | 17 / 18 |
-| 3 | 15 / 32 |
+| 3 | 16 / 32 |
 | 4 | 0 / 16 |
 | 5 | 0 / 22 |
 | 6 | 0 / 8 |

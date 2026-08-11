@@ -11,7 +11,6 @@ class RuleEntry {
         category = json['category']! as String,
         description = json['description']! as String,
         tags = (json['tags']! as List).cast<String>(),
-        url = json['url']! as String,
         hasFix = json['hasFix']! as bool,
         configurable = json['configurable']! as bool,
         severity = json['severity']! as String,
@@ -26,19 +25,16 @@ class RuleEntry {
   /// Either `common` or `flutter`.
   final String category;
 
-  /// DCM's one-line description — the only available specification.
+  /// One-line description of the rule — the available specification.
   final String description;
 
-  /// Classification tags carried over from DCM.
+  /// Classification tags, e.g. `correctness`.
   final List<String> tags;
 
-  /// DCM documentation page for this rule.
-  final String url;
-
-  /// Whether DCM offers an auto-fix, and therefore whether this port must.
+  /// Whether the rule is expected to offer an auto-fix.
   final bool hasFix;
 
-  /// Whether DCM exposes options for this rule.
+  /// Whether the rule takes options.
   final bool configurable;
 
   /// Either `warning` or `info`.
@@ -85,7 +81,6 @@ class RuleEntry {
         'category': category,
         'description': description,
         'tags': tags,
-        'url': url,
         'hasFix': hasFix,
         'configurable': configurable,
         'severity': severity,

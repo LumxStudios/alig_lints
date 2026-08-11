@@ -55,6 +55,7 @@ custom_lint:
     - avoid-unnecessary-return
     - avoid-unnecessary-statements
     - avoid-unnecessary-super
+    - avoid-unreachable-for-loop
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case

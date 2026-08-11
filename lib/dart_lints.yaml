@@ -1,6 +1,6 @@
 # Built-in Dart analyzer lints bundled with alig_lints.
-# This is the very_good_analysis-equivalent half of the package; the custom
-# rules are configured by all.yaml / recommended.yaml / flutter.yaml.
+# This is the ready-made-lints half of the package; the custom rules are
+# configured by all.yaml / recommended.yaml / flutter.yaml.
 
 analyzer:
   language:

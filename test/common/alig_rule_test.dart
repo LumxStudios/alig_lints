@@ -12,14 +12,10 @@ const _meta = AligRuleMeta(
 );
 
 void main() {
-  test('builds a LintCode carrying the DCM doc url and default severity', () {
+  test('builds a LintCode with the rule name and default severity', () {
     final code = _meta.toCode(CustomLintConfigs.empty);
 
     expect(code.name, 'avoid-self-assignment');
-    expect(
-      code.url,
-      'https://dcm.dev/docs/rules/common/avoid-self-assignment/',
-    );
     expect(code.errorSeverity, DiagnosticSeverity.WARNING);
   });
 

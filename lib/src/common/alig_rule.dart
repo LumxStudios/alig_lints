@@ -32,21 +32,17 @@ class AligRuleMeta {
   /// One-sentence explanation of how to fix the reported code.
   final String? correctionMessage;
 
-  /// Classification tags carried over from DCM, e.g. `correctness`.
+  /// Classification tags, e.g. `correctness`.
   final List<String> tags;
 
   /// Severity used unless overridden in `analysis_options.yaml`.
   final DiagnosticSeverity severity;
-
-  /// Documentation page describing the equivalent DCM rule.
-  String get url => 'https://dcm.dev/docs/rules/$category/$name/';
 
   /// Builds the [LintCode] for this rule, applying any `severity:` override.
   LintCode toCode(CustomLintConfigs configs) => LintCode(
         name: name,
         problemMessage: problemMessage,
         correctionMessage: correctionMessage,
-        url: url,
         errorSeverity: _severityOverride(configs) ?? severity,
       );
 

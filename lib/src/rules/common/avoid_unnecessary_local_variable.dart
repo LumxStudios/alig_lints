@@ -25,10 +25,9 @@ const _meta = AligRuleMeta(
 /// ```
 /// `temp` is a pointless intermediate: `result` could take the value directly.
 ///
-/// DCM's description also covers locals that are never referenced. That half is
-/// left to `avoid-unused-local-variable`, and Dart's own `unused_local_variable`
-/// already reports it, so covering it here would put three lints on one
-/// declaration.
+/// Locals that are never referenced are left to `avoid-unused-local-variable`,
+/// and Dart's own `unused_local_variable` already reports them, so covering that
+/// here would put three lints on one declaration.
 ///
 /// Only a reference that forms the *whole* initializer counts. In
 /// `final scaled = base * 2` the variable is part of a larger expression and is
