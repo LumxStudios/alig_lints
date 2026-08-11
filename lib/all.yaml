@@ -24,6 +24,7 @@ custom_lint:
     - avoid-duplicate-switch-case-conditions
     - avoid-duplicate-test-assertions
     - avoid-empty-setstate
+    - avoid-empty-spread
     - avoid-equal-expressions
     - avoid-passing-self-as-argument
     - avoid-redundant-else

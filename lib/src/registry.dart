@@ -17,6 +17,7 @@ import 'rules/common/avoid_duplicate_patterns.dart';
 import 'rules/common/avoid_duplicate_switch_case_conditions.dart';
 import 'rules/common/avoid_duplicate_test_assertions.dart';
 import 'rules/flutter/avoid_empty_setstate.dart';
+import 'rules/common/avoid_empty_spread.dart';
 import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_passing_self_as_argument.dart';
 import 'rules/common/avoid_redundant_else.dart';
@@ -63,6 +64,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidDuplicateSwitchCaseConditions.new,
   AvoidDuplicateTestAssertions.new,
   AvoidEmptySetstate.new,
+  AvoidEmptySpread.new,
   AvoidEqualExpressions.new,
   AvoidPassingSelfAsArgument.new,
   AvoidRedundantElse.new,
