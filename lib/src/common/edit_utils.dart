@@ -15,12 +15,29 @@ SourceRange lineRangeOf(
   AstNode node,
   CustomLintResolver resolver, {
   bool absorbFollowingBlankLines = false,
+}) =>
+    lineRangeOfSpan(
+      node.offset,
+      node.end,
+      resolver,
+      absorbFollowingBlankLines: absorbFollowingBlankLines,
+    );
+
+/// [lineRangeOf] for a span that no single [AstNode] covers.
+///
+/// A declaration's own range begins after its metadata, so deleting it together
+/// with its annotations means starting from the first annotation's offset.
+SourceRange lineRangeOfSpan(
+  int offset,
+  int endOffset,
+  CustomLintResolver resolver, {
+  bool absorbFollowingBlankLines = false,
 }) {
   final lineInfo = resolver.lineInfo;
   final source = resolver.source.contents.data;
 
-  final startLine = lineInfo.getLocation(node.offset).lineNumber;
-  final endLine = lineInfo.getLocation(node.end).lineNumber;
+  final startLine = lineInfo.getLocation(offset).lineNumber;
+  final endLine = lineInfo.getLocation(endOffset).lineNumber;
 
   final start = lineInfo.getOffsetOfLine(startLine - 1);
   var line = endLine;

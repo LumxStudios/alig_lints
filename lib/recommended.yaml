@@ -26,6 +26,7 @@ custom_lint:
     - avoid-unnecessary-if
     - avoid-unnecessary-late-fields
     - avoid-unnecessary-local-variable
+    - avoid-unnecessary-overrides
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case

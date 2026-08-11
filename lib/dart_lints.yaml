@@ -154,7 +154,11 @@ linter:
     - unnecessary_null_checks
     - unnecessary_null_in_if_null_operators
     - unnecessary_nullable_for_final_variable_declarations
-    - unnecessary_overrides
+    # Covered by alig_lints' own avoid-unnecessary-overrides, which reports the
+    # same forwarding overrides. Enabling both would put two warnings on one
+    # method. Re-enable this and disable the custom rule if you prefer the
+    # built-in.
+    # - unnecessary_overrides
     - unnecessary_parenthesis
     - unnecessary_raw_strings
     - unnecessary_statements
