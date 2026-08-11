@@ -25,6 +25,7 @@ import 'rules/common/avoid_unnecessary_enum_arguments.dart';
 import 'rules/common/avoid_unnecessary_extends.dart';
 import 'rules/common/avoid_unnecessary_if.dart';
 import 'rules/common/avoid_unnecessary_late_fields.dart';
+import 'rules/common/avoid_unnecessary_local_late.dart';
 import 'rules/common/no_equal_conditions.dart';
 import 'rules/common/no_equal_nested_conditions.dart';
 import 'rules/common/no_equal_switch_case.dart';
@@ -57,6 +58,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnnecessaryExtends.new,
   AvoidUnnecessaryIf.new,
   AvoidUnnecessaryLateFields.new,
+  AvoidUnnecessaryLocalLate.new,
   NoEqualConditions.new,
   NoEqualNestedConditions.new,
   NoEqualSwitchCase.new,

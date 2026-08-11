@@ -32,6 +32,7 @@ custom_lint:
     - avoid-unnecessary-extends
     - avoid-unnecessary-if
     - avoid-unnecessary-late-fields
+    - avoid-unnecessary-local-late
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case
