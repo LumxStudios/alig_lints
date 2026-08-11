@@ -1,10 +1,14 @@
 bool check() => true;
 
 int pick(bool flag, int a, int b) {
+  // Both findings are true here and suggest different remedies: collapse the
+  // branches, or drop the else that follows a returning branch.
   // expect_lint: no-equal-then-else
   if (flag) {
     return a;
-  } else {
+  }
+  // expect_lint: avoid-redundant-else
+  else {
     return a;
   }
 }

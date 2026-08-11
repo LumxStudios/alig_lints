@@ -1016,7 +1016,7 @@
       "configurable": false,
       "severity": "info",
       "phase": 2,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },

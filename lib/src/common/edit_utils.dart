@@ -99,5 +99,70 @@ SourceRange rangeWithLeadingSpace(AstNode node, CustomLintResolver resolver) {
   return SourceRange(start, node.end - start);
 }
 
+/// The whitespace at the start of the line [node] begins on.
+String indentationOf(AstNode node, CustomLintResolver resolver) {
+  final source = resolver.source.contents.data;
+
+  var lineStart = node.offset;
+  while (lineStart > 0 && source.codeUnitAt(lineStart - 1) != 0x0a) {
+    lineStart--;
+  }
+
+  final line = source.substring(lineStart, node.offset);
+  final indent = line.length - line.trimLeft().length;
+
+  return line.substring(0, indent);
+}
+
+/// The source of [block]'s statements, re-indented to start at [targetIndent].
+///
+/// Use this when a fix unwraps a block into the position its enclosing statement
+/// occupied — removing an `else`, collapsing an `if`, inlining a body. Emitting
+/// `block.toSource()` instead would leave every line at its old depth and the
+/// braces behind.
+///
+/// Lines after the first are shifted left by however much deeper the block's
+/// contents sit than [targetIndent], so relative indentation inside the block is
+/// preserved. Blank lines are left blank rather than being given trailing spaces.
+String reindentedBody(
+  Block block,
+  String targetIndent,
+  CustomLintResolver resolver,
+) {
+  final statements = block.statements;
+  if (statements.isEmpty) return '';
+
+  final source = resolver.source.contents.data;
+  final body = source.substring(statements.first.offset, statements.last.end);
+
+  final currentIndent = indentationOf(statements.first, resolver).length;
+  final shift = currentIndent - targetIndent.length;
+  if (shift <= 0) return body;
+
+  final lines = body.split('\n');
+
+  // The first line starts at the statement itself, so it carries no indentation
+  // of its own — the caller places it. Every later line already holds its
+  // absolute indentation, so shifting it left by [shift] lands it exactly at
+  // [targetIndent].
+  return [
+    lines.first,
+    for (final line in lines.skip(1))
+      if (line.trim().isEmpty) '' else _shiftLeft(line, shift),
+  ].join('\n');
+}
+
+/// [line] with up to [amount] leading spaces removed.
+String _shiftLeft(String line, int amount) {
+  var removed = 0;
+  var index = 0;
+  while (index < line.length && removed < amount && line[index] == ' ') {
+    index++;
+    removed++;
+  }
+
+  return line.substring(index);
+}
+
 bool _isBlank(String character) =>
     character == ' ' || character == '\t' || character == '\n';
