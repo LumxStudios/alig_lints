@@ -10,6 +10,7 @@ custom_lint:
   rules:
     - avoid-assignments-as-conditions
     - avoid-cascade-after-if-null
+    - avoid-conditions-with-boolean-literals
     - avoid-duplicate-cascades
     - avoid-duplicate-constant-values
     - avoid-duplicate-exports
