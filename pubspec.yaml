@@ -1,0 +1,19 @@
+name: alig_lints
+description: Custom analysis rules for Dart and Flutter, reimplementing the DCM recommended rule set on top of custom_lint.
+version: 0.1.0
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  analyzer: ^8.4.0
+  analyzer_plugin: ^0.13.10
+  custom_lint_builder: ^0.8.1
+  path: ^1.9.0
+
+dev_dependencies:
+  custom_lint: ^0.8.1
+  lints: ^5.0.0
+  test: ^1.25.0
+  yaml: ^3.1.3
