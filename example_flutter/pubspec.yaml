@@ -1,0 +1,15 @@
+name: example_flutter
+description: expect_lint goldens for the Flutter rules.
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  alig_lints:
+    path: ../
+  custom_lint: ^0.8.1

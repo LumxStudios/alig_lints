@@ -1,0 +1,11 @@
+name: example
+description: expect_lint goldens for the common rules.
+publish_to: none
+
+environment:
+  sdk: ^3.8.0
+
+dev_dependencies:
+  alig_lints:
+    path: ../
+  custom_lint: ^0.8.1

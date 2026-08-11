@@ -1,0 +1,11 @@
+# Only the plugin is enabled here. The built-in lint preset is deliberately
+# left out: golden files contain intentionally bad code, and built-in lints
+# firing on it would drown out the signal from the rules under test.
+analyzer:
+  plugins:
+    - custom_lint
+  errors:
+    unused_local_variable: ignore
+    unused_element: ignore
+    unused_field: ignore
+    dead_code: ignore
