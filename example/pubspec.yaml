@@ -9,3 +9,4 @@ dev_dependencies:
   alig_lints:
     path: ../
   custom_lint: ^0.8.1
+  test: ^1.25.0

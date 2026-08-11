@@ -16,5 +16,6 @@ custom_lint:
     - avoid-duplicate-mixins
     - avoid-duplicate-patterns
     - avoid-duplicate-switch-case-conditions
+    - avoid-duplicate-test-assertions
     - avoid-empty-setstate
     - avoid-self-assignment
