@@ -60,4 +60,5 @@ custom_lint:
     - no-equal-switch-expression-cases
     - no-equal-then-else
     - prefer-correct-for-loop-increment
+    - prefer-iterable-of
     - prefer-parentheses-with-if-null

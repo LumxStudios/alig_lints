@@ -69,6 +69,7 @@ import 'rules/common/no_equal_switch_expression_cases.dart';
 import 'rules/common/no_equal_then_else.dart';
 import 'rules/common/prefer_any_or_every.dart';
 import 'rules/common/prefer_correct_for_loop_increment.dart';
+import 'rules/common/prefer_iterable_of.dart';
 import 'rules/common/prefer_parentheses_with_if_null.dart';
 import 'rules/common/prefer_returning_shorthands.dart';
 import 'rules/common/prefer_shorthands_with_enums.dart';
@@ -148,6 +149,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   NoEqualThenElse.new,
   PreferAnyOrEvery.new,
   PreferCorrectForLoopIncrement.new,
+  PreferIterableOf.new,
   PreferParenthesesWithIfNull.new,
   PreferReturningShorthands.new,
   PreferShorthandsWithEnums.new,
