@@ -20,6 +20,7 @@ custom_lint:
     - avoid-empty-setstate
     - avoid-equal-expressions
     - avoid-passing-self-as-argument
+    - avoid-redundant-pragma-inline
     - avoid-self-assignment
     - avoid-self-compare
     - no-equal-conditions

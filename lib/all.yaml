@@ -21,6 +21,7 @@ custom_lint:
     - avoid-equal-expressions
     - avoid-passing-self-as-argument
     - avoid-redundant-else
+    - avoid-redundant-pragma-inline
     - avoid-self-assignment
     - avoid-self-compare
     - avoid-unnecessary-compare-to
