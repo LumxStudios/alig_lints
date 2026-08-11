@@ -48,13 +48,13 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**65 / 181 rules implemented** — 4 awaiting clarification, 1 covered by the analyzer itself
+**66 / 181 rules implemented** — 4 awaiting clarification, 1 covered by the analyzer itself
 
 | Phase | Done |
 |---|---|
 | 1 | 19 / 21 |
 | 2 | 17 / 18 |
-| 3 | 29 / 32 |
+| 3 | 30 / 32 |
 | 4 | 0 / 16 |
 | 5 | 0 / 22 |
 | 6 | 0 / 8 |
