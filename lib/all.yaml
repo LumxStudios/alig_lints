@@ -27,6 +27,7 @@ custom_lint:
     - avoid-unnecessary-call
     - avoid-unnecessary-compare-to
     - avoid-unnecessary-conditionals
+    - avoid-unnecessary-continue
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case
