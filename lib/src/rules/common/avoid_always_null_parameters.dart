@@ -1,6 +1,4 @@
 import 'package:analyzer/dart/ast/ast.dart';
-import 'package:analyzer/dart/ast/visitor.dart';
-import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/nullability_suffix.dart';
 import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/error/error.dart' hide LintCode;
@@ -8,6 +6,7 @@ import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../common/alig_rule.dart';
+import '../../common/private_call_sites.dart';
 
 const _meta = AligRuleMeta(
   name: 'avoid-always-null-parameters',
@@ -35,24 +34,14 @@ const _meta = AligRuleMeta(
 /// reads it is dead weight. An optional parameter nobody ever supplies counts
 /// too, as long as its default is `null`.
 ///
-/// Only private declarations are considered. A public function can be called
-/// from code this analysis never sees, so "every call passes null" would be a
-/// claim about one file rather than about the program.
+/// Only private declarations are considered, and only those whose calls can all
+/// be seen — `lib/src/common/private_call_sites.dart` says which those are and
+/// what it cannot follow. `avoid-unnecessary-nullable-parameters` reads the same
+/// call sites to reach the opposite conclusion.
 ///
-/// Even for a private name that claim needs the whole library in view, and
-/// analysis here runs file by file. Declarations reachable from another part of
-/// a multi-file library are therefore judged on this file's calls alone; the
-/// narrowing is recorded in `doc/LIMITATIONS.md`.
-///
-/// Three shapes are deliberately left alone:
-///
-/// - declarations with no call in the file, where there is nothing to conclude
-///   — an entirely uncalled private function is `avoid-unused-parameters`'
-///   and the analyzer's business, not this rule's;
-/// - declarations that are torn off (`final fn = _format;`), because the calls
-///   then happen through a variable this rule cannot follow;
-/// - parameters whose default is a non-null value, since omitting the argument
-///   supplies that value rather than null.
+/// A value that is null but not written `null` — a `const empty = null`, or a
+/// variable the analyzer could prove null — does not count. Only the literal
+/// does, so what the rule reports is what a reader can see at the call.
 ///
 /// No quick-fix is offered. Deleting the parameter leaves every use of it in
 /// the body undefined, so the repair is to rewrite that body around a known
@@ -68,19 +57,9 @@ class AvoidAlwaysNullParameters extends AligRule {
     CustomLintContext context,
   ) {
     context.registry.addCompilationUnit((unit) {
-      final calls = _CallCollector();
-      unit.accept(calls);
-
-      for (final declaration in _privateDeclarations(unit)) {
-        final element = declaration.element;
-        if (element == null) continue;
-
-        final argumentLists = calls.argumentListsFor(element);
-        if (argumentLists.isEmpty) continue;
-        if (calls.isTornOff(element)) continue;
-
-        for (final parameter in declaration.parameters.parameters) {
-          if (_isAlwaysNull(parameter, argumentLists)) {
+      for (final callable in privateCallablesOf(unit)) {
+        for (final parameter in callable.parameters.parameters) {
+          if (_isAlwaysNull(parameter, callable.calls)) {
             reporter.atNode(parameter, code);
           }
         }
@@ -90,20 +69,17 @@ class AvoidAlwaysNullParameters extends AligRule {
 }
 
 /// Whether [parameter] receives null — explicitly or by default — at every one
-/// of [argumentLists].
-bool _isAlwaysNull(
-  FormalParameter parameter,
-  List<ArgumentList> argumentLists,
-) {
+/// of [calls].
+bool _isAlwaysNull(FormalParameter parameter, List<ArgumentList> calls) {
   final element = parameter.declaredFragment?.element;
   if (element == null) return false;
   if (!_acceptsNull(element.type)) return false;
 
   // Omitting the argument only means "null" when the default says so.
-  final defaultsToNull = _defaultValueOf(parameter) == null;
+  final defaultsToNull = defaultValueOf(parameter) == null;
 
-  for (final argumentList in argumentLists) {
-    final argument = _argumentFor(element, argumentList);
+  for (final call in calls) {
+    final argument = argumentFor(element, call);
     if (argument == null) {
       if (!defaultsToNull) return false;
       continue;
@@ -114,106 +90,6 @@ bool _isAlwaysNull(
   return true;
 }
 
-/// The expression bound to [parameter] in [argumentList], or null when the call
-/// leaves the parameter out.
-Expression? _argumentFor(
-  FormalParameterElement parameter,
-  ArgumentList argumentList,
-) {
-  for (final argument in argumentList.arguments) {
-    if (argument.correspondingParameter != parameter) continue;
-
-    return argument is NamedExpression ? argument.expression : argument;
-  }
-
-  return null;
-}
-
-/// The default of [parameter], or null when it has none.
-Expression? _defaultValueOf(FormalParameter parameter) =>
-    parameter is DefaultFormalParameter ? parameter.defaultValue : null;
-
 /// Whether a null argument would even be legal for [type].
 bool _acceptsNull(DartType type) =>
     type is DynamicType || type.nullabilitySuffix == NullabilitySuffix.question;
-
-/// Every private function and method declared in [unit], paired with its
-/// element and parameter list.
-List<_Declaration> _privateDeclarations(CompilationUnit unit) {
-  final visitor = _DeclarationCollector();
-  unit.accept(visitor);
-
-  return visitor.declarations;
-}
-
-/// A private callable this rule can reason about.
-class _Declaration {
-  _Declaration(this.element, this.parameters);
-
-  final Element? element;
-  final FormalParameterList parameters;
-}
-
-class _DeclarationCollector extends RecursiveAstVisitor<void> {
-  final declarations = <_Declaration>[];
-
-  @override
-  void visitFunctionDeclaration(FunctionDeclaration node) {
-    final parameters = node.functionExpression.parameters;
-    if (parameters != null && _isPrivate(node.name.lexeme)) {
-      declarations.add(
-        _Declaration(node.declaredFragment?.element, parameters),
-      );
-    }
-    super.visitFunctionDeclaration(node);
-  }
-
-  @override
-  void visitMethodDeclaration(MethodDeclaration node) {
-    final parameters = node.parameters;
-    final element = node.declaredFragment?.element;
-    // An overriding method can be entered through a supertype's signature, so
-    // this file's calls are not the full set.
-    final overrides = element?.metadata.hasOverride ?? true;
-    if (parameters != null && _isPrivate(node.name.lexeme) && !overrides) {
-      declarations.add(_Declaration(element, parameters));
-    }
-    super.visitMethodDeclaration(node);
-  }
-}
-
-bool _isPrivate(String name) => name.startsWith('_');
-
-/// Collects, per callable element, the argument lists of its calls and whether
-/// it is ever mentioned outside a call.
-class _CallCollector extends RecursiveAstVisitor<void> {
-  final _calls = <Element, List<ArgumentList>>{};
-  final _tornOff = <Element>{};
-
-  List<ArgumentList> argumentListsFor(Element element) =>
-      _calls[element] ?? const [];
-
-  bool isTornOff(Element element) => _tornOff.contains(element);
-
-  @override
-  void visitMethodInvocation(MethodInvocation node) {
-    final element = node.methodName.element;
-    if (element != null) {
-      _calls.putIfAbsent(element, () => []).add(node.argumentList);
-    }
-    // Visit the arguments, but not the name — it is a call, not a tear-off.
-    node.target?.accept(this);
-    node.argumentList.accept(this);
-  }
-
-  @override
-  void visitSimpleIdentifier(SimpleIdentifier node) {
-    // The declaration's own name is not a use of it.
-    final parent = node.parent;
-    if (parent is FunctionDeclaration && parent.name == node.token) return;
-    if (parent is MethodDeclaration && parent.name == node.token) return;
-
-    final element = node.element;
-    if (element is ExecutableElement) _tornOff.add(element);
-  }
-}

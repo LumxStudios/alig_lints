@@ -1,10 +1,9 @@
-import 'package:analyzer/dart/element/nullability_suffix.dart';
-import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/error/error.dart' hide LintCode;
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../common/alig_rule.dart';
+import '../../common/null_checks.dart';
 
 const _meta = AligRuleMeta(
   name: 'avoid-nullable-interpolation',
@@ -48,20 +47,10 @@ class AvoidNullableInterpolation extends AligRule {
     CustomLintContext context,
   ) {
     context.registry.addInterpolationExpression((node) {
-      if (!_isNullable(node.expression.staticType)) return;
+      if (!isNullableType(node.expression.staticType)) return;
 
       reporter.atNode(node, code);
     });
   }
 }
 
-/// Whether a value of [type] can be null at this point.
-bool _isNullable(DartType? type) {
-  if (type == null) return false;
-  // Every dynamic can be null, which makes saying so here uninformative.
-  if (type is DynamicType || type is InvalidType) return false;
-  if (type is VoidType) return false;
-
-  return type.isDartCoreNull ||
-      type.nullabilitySuffix == NullabilitySuffix.question;
-}
