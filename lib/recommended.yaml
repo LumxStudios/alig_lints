@@ -43,6 +43,7 @@ custom_lint:
     - avoid-unnecessary-statements
     - avoid-unreachable-for-loop
     - avoid-wildcard-cases-with-enums
+    - avoid-wildcard-cases-with-sealed-classes
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case
