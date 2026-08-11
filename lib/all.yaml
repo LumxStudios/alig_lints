@@ -29,6 +29,7 @@ custom_lint:
     - avoid-unnecessary-conditionals
     - avoid-unnecessary-continue
     - avoid-unnecessary-enum-arguments
+    - avoid-unnecessary-extends
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case

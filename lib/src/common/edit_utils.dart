@@ -88,15 +88,27 @@ SourceRange rangeRemovingListItem(AstNode node, CustomLintResolver resolver) {
 ///
 /// Use this to delete an optional clause — a `with`, `implements` or `on` clause
 /// — without leaving a double space behind.
-SourceRange rangeWithLeadingSpace(AstNode node, CustomLintResolver resolver) {
+SourceRange rangeWithLeadingSpace(AstNode node, CustomLintResolver resolver) =>
+    rangeWithLeadingSpaceBetween(node.offset, node.end, resolver);
+
+/// The range from [offset] to [end] extended backwards over any whitespace.
+///
+/// The offset form exists for clauses introduced by a bare token, such as a type
+/// parameter's `extends`, where there is no single [AstNode] spanning the part to
+/// remove.
+SourceRange rangeWithLeadingSpaceBetween(
+  int offset,
+  int end,
+  CustomLintResolver resolver,
+) {
   final source = resolver.source.contents.data;
 
-  var start = node.offset;
+  var start = offset;
   while (start > 0 && _isBlank(source[start - 1])) {
     start--;
   }
 
-  return SourceRange(start, node.end - start);
+  return SourceRange(start, end - start);
 }
 
 /// The whitespace at the start of the line [node] begins on.
