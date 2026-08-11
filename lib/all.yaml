@@ -74,3 +74,4 @@ custom_lint:
     - prefer-simpler-boolean-expressions
     - prefer-simpler-patterns-null-check
     - prefer-switch-with-enums
+    - prefer-wildcard-pattern

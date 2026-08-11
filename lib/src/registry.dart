@@ -67,6 +67,7 @@ import 'rules/common/prefer_shorthands_with_static_fields.dart';
 import 'rules/common/prefer_simpler_boolean_expressions.dart';
 import 'rules/common/prefer_simpler_patterns_null_check.dart';
 import 'rules/common/prefer_switch_with_enums.dart';
+import 'rules/common/prefer_wildcard_pattern.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -136,4 +137,5 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferSimplerBooleanExpressions.new,
   PreferSimplerPatternsNullCheck.new,
   PreferSwitchWithEnums.new,
+  PreferWildcardPattern.new,
 ];
