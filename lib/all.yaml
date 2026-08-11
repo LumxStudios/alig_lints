@@ -74,6 +74,7 @@ custom_lint:
     - no-equal-switch-case
     - no-equal-switch-expression-cases
     - no-equal-then-else
+    - prefer-any-or-every
     - prefer-correct-for-loop-increment
     - prefer-parentheses-with-if-null
     - prefer-returning-shorthands
