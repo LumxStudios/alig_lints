@@ -63,6 +63,7 @@ import 'rules/common/avoid_unnecessary_local_late.dart';
 import 'rules/common/avoid_unnecessary_local_variable.dart';
 import 'rules/common/avoid_unnecessary_negations.dart';
 import 'rules/common/avoid_unnecessary_nullable_parameters.dart';
+import 'rules/common/avoid_unnecessary_nullable_return_type.dart';
 import 'rules/common/avoid_unnecessary_overrides.dart';
 import 'rules/common/avoid_unnecessary_reassignment.dart';
 import 'rules/common/avoid_unnecessary_return.dart';
@@ -158,6 +159,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnnecessaryLocalVariable.new,
   AvoidUnnecessaryNegations.new,
   AvoidUnnecessaryNullableParameters.new,
+  AvoidUnnecessaryNullableReturnType.new,
   AvoidUnnecessaryOverrides.new,
   AvoidUnnecessaryReassignment.new,
   AvoidUnnecessaryReturn.new,

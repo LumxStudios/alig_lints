@@ -1,4 +1,7 @@
-bool? nextFlag() => true;
+final _pending = <bool>[];
+
+// Runs out, so null is a value it really returns.
+bool? nextFlag() => _pending.isEmpty ? null : _pending.removeLast();
 
 void main() {
   var flag = false;

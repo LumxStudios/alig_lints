@@ -56,6 +56,7 @@ custom_lint:
     - avoid-unnecessary-late-fields
     - avoid-unnecessary-local-variable
     - avoid-unnecessary-nullable-parameters
+    - avoid-unnecessary-nullable-return-type
     - avoid-unnecessary-overrides
     - avoid-unnecessary-reassignment
     - avoid-unnecessary-statements

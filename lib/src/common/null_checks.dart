@@ -47,3 +47,21 @@ bool isNullableType(DartType? type) {
   return type.isDartCoreNull ||
       type.nullabilitySuffix == NullabilitySuffix.question;
 }
+
+/// Whether a value of [type] is guaranteed never to be null.
+///
+/// This is *not* the negation of [isNullableType]. The two disagree about
+/// `dynamic`, deliberately: a rule that reports nullable values stays quiet
+/// about it because every dynamic can be null and saying so conveys nothing,
+/// while a rule that concludes a value is never null must not accept `dynamic`
+/// as proof of anything. Use this one whenever the report depends on the absence
+/// of null rather than its presence.
+bool isDefinitelyNonNullable(DartType? type) {
+  if (type == null) return false;
+  if (type is DynamicType || type is InvalidType || type is VoidType) {
+    return false;
+  }
+  if (type.isDartCoreNull) return false;
+
+  return type.nullabilitySuffix == NullabilitySuffix.none;
+}
