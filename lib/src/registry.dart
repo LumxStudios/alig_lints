@@ -14,6 +14,7 @@ import 'rules/flutter/avoid_empty_setstate.dart';
 import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_passing_self_as_argument.dart';
 import 'rules/common/avoid_self_assignment.dart';
+import 'rules/common/avoid_self_compare.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -30,4 +31,5 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidEqualExpressions.new,
   AvoidPassingSelfAsArgument.new,
   AvoidSelfAssignment.new,
+  AvoidSelfCompare.new,
 ];

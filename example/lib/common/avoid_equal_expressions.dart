@@ -28,7 +28,9 @@ void main(List<String> args) {
   // Two separate calls are not the same expression in effect.
   print(roll() - roll());
 
-  // Comparisons belong to avoid-self-compare.
+  // Comparisons belong to avoid-self-compare, which reports them instead of
+  // this rule, so one expression never collects two lints.
+  // expect_lint: avoid-self-compare
   if (count == count) print('compare');
 
   if (flag && count > 0) print('distinct');

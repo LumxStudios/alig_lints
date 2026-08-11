@@ -21,3 +21,4 @@ custom_lint:
     - avoid-equal-expressions
     - avoid-passing-self-as-argument
     - avoid-self-assignment
+    - avoid-self-compare
