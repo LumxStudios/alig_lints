@@ -36,6 +36,7 @@ import 'rules/common/avoid_misused_set_literals.dart';
 import 'rules/common/avoid_multi_assignment.dart';
 import 'rules/common/avoid_nested_shorthands.dart';
 import 'rules/common/avoid_not_encodable_in_to_json.dart';
+import 'rules/common/avoid_nullable_interpolation.dart';
 import 'rules/common/avoid_only_rethrow.dart';
 import 'rules/common/avoid_passing_self_as_argument.dart';
 import 'rules/common/avoid_redundant_else.dart';
@@ -125,6 +126,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidMultiAssignment.new,
   AvoidNestedShorthands.new,
   AvoidNotEncodableInToJson.new,
+  AvoidNullableInterpolation.new,
   AvoidOnlyRethrow.new,
   AvoidPassingSelfAsArgument.new,
   AvoidRedundantElse.new,

@@ -38,6 +38,7 @@ custom_lint:
     - avoid-misused-set-literals
     - avoid-multi-assignment
     - avoid-not-encodable-in-to-json
+    - avoid-nullable-interpolation
     - avoid-only-rethrow
     - avoid-passing-self-as-argument
     - avoid-redundant-positional-field-name
