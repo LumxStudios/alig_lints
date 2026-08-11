@@ -1510,9 +1510,9 @@
       "configurable": false,
       "severity": "info",
       "phase": 4,
-      "status": "todo",
+      "status": "covered",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Dart's invalid_null_aware_operator warning reports every unnecessary ? on a collection element, measured across list elements, set elements and map values."
     },
     {
       "name": "avoid-unnecessary-nullable-parameters",
