@@ -1,3 +1,4 @@
+import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
@@ -40,6 +41,24 @@ bool implementsType(DartType? type, bool Function(InterfaceType) test) {
 
   for (final supertype in type.allSupertypes) {
     if (test(supertype)) return true;
+  }
+
+  return false;
+}
+
+/// Whether [type] declares a `toString` of its own, anywhere in its hierarchy
+/// below `Object`.
+///
+/// `Object`'s default is the one these rules object to, so a type that only
+/// inherits it does not count as describing itself.
+bool declaresToString(DartType? type) => implementsType(
+      type,
+      (it) => !it.isDartCoreObject && _hasToStringMethod(it.element),
+    );
+
+bool _hasToStringMethod(InterfaceElement element) {
+  for (final method in element.methods) {
+    if (method.name == 'toString') return true;
   }
 
   return false;

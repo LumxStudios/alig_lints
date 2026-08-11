@@ -2,6 +2,9 @@ class WrappedError implements Exception {
   WrappedError(this.cause);
 
   final Object cause;
+
+  @override
+  String toString() => 'WrappedError: $cause';
 }
 
 void risky() {}

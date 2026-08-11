@@ -48,6 +48,7 @@ import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
 import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
+import 'rules/common/avoid_throw_objects_without_tostring.dart';
 import 'rules/common/avoid_unconditional_break.dart';
 import 'rules/common/avoid_unnecessary_call.dart';
 import 'rules/common/avoid_unnecessary_collections.dart';
@@ -141,6 +142,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidSelfCompare.new,
   AvoidStreamTostring.new,
   AvoidThrowInCatchBlock.new,
+  AvoidThrowObjectsWithoutTostring.new,
   AvoidUnconditionalBreak.new,
   AvoidUnnecessaryCall.new,
   AvoidUnnecessaryCollections.new,

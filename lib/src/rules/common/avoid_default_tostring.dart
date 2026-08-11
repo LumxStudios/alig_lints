@@ -6,6 +6,7 @@ import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../common/alig_rule.dart';
+import '../../common/stringification.dart';
 
 const _meta = AligRuleMeta(
   name: 'avoid-default-tostring',
@@ -86,20 +87,5 @@ bool _describesItself(InterfaceType type) {
     return true;
   }
 
-  if (_declaresToString(element)) return true;
-  for (final supertype in type.allSupertypes) {
-    if (supertype.isDartCoreObject) continue;
-    if (_declaresToString(supertype.element)) return true;
-  }
-
-  return false;
-}
-
-/// Whether [element] itself declares `toString`.
-bool _declaresToString(InterfaceElement element) {
-  for (final method in element.methods) {
-    if (method.name == 'toString') return true;
-  }
-
-  return false;
+  return declaresToString(type);
 }

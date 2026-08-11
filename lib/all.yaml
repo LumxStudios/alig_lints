@@ -55,6 +55,7 @@ custom_lint:
     - avoid-self-compare
     - avoid-stream-tostring
     - avoid-throw-in-catch-block
+    - avoid-throw-objects-without-tostring
     - avoid-unconditional-break
     - avoid-unnecessary-call
     - avoid-unnecessary-collections
