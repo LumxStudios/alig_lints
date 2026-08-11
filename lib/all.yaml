@@ -24,6 +24,7 @@ custom_lint:
     - avoid-redundant-pragma-inline
     - avoid-self-assignment
     - avoid-self-compare
+    - avoid-unnecessary-call
     - avoid-unnecessary-compare-to
     - no-equal-conditions
     - no-equal-nested-conditions
