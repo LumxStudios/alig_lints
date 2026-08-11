@@ -1,0 +1,41 @@
+enum Color { red, green }
+
+class Size {
+  const Size(this.value);
+
+  static const small = Size(1);
+
+  final int value;
+}
+
+class Style {
+  const Style(this.color, {required this.size});
+
+  static Style of(Color color, {required Size size}) => Style(color, size: size);
+
+  final Color color;
+  final Size size;
+}
+
+class Theme {
+  const Theme(this.style);
+
+  static Theme from(Style style) => Theme(style);
+
+  final Style style;
+}
+
+Theme nested() =>
+    // expect_lint: avoid-nested-shorthands
+    .from(.of(.red, size: .small));
+
+Theme constructorNested() =>
+    // expect_lint: avoid-nested-shorthands
+    .new(.of(.red, size: .small));
+
+// One level of shorthand is the point of the feature.
+Style flat() => .of(Color.red, size: Size.small);
+
+Theme explicitInner() => .from(Style.of(Color.red, size: Size.small));
+
+Color plain() => .red;

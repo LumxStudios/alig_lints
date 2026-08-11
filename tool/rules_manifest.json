@@ -842,7 +842,7 @@
       "configurable": false,
       "severity": "info",
       "phase": 3,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },

@@ -29,6 +29,7 @@ custom_lint:
     - avoid-explicit-pattern-field-name
     - avoid-keywords-in-wildcard-pattern
     - avoid-multi-assignment
+    - avoid-nested-shorthands
     - avoid-passing-self-as-argument
     - avoid-redundant-else
     - avoid-redundant-pragma-inline
