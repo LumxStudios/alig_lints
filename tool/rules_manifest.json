@@ -2502,9 +2502,9 @@
       "configurable": false,
       "severity": "warning",
       "phase": 3,
-      "status": "todo",
+      "status": "covered",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Dart's own unreachable_switch_case warning reports exactly this, and more besides. Writing the rule would put a second message on every occurrence."
     },
     {
       "name": "prefer-specifying-future-value-type",

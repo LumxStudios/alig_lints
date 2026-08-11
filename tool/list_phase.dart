@@ -14,13 +14,16 @@ void main(List<String> args) {
   for (final rule in rules) {
     final mark = rule.isDone
         ? 'x'
-        : rule.needsSpec
-            ? '?'
-            : ' ';
+        : rule.isCovered
+            ? '~'
+            : rule.needsSpec
+                ? '?'
+                : ' ';
     stdout.writeln('[$mark] ${rule.name}${rule.hasFix ? '  (has fix)' : ''}');
   }
   stdout.writeln(
-    '\n${rules.where((r) => r.isDone).length} / ${rules.length} done in '
-    'phase $phase.',
+    '\n${rules.where((r) => r.isSettled).length} / ${rules.length} settled in '
+    'phase $phase  (x implemented, ~ covered by the analyzer, ? awaiting '
+    'clarification).',
   );
 }

@@ -80,11 +80,16 @@ void _updateReadmeProgress(Manifest manifest) {
 
   final rows = [
     for (final phase in byPhase.keys.toList()..sort())
-      '| $phase | ${byPhase[phase]!.where((r) => r.isDone).length} / '
+      '| $phase | ${byPhase[phase]!.where((r) => r.isSettled).length} / '
           '${byPhase[phase]!.length} |',
   ];
   final needsSpec = manifest.rules.where((r) => r.needsSpec).length;
-  final suffix = needsSpec > 0 ? ' — $needsSpec awaiting clarification' : '';
+  final covered = manifest.covered.length;
+  final notes = [
+    if (needsSpec > 0) '$needsSpec awaiting clarification',
+    if (covered > 0) '$covered covered by the analyzer itself',
+  ];
+  final suffix = notes.isEmpty ? '' : ' — ${notes.join(', ')}';
 
   final table = '''
 <!-- progress:start -->

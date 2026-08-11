@@ -43,7 +43,11 @@ class RuleEntry {
   /// Implementation phase, 1 to 9.
   final int phase;
 
-  /// Either `todo` or `done`.
+  /// One of `todo`, `done`, or `covered`.
+  ///
+  /// `covered` means the analyzer already reports this exactly, so implementing
+  /// the rule would only add a second message. Those rules have no file of their
+  /// own; `doc/LIMITATIONS.md` records which diagnostic covers each.
   String status;
 
   /// Whether the rule's intent could not be inferred and awaits clarification.
@@ -61,8 +65,14 @@ class RuleEntry {
       .map((part) => part[0].toUpperCase() + part.substring(1))
       .join();
 
-  /// Whether this rule is implemented.
+  /// Whether this rule is implemented in this package.
   bool get isDone => status == 'done';
+
+  /// Whether the analyzer already reports this, so no rule is written.
+  bool get isCovered => status == 'covered';
+
+  /// Whether this rule needs no further work, whoever reports it.
+  bool get isSettled => isDone || isCovered;
 
   /// Relative path of this rule's implementation file.
   String get libPath => 'lib/src/rules/$category/$fileName.dart';
@@ -135,9 +145,13 @@ class Manifest {
   /// The rules that are implemented.
   List<RuleEntry> get done => rules.where((r) => r.isDone).toList();
 
-  /// The rules still to implement, excluding those awaiting clarification.
+  /// The rules still to implement, excluding those awaiting clarification and
+  /// those the analyzer already covers.
   List<RuleEntry> get todo =>
-      rules.where((r) => !r.isDone && !r.needsSpec).toList();
+      rules.where((r) => !r.isSettled && !r.needsSpec).toList();
+
+  /// The rules the analyzer already reports.
+  List<RuleEntry> get covered => rules.where((r) => r.isCovered).toList();
 
   /// The next rule to implement: lowest phase first, then alphabetical.
   RuleEntry? get next {
