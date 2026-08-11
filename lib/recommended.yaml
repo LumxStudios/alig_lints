@@ -9,5 +9,6 @@ custom_lint:
   enable_all_lint_rules: false
   rules:
     - avoid-duplicate-cascades
+    - avoid-duplicate-constant-values
     - avoid-empty-setstate
     - avoid-self-assignment

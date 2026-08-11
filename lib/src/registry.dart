@@ -2,12 +2,14 @@
 
 import 'common/alig_rule.dart';
 import 'rules/common/avoid_duplicate_cascades.dart';
+import 'rules/common/avoid_duplicate_constant_values.dart';
 import 'rules/flutter/avoid_empty_setstate.dart';
 import 'rules/common/avoid_self_assignment.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
   AvoidDuplicateCascades.new,
+  AvoidDuplicateConstantValues.new,
   AvoidEmptySetstate.new,
   AvoidSelfAssignment.new,
 ];

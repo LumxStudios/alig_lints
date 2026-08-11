@@ -299,7 +299,7 @@
       "configurable": true,
       "severity": "warning",
       "phase": 1,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
