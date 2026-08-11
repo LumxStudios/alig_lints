@@ -11,6 +11,7 @@ custom_lint:
     - avoid-assignments-as-conditions
     - avoid-cascade-after-if-null
     - avoid-conditions-with-boolean-literals
+    - avoid-constant-assert-conditions
     - avoid-duplicate-cascades
     - avoid-duplicate-constant-values
     - avoid-duplicate-exports

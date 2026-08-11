@@ -49,13 +49,13 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**40 / 181 rules implemented** — 3 awaiting clarification
+**41 / 181 rules implemented** — 3 awaiting clarification
 
 | Phase | Done |
 |---|---|
 | 1 | 19 / 21 |
 | 2 | 17 / 18 |
-| 3 | 3 / 32 |
+| 3 | 4 / 32 |
 | 4 | 0 / 16 |
 | 5 | 0 / 22 |
 | 6 | 0 / 8 |
@@ -76,8 +76,9 @@ inferred from the available specification are listed in
 - `dart run tool/list_phase.dart <n>` shows one phase's status.
 - `dart run tool/generate.dart` regenerates `lib/src/registry.dart`, the
   presets and the table above.
-- `dart test` runs unit and fix-golden tests.
-- `(cd example && dart run custom_lint)` checks the `common` rule goldens.
-- `(cd example_flutter && dart run custom_lint)` checks the Flutter rule
-  goldens.
+- `./tool/verify.sh` is the full gate: analyze, tests and both golden suites,
+  run in parallel. Prints the log only for the parts that failed.
+- Individually: `dart analyze`, `dart test`,
+  `(cd example && dart run custom_lint)` for the `common` rule goldens, and
+  `(cd example_flutter && dart run custom_lint)` for the Flutter ones.
 - `doc/API_NOTES.md` records verified analyzer/custom_lint API details.
