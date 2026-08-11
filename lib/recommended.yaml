@@ -24,6 +24,7 @@ custom_lint:
     - avoid-self-assignment
     - avoid-self-compare
     - avoid-unnecessary-if
+    - avoid-unnecessary-late-fields
     - no-equal-conditions
     - no-equal-nested-conditions
     - no-equal-switch-case
