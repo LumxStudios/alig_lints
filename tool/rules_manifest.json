@@ -1,0 +1,3167 @@
+{
+  "source": "Rules _ DCM - Code Quality Tool for Flutter Developers.html (dcm.dev/docs/rules/?presets=recommended, captured 2026-08-11)",
+  "totalRules": 181,
+  "rules": [
+    {
+      "name": "avoid-accessing-collections-by-constant-index",
+      "category": "common",
+      "description": "Warns when a collection is accessed by a constant index inside a for loop",
+      "tags": [
+        "correctness",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-accessing-collections-by-constant-index/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-always-null-parameters",
+      "category": "common",
+      "description": "Warns when a private function or method has a parameter that always gets null",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-always-null-parameters/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-assignments-as-conditions",
+      "category": "common",
+      "description": "Warns when an assignment is used inside a condition",
+      "tags": [
+        "correctness",
+        "readability",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-assignments-as-conditions/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-cascade-after-if-null",
+      "category": "common",
+      "description": "Warns when a cascade expression is used after if null (??) binary expression without parentheses",
+      "tags": [
+        "correctness",
+        "control-flow"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-cascade-after-if-null/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-casting-to-extension-type",
+      "category": "common",
+      "description": "Warns when an expression is casted to an extension type",
+      "tags": [
+        "correctness",
+        "cwe",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-casting-to-extension-type/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-collection-equality-checks",
+      "category": "common",
+      "description": "Warns when a collection is checked for equality with another collection",
+      "tags": [
+        "correctness",
+        "cwe",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-collection-equality-checks/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-collection-methods-with-unrelated-types",
+      "category": "common",
+      "description": "Warns when a collection method is used with an expression of an unrelated type",
+      "tags": [
+        "correctness",
+        "cwe",
+        "types",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-collection-methods-with-unrelated-types/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-commented-out-code",
+      "category": "common",
+      "description": "Warns when a section of code is commented out",
+      "tags": [
+        "maintainability",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-commented-out-code/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-conditions-with-boolean-literals",
+      "category": "common",
+      "description": "Warns then a binary expression has a boolean constant that either makes the resulting value always the same or does not affect it",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-conditions-with-boolean-literals/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-constant-assert-conditions",
+      "category": "common",
+      "description": "Warns when an assert statement has a constant condition",
+      "tags": [
+        "correctness",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-constant-assert-conditions/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-constant-conditions",
+      "category": "common",
+      "description": "Warns when both sides of a binary expression are constant",
+      "tags": [
+        "correctness",
+        "conditions",
+        "unused-code"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-constant-conditions/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-constant-switches",
+      "category": "common",
+      "description": "Warns when a switch expression or statement has a constant expression",
+      "tags": [
+        "correctness",
+        "conditions",
+        "unused-code"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-constant-switches/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-contradictory-expressions",
+      "category": "common",
+      "description": "Warns when several conditions contradict each other",
+      "tags": [
+        "correctness",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-contradictory-expressions/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-default-tostring",
+      "category": "common",
+      "description": "Warns when a class is the target of the toString() invocation, but does not implement toString",
+      "tags": [
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-default-tostring/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-double-slash-imports",
+      "category": "common",
+      "description": "Warns when an import/export directive contains a double slash",
+      "tags": [
+        "correctness",
+        "imports"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-double-slash-imports/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-cascades",
+      "category": "common",
+      "description": "Warns when a cascade expression has duplicate cascades",
+      "tags": [
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-cascades/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-constant-values",
+      "category": "common",
+      "description": "Warns when a class or enum declaration has several constants with the same primitive values",
+      "tags": [
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-constant-values/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-exports",
+      "category": "common",
+      "description": "Warns when a file has multiple exports declarations with the same URI",
+      "tags": [
+        "correctness",
+        "cwe",
+        "imports"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-exports/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-initializers",
+      "category": "common",
+      "description": "Warns when a final variable has the same initializer as another variable in scope",
+      "tags": [
+        "correctness",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-initializers/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-map-keys",
+      "category": "common",
+      "description": "Warns when a map has duplicate keys",
+      "tags": [
+        "correctness",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-map-keys/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-mixins",
+      "category": "common",
+      "description": "Warns when a class has a mixin that is already present in that class's hierarchy.",
+      "tags": [
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-mixins/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-patterns",
+      "category": "common",
+      "description": "Warns when a LogicalOrPattern or LogicalAndPattern contains duplicate patterns",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-patterns/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-switch-case-conditions",
+      "category": "common",
+      "description": "Warns when several switch cases have the same condition",
+      "tags": [
+        "correctness",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-switch-case-conditions/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-duplicate-test-assertions",
+      "category": "common",
+      "description": "Warns when a test case has multiple test assertions with the same expression and expected value",
+      "tags": [
+        "correctness",
+        "cwe",
+        "testing"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-duplicate-test-assertions/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-dynamic",
+      "category": "common",
+      "description": "Warns when the dynamic type is used as a variable type in a declaration, a function return type, etc.",
+      "tags": [
+        "maintainability",
+        "correctness",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-dynamic/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-empty-spread",
+      "category": "common",
+      "description": "Warns when a collection literal in spread (...[]) has no elements",
+      "tags": [
+        "correctness",
+        "cwe",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-empty-spread/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-empty-test-groups",
+      "category": "common",
+      "description": "Warns when a test group does not have any test cases",
+      "tags": [
+        "correctness",
+        "cwe",
+        "testing"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-empty-test-groups/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-enum-values-by-index",
+      "category": "common",
+      "description": "Warns when a enum value is accessed via Enum.values[index]",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-enum-values-by-index/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-equal-expressions",
+      "category": "common",
+      "description": "Warns when both sides of a binary expression are the same",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-equal-expressions/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-excessive-expressions",
+      "category": "common",
+      "description": "Warns when a condition has excessive expressions",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-excessive-expressions/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-explicit-pattern-field-name",
+      "category": "common",
+      "description": "Warns when an object pattern has an explicit field name",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-explicit-pattern-field-name/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-future-tostring",
+      "category": "common",
+      "description": "Warns when a Future is a target of the toString invocation or is used in an interpolation",
+      "tags": [
+        "correctness",
+        "cwe",
+        "async"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-future-tostring/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-generics-shadowing",
+      "category": "common",
+      "description": "Warns when a generic type shadows an existing top-level (class, mixin, typedef or enum) declaration",
+      "tags": [
+        "correctness",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-generics-shadowing/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-implicitly-nullable-extension-types",
+      "category": "common",
+      "description": "Warns when an extension type declaration does not have the implements clause",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-implicitly-nullable-extension-types/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-inconsistent-digit-separators",
+      "category": "common",
+      "description": "Warns when the digit separators create inconsistent groups of digits",
+      "tags": [
+        "readability",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-inconsistent-digit-separators/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "info",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-inferrable-type-arguments",
+      "category": "common",
+      "description": "Warns when an inferrable type argument can be removed without affecting the code",
+      "tags": [
+        "readability",
+        "consistency",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-inferrable-type-arguments/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "info",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-keywords-in-wildcard-pattern",
+      "category": "common",
+      "description": "Warns when a wildcard pattern has declaration keywords",
+      "tags": [
+        "readability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-keywords-in-wildcard-pattern/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-late-final-reassignment",
+      "category": "common",
+      "description": "Warns when a late final variable is assigned multiple times in the same block",
+      "tags": [
+        "correctness",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-late-final-reassignment/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-map-keys-contains",
+      "category": "common",
+      "description": "Warns when Map's .keys.contains is used instead of containsKey",
+      "tags": [
+        "performance",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-map-keys-contains/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-missed-calls",
+      "category": "common",
+      "description": "Warns when a method that should be invoked is passed as tear-off",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-missed-calls/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 6,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-missing-completer-stack-trace",
+      "category": "common",
+      "description": "Warns when Completer.completeError is called without providing a stack trace",
+      "tags": [
+        "correctness",
+        "error-handing"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-missing-completer-stack-trace/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 6,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-missing-enum-constant-in-map",
+      "category": "common",
+      "description": "Warns when a enum constant is missing in a map declaration",
+      "tags": [
+        "correctness",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-missing-enum-constant-in-map/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-misused-set-literals",
+      "category": "common",
+      "description": "Warns when a set literal is used in a wrong place",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-misused-set-literals/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-misused-test-matchers",
+      "category": "common",
+      "description": "Warns when an incorrect matcher or literal is used to verify the target expression",
+      "tags": [
+        "correctness",
+        "testing"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-misused-test-matchers/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-multi-assignment",
+      "category": "common",
+      "description": "Warns when multiple variable assignments are placed on the same line",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-multi-assignment/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-nested-futures",
+      "category": "common",
+      "description": "Warns when a Future type contains another Future",
+      "tags": [
+        "correctness",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-nested-futures/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 6,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-nested-records",
+      "category": "common",
+      "description": "Warns when a record type declaration contains a nested record type declaration",
+      "tags": [
+        "readability",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-nested-records/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "info",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-nested-shorthands",
+      "category": "common",
+      "description": "Warns when a dot shorthand invocation has an argument that is also a dot shorthand",
+      "tags": [
+        "maintainability",
+        "readability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-nested-shorthands/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-never-passed-parameters",
+      "category": "common",
+      "description": "Warns when a private function or method has an optional parameter that never gets a value",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-never-passed-parameters/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-not-encodable-in-to-json",
+      "category": "common",
+      "description": "Warns when a toJson method references a non-encodable object",
+      "tags": [
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-not-encodable-in-to-json/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-nullable-interpolation",
+      "category": "common",
+      "description": "Warns when an interpolation string contains a nullable value",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-nullable-interpolation/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-nullable-tostring",
+      "category": "common",
+      "description": "Warns when the toString method is called on a nullable value",
+      "tags": [
+        "correctness",
+        "cwe",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-nullable-tostring/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-only-rethrow",
+      "category": "common",
+      "description": "Warns when a catch clause has only a rethrow expression",
+      "tags": [
+        "correctness",
+        "cwe",
+        "error-handing"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-only-rethrow/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-passing-async-when-sync-expected",
+      "category": "common",
+      "description": "Warns when an asynchronous function is used as an argument where a synchronous function is expected",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "cwe",
+        "async"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-passing-async-when-sync-expected/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 6,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-passing-self-as-argument",
+      "category": "common",
+      "description": "Warns when an object is used as an argument to its own method",
+      "tags": [
+        "correctness",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-passing-self-as-argument/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-recursive-tostring",
+      "category": "common",
+      "description": "Warns when a toString method calls itself recursively",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-recursive-tostring/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-redundant-async",
+      "category": "common",
+      "description": "Checks for redundant async in a method or function body",
+      "tags": [
+        "maintainability",
+        "correctness",
+        "async"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-redundant-async/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 6,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-redundant-else",
+      "category": "common",
+      "description": "Checks for else blocks that can be removed without changing semantics",
+      "tags": [
+        "control-flow",
+        "readability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-redundant-else/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-redundant-positional-field-name",
+      "category": "common",
+      "description": "Warns when a record positional field has a name",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-redundant-positional-field-name/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-redundant-pragma-inline",
+      "category": "common",
+      "description": "Warns when a @pragma('vm:prefer-inline') annotation has no effect",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-redundant-pragma-inline/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-referencing-discarded-variables",
+      "category": "common",
+      "description": "Warns when a variable with the name that has only underscores (ex. _, __, etc.) is referenced",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-referencing-discarded-variables/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-renaming-representation-getters",
+      "category": "common",
+      "description": "Warns when an extension type exposes a member that renames an existing representation field member",
+      "tags": [
+        "correctness",
+        "naming"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-renaming-representation-getters/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-self-assignment",
+      "category": "common",
+      "description": "Warns when a variable or a class instance field / property is assigned to itself",
+      "tags": [
+        "correctness",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-self-assignment/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-self-compare",
+      "category": "common",
+      "description": "Warns when a comparison has both sides exactly the same",
+      "tags": [
+        "correctness",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-self-compare/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-shadowed-extension-methods",
+      "category": "common",
+      "description": "Warns when an extension declares a method with the name that is already used by the extension target",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-shadowed-extension-methods/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-shadowing",
+      "category": "common",
+      "description": "Warns when a declaration name shadows another declaration with the same name in the current scope",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-shadowing/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-stream-tostring",
+      "category": "common",
+      "description": "Warns when a Stream is the target of the toString() invocation or is used in an interpolation",
+      "tags": [
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-stream-tostring/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-suspicious-global-reference",
+      "category": "common",
+      "description": "Warns when a subclass or an extension refers to a global identifier, but the parent class has an identifier with the same name",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-suspicious-global-reference/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-suspicious-super-overrides",
+      "category": "common",
+      "description": "Warns when a getter overrides a field that is already passed to the super constructor",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-suspicious-super-overrides/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-throw-in-catch-block",
+      "category": "common",
+      "description": "Warns when a throw expression is called inside a catch block",
+      "tags": [
+        "correctness",
+        "error-handing"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-throw-in-catch-block/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-throw-objects-without-tostring",
+      "category": "common",
+      "description": "Warns when a thrown object does not implement toString",
+      "tags": [
+        "correctness",
+        "cwe",
+        "error-handing"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-throw-objects-without-tostring/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unassigned-fields",
+      "category": "common",
+      "description": "Warns when a private field is not assigned a value",
+      "tags": [
+        "correctness",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unassigned-fields/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unassigned-late-fields",
+      "category": "common",
+      "description": "Warns when a private late field is not assigned a value",
+      "tags": [
+        "correctness",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unassigned-late-fields/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unassigned-stream-subscriptions",
+      "category": "common",
+      "description": "Warns when a stream subscription is not assigned to a variable",
+      "tags": [
+        "memory-leak",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unassigned-stream-subscriptions/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 8,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-uncaught-future-errors",
+      "category": "common",
+      "description": "Warns when an error from a Future inside a try / catch block might not be caught",
+      "tags": [
+        "correctness",
+        "error-handing",
+        "async"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-uncaught-future-errors/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 6,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unconditional-break",
+      "category": "common",
+      "description": "Warns when a break, continue, return or throw are used unconditionally in a for loop",
+      "tags": [
+        "control-flow",
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unconditional-break/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unknown-pragma",
+      "category": "common",
+      "description": "Warns when the @pragma annotation has an unknown value",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unknown-pragma/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-call",
+      "category": "common",
+      "description": "Warns when a .call() invocation is unnecessary and can be simplified",
+      "tags": [
+        "readability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-call/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-collections",
+      "category": "common",
+      "description": "Warns when a collection literal can be replaced by its first and only element",
+      "tags": [
+        "correctness",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-collections/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-compare-to",
+      "category": "common",
+      "description": "Suggests replacing .compareTo() with an equality check (when applicable)",
+      "tags": [
+        "readability",
+        "consistency",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-compare-to/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-conditionals",
+      "category": "common",
+      "description": "Checks for unnecessary conditional expressions",
+      "tags": [
+        "control-flow",
+        "consistency",
+        "readability",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-conditionals/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-continue",
+      "category": "common",
+      "description": "Warns when a continue statement is unnecessary and can be removed",
+      "tags": [
+        "control-flow",
+        "readability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-continue/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-enum-arguments",
+      "category": "common",
+      "description": "Warns when a enum constant has an unnecessary empty argument list",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-enum-arguments/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-extends",
+      "category": "common",
+      "description": "Suggests removing unnecessary extends clauses that match default values for classes and type parameters",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-extends/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-futures",
+      "category": "common",
+      "description": "Warns when a return type of a declaration is unnecessary wrapped into a Future",
+      "tags": [
+        "maintainability",
+        "async"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-futures/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 6,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-if",
+      "category": "common",
+      "description": "Warns when a return statement inside an if block is equal to the return statement after it",
+      "tags": [
+        "control-flow",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-if/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-late-fields",
+      "category": "common",
+      "description": "Warns when a late final field declaration is assigned in all constructors",
+      "tags": [
+        "correctness",
+        "assignments",
+        "unused-code"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-late-fields/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-length-check",
+      "category": "common",
+      "description": "Warns when the if statement's condition has a collection length check that can be removed",
+      "tags": [
+        "correctness",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-length-check/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-local-late",
+      "category": "common",
+      "description": "Warns when a late variable is assigned in all code branches before use",
+      "tags": [
+        "maintainability",
+        "nullability",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-local-late/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-local-variable",
+      "category": "common",
+      "description": "Warns when a local variable is not referenced or is only used as an initializer of another local variable",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-local-variable/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-negations",
+      "category": "common",
+      "description": "Warns when a negation can be simplified",
+      "tags": [
+        "readability",
+        "maintainability",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-negations/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-null-aware-elements",
+      "category": "common",
+      "description": "Warns when a null-aware element is unnecessary and can be removed",
+      "tags": [
+        "readability",
+        "collections",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-null-aware-elements/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-nullable-parameters",
+      "category": "common",
+      "description": "Warns when a private function or method has a nullable parameter that never gets a nullable value",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-nullable-parameters/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-nullable-return-type",
+      "category": "common",
+      "description": "Warns when the return type of a function or a method is declared nullable, but the function or method always return non-nullable value",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-nullable-return-type/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-overrides",
+      "category": "common",
+      "description": "Warns when a parent declaration is overridden by a declaration without an implementation",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-overrides/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-patterns",
+      "category": "common",
+      "description": "Warns when a pattern variable declaration does not affect the type of an existing local variable",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-patterns/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-reassignment",
+      "category": "common",
+      "description": "Warns when a value is reassigned to a variable without using the initial value",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-reassignment/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-return",
+      "category": "common",
+      "description": "Warns when a return statement is unnecessary and can be removed",
+      "tags": [
+        "control-flow",
+        "readability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-return/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-statements",
+      "category": "common",
+      "description": "Warns when a statement is unnecessary and can be removed",
+      "tags": [
+        "correctness",
+        "control-flow",
+        "unused-code"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-statements/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-super",
+      "category": "common",
+      "description": "Warns when a constructor has an unnecessary super invocation or when an invocation has an unnecessary super prefix",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-super/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 2,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-type-assertions",
+      "category": "common",
+      "description": "Warns about unnecessary usage of the is operator, and whereType and whereNotNull methods",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-type-assertions/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-type-casts",
+      "category": "common",
+      "description": "Warns about unnecessary use of the as operator and cast method",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unnecessary-type-casts/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unreachable-for-loop",
+      "category": "common",
+      "description": "Warns when the if statement's condition makes the inner for-loop unreachable",
+      "tags": [
+        "correctness",
+        "collections",
+        "unused-code"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unreachable-for-loop/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unrelated-type-assertions",
+      "category": "common",
+      "description": "Warns about unrelated usages of the is operator and whereType method",
+      "tags": [
+        "correctness",
+        "cwe",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unrelated-type-assertions/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unrelated-type-casts",
+      "category": "common",
+      "description": "Warns about unrelated usages of the as operator and cast method",
+      "tags": [
+        "correctness",
+        "cwe",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unrelated-type-casts/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unremovable-callbacks-in-listeners",
+      "category": "common",
+      "description": "Warns when an addListener invocation receives a callback that cannot be unregistered",
+      "tags": [
+        "correctness",
+        "memory-leak"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unremovable-callbacks-in-listeners/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 8,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unsafe-collection-methods",
+      "category": "common",
+      "description": "Warns when first, last, single, firstWhere, lastWhere, singleWhere or [] methods are used on Iterable or its subclasses",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "cwe",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unsafe-collection-methods/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unused-assignment",
+      "category": "common",
+      "description": "Warns when an assignment is not used in the subsequent statements",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unused-assignment/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unused-generics",
+      "category": "common",
+      "description": "Warns when a function or method declares unused generic types",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unused-generics/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unused-instances",
+      "category": "common",
+      "description": "Warns when a newly created object is not being used",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unused-instances/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unused-local-variable",
+      "category": "common",
+      "description": "Warns when a local variable is not referenced and can be removed or renamed to _",
+      "tags": [
+        "correctness",
+        "assignments",
+        "unused-code"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unused-local-variable/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unused-parameters",
+      "category": "common",
+      "description": "Checks for unused parameters inside a function or method body",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-unused-parameters/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-wildcard-cases-with-enums",
+      "category": "common",
+      "description": "Warns when a switch on the Enum value has a wildcard pattern case",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-wildcard-cases-with-enums/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-wildcard-cases-with-sealed-classes",
+      "category": "common",
+      "description": "Warns when a switch on a sealed class has a wildcard pattern case",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/avoid-wildcard-cases-with-sealed-classes/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "dispose-class-fields",
+      "category": "common",
+      "description": "Warns when a field is not disposed in a class's dispose method",
+      "tags": [
+        "memory-leak",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/dispose-class-fields/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 8,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "function-always-returns-null",
+      "category": "common",
+      "description": "Warns when a function with nullable return type returns only nullvalue",
+      "tags": [
+        "control-flow",
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/function-always-returns-null/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "function-always-returns-same-value",
+      "category": "common",
+      "description": "Warns when a function always returns the same constant value",
+      "tags": [
+        "control-flow",
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/function-always-returns-same-value/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "match-base-class-default-value",
+      "category": "common",
+      "description": "Warns when the default value of a parameter in an overridden method does not match the default value of the base class parameter",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/match-base-class-default-value/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "match-getter-setter-field-names",
+      "category": "common",
+      "description": "Warns when a getter or setter do not access at least one field with the name that matches the getter or setter name",
+      "tags": [
+        "correctness",
+        "readability",
+        "maintainability",
+        "naming"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/match-getter-setter-field-names/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "move-variable-closer-to-its-usage",
+      "category": "common",
+      "description": "Warns when a variable is declared in the outer block, but used only in the inner one",
+      "tags": [
+        "control-flow",
+        "readability",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/move-variable-closer-to-its-usage/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "info",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "no-empty-block",
+      "category": "common",
+      "description": "Disallows empty blocks except catch clause block",
+      "tags": [
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/no-empty-block/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "no-equal-conditions",
+      "category": "common",
+      "description": "Warns when a if statement has duplicate conditions",
+      "tags": [
+        "correctness",
+        "unused-code",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/no-equal-conditions/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "no-equal-nested-conditions",
+      "category": "common",
+      "description": "Warns when an if statement contains another if statement with the same condition",
+      "tags": [
+        "correctness",
+        "cwe",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/no-equal-nested-conditions/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "no-equal-switch-case",
+      "category": "common",
+      "description": "Warns when a switch has cases with equal bodies",
+      "tags": [
+        "control-flow",
+        "correctness",
+        "maintainability",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/no-equal-switch-case/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "no-equal-switch-expression-cases",
+      "category": "common",
+      "description": "Warns when a switch expression has cases with equal bodies",
+      "tags": [
+        "control-flow",
+        "correctness",
+        "maintainability",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/no-equal-switch-expression-cases/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "no-equal-then-else",
+      "category": "common",
+      "description": "Warns when if statement has equal then and else statements or conditional expression has equal then and else expressions",
+      "tags": [
+        "control-flow",
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/no-equal-then-else/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 1,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-any-or-every",
+      "category": "common",
+      "description": "Warns when a collection's call chain can be rewritten to use .any() or .every() instead of .isEmpty or .isNotEmpty",
+      "tags": [
+        "readability",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-any-or-every/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-contains",
+      "category": "common",
+      "description": "Suggests using .contains instead of .indexOf when checking for the presence of an element",
+      "tags": [
+        "readability",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-contains/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-correct-callback-field-name",
+      "category": "common",
+      "description": "Warns when a field with a Function type does not matched the configured name or a field with a non-Function type matches the configured name",
+      "tags": [
+        "readability",
+        "consistency",
+        "naming"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-correct-callback-field-name/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "info",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-correct-for-loop-increment",
+      "category": "common",
+      "description": "Warns when a for loop increments a wrong variable",
+      "tags": [
+        "correctness",
+        "cwe",
+        "assignments"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-correct-for-loop-increment/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-correct-json-casts",
+      "category": "common",
+      "description": "Warns when a JSON object type cast is done in an unsafe way that will throw at runtime",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "cwe",
+        "types"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-correct-json-casts/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-correct-test-file-name",
+      "category": "common",
+      "description": "Warns if the file within /test contains a main, but the file name doesn't end with _test.dart",
+      "tags": [
+        "correctness",
+        "testing",
+        "naming"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-correct-test-file-name/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-declaring-const-constructor",
+      "category": "common",
+      "description": "Warns when a class with no non-final fields has a non-constant constructor declaration",
+      "tags": [
+        "performance",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-declaring-const-constructor/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "info",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-explicit-function-type",
+      "category": "common",
+      "description": "Warns when a Function type does not specify the return type and arguments",
+      "tags": [
+        "correctness",
+        "consistency",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-explicit-function-type/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-iterable-of",
+      "category": "common",
+      "description": "Warns when List.from() factory is used instead of List.of()",
+      "tags": [
+        "correctness",
+        "cwe",
+        "collections"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-iterable-of/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-match-file-name",
+      "category": "common",
+      "description": "Warns when a file name does not match the class name",
+      "tags": [
+        "readability",
+        "consistency",
+        "maintainability",
+        "naming"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-match-file-name/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "info",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-null-aware-elements",
+      "category": "common",
+      "description": "Suggests using null-aware elements (?element) instead of checking for a potential null value",
+      "tags": [
+        "readability",
+        "collections",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-null-aware-elements/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "info",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-null-aware-spread",
+      "category": "common",
+      "description": "Warns when a null check inside a collection literal can be replaced with a null-aware spread (...?)",
+      "tags": [
+        "readability",
+        "collections",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-null-aware-spread/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "info",
+      "phase": 4,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-overriding-parent-equality",
+      "category": "common",
+      "description": "Warns when a parent class implements hashCode and ==, but the child class does not implement them",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-overriding-parent-equality/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-parentheses-with-if-null",
+      "category": "common",
+      "description": "Warns when an if null (??) has a binary expression without parentheses",
+      "tags": [
+        "control-flow",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-parentheses-with-if-null/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-prefixed-global-constants",
+      "category": "common",
+      "description": "Warns when a global constant does not start with a configured prefix",
+      "tags": [
+        "readability",
+        "consistency",
+        "naming"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-prefixed-global-constants/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "info",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-private-extension-type-field",
+      "category": "common",
+      "description": "Warns when an extension type has a public representation field",
+      "tags": [
+        "maintainability",
+        "encapsulation"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-private-extension-type-field/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-public-exception-classes",
+      "category": "common",
+      "description": "Warns when an exception class declaration is not public",
+      "tags": [
+        "maintainability",
+        "correctness",
+        "error-handing"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-public-exception-classes/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-return-await",
+      "category": "common",
+      "description": "Warns when a Future is returned from a try / catch block without an await",
+      "tags": [
+        "correctness",
+        "cwe",
+        "async"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-return-await/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 6,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-returning-shorthands",
+      "category": "common",
+      "description": "Suggests returning dot shorthands from an expression function body",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-returning-shorthands/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-shorthands-with-constructors",
+      "category": "common",
+      "description": "Suggests using dot shorthand constructor invocations for the configured list of classes",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-shorthands-with-constructors/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-shorthands-with-enums",
+      "category": "common",
+      "description": "Suggests using dot shorthands with enums",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-shorthands-with-enums/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-shorthands-with-static-fields",
+      "category": "common",
+      "description": "Suggests using dot shorthands with static fields",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-shorthands-with-static-fields/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-simpler-boolean-expressions",
+      "category": "common",
+      "description": "Suggests simplifying various boolean expressions",
+      "tags": [
+        "readability",
+        "maintainability",
+        "conditions"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-simpler-boolean-expressions/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-simpler-patterns-null-check",
+      "category": "common",
+      "description": "Warns when a patterns check for non-nullability can be simplified",
+      "tags": [
+        "readability",
+        "maintainability",
+        "nullability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-simpler-patterns-null-check/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-specific-cases-first",
+      "category": "common",
+      "description": "Warns when a more specific switch case is placed after a more general one",
+      "tags": [
+        "control-flow",
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-specific-cases-first/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-specifying-future-value-type",
+      "category": "common",
+      "description": "Warns when a Future.value invocation gets a nullable argument, but the expected type is not nullable",
+      "tags": [
+        "correctness",
+        "async",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-specifying-future-value-type/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 5,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-switch-with-enums",
+      "category": "common",
+      "description": "Suggests to use a switch statement or expression instead of conditionals with multiple enum values",
+      "tags": [
+        "control-flow",
+        "readability",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-switch-with-enums/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-unique-test-names",
+      "category": "common",
+      "description": "Warns when the test name is not unique within the same test suite",
+      "tags": [
+        "correctness",
+        "testing",
+        "naming"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-unique-test-names/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 9,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-wildcard-pattern",
+      "category": "common",
+      "description": "Warns when a dynamic or Object type is used instead of a wildcard pattern",
+      "tags": [
+        "readability",
+        "consistency"
+      ],
+      "url": "https://dcm.dev/docs/rules/common/prefer-wildcard-pattern/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 3,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "always-remove-listener",
+      "category": "flutter",
+      "description": "Warns when an event listener is added but never removed",
+      "tags": [
+        "memory-leak",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/always-remove-listener/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 8,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-empty-setstate",
+      "category": "flutter",
+      "description": "Warns when a setState callback is empty",
+      "tags": [
+        "correctness",
+        "cwe"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-empty-setstate/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-flexible-outside-flex",
+      "category": "flutter",
+      "description": "Warns when a Flexible widget is used outside the Flex widget",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-flexible-outside-flex/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-incomplete-copy-with",
+      "category": "flutter",
+      "description": "Checks if all parameters from the default constructor are added to the copyWith method",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-incomplete-copy-with/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-incorrect-image-opacity",
+      "category": "flutter",
+      "description": "Warns when an Image widget is wrapped into an Opacity widget",
+      "tags": [
+        "performance"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-incorrect-image-opacity/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "info",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-missing-controller",
+      "category": "flutter",
+      "description": "Warns when a TextFormField, TextField or EditableText does not have at least one way to get the updated value",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-missing-controller/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 8,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-missing-image-alt",
+      "category": "flutter",
+      "description": "Warns when an Image widget does not have a semanticLabel",
+      "tags": [
+        "correctness",
+        "accessibility"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-missing-image-alt/",
+      "hasFix": true,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-mounted-in-setstate",
+      "category": "flutter",
+      "description": "Warns when a mounted check happens inside a setState callback",
+      "tags": [
+        "control-flow",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-mounted-in-setstate/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-recursive-widget-calls",
+      "category": "flutter",
+      "description": "Warns when a Widget recursively uses itself",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-recursive-widget-calls/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-state-constructors",
+      "category": "flutter",
+      "description": "Warns when a State has a constructor with non-empty body",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-state-constructors/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-undisposed-instances",
+      "category": "flutter",
+      "description": "Warns when an instance that has a dispose method is not assigned to a variable",
+      "tags": [
+        "memory-leak",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-undisposed-instances/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 8,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-gesture-detector",
+      "category": "flutter",
+      "description": "Warns when a GestureDetector widget has no event handlers",
+      "tags": [
+        "correctness",
+        "maintainability",
+        "unused-code"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-unnecessary-gesture-detector/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-overrides-in-state",
+      "category": "flutter",
+      "description": "Warns when a widget's State has unnecessary overrides",
+      "tags": [
+        "correctness",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-unnecessary-overrides-in-state/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-setstate",
+      "category": "flutter",
+      "description": "Warns when setState is called inside initState, didUpdateWidget or build methods and when it is called from a sync method that is called inside those methods",
+      "tags": [
+        "correctness",
+        "performance"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-unnecessary-setstate/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "avoid-unnecessary-stateful-widgets",
+      "category": "flutter",
+      "description": "Warns when a StatefulWidget can be converted to a StatelessWidget",
+      "tags": [
+        "readability",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/avoid-unnecessary-stateful-widgets/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "info",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "check-for-equals-in-render-object-setters",
+      "category": "flutter",
+      "description": "Warns when a RenderObject setter doesn't have an equality check for the new value",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/check-for-equals-in-render-object-setters/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "consistent-update-render-object",
+      "category": "flutter",
+      "description": "Warns when an updateRenderObject method is absent or doesn't update all fields set in createRenderObject",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/consistent-update-render-object/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "dispose-fields",
+      "category": "flutter",
+      "description": "Warns when a widget state field is not disposed in dispose method",
+      "tags": [
+        "memory-leak",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/dispose-fields/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 8,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "pass-existing-future-to-future-builder",
+      "category": "flutter",
+      "description": "Warns when a newly created future is passed to the FutureBuilder",
+      "tags": [
+        "performance",
+        "correctness",
+        "async"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/pass-existing-future-to-future-builder/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "pass-existing-stream-to-stream-builder",
+      "category": "flutter",
+      "description": "Warns when a newly created stream is passed to the StreamBuilder",
+      "tags": [
+        "performance",
+        "correctness",
+        "async"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/pass-existing-stream-to-stream-builder/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-dedicated-media-query-methods",
+      "category": "flutter",
+      "description": "Warns when MediaQuery.of or MediaQuery.maybeOf are used over dedicated methods (ex. sizeOf)",
+      "tags": [
+        "performance",
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/prefer-dedicated-media-query-methods/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-single-widget-per-file",
+      "category": "flutter",
+      "description": "Warns when a file contains more than one widget",
+      "tags": [
+        "readability",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/prefer-single-widget-per-file/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "info",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "prefer-spacing",
+      "category": "flutter",
+      "description": "Suggests using the spacing argument of a Row, Column or Flex instead of using SizedBox widgets for adding gaps between children widgets",
+      "tags": [
+        "readability",
+        "maintainability"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/prefer-spacing/",
+      "hasFix": false,
+      "configurable": false,
+      "severity": "info",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "proper-super-calls",
+      "category": "flutter",
+      "description": "Checks that super calls in the initState and dispose methods are called in the correct order",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/proper-super-calls/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "use-closest-build-context",
+      "category": "flutter",
+      "description": "Warns when the referenced BuildContext variable is not the closest BuildContext",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/use-closest-build-context/",
+      "hasFix": true,
+      "configurable": false,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    },
+    {
+      "name": "use-setstate-synchronously",
+      "category": "flutter",
+      "description": "Warns when setState is called past an await point",
+      "tags": [
+        "correctness"
+      ],
+      "url": "https://dcm.dev/docs/rules/flutter/use-setstate-synchronously/",
+      "hasFix": false,
+      "configurable": true,
+      "severity": "warning",
+      "phase": 7,
+      "status": "todo",
+      "needsSpec": false,
+      "notes": ""
+    }
+  ]
+}
