@@ -30,6 +30,7 @@ custom_lint:
     - avoid-keywords-in-wildcard-pattern
     - avoid-multi-assignment
     - avoid-nested-shorthands
+    - avoid-only-rethrow
     - avoid-passing-self-as-argument
     - avoid-redundant-else
     - avoid-redundant-pragma-inline

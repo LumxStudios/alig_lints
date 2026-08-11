@@ -64,6 +64,27 @@ void main() {
     expect(hasSideEffects(parseExpression('a..b()')), isTrue);
   });
 
+  test('hasSideEffects treats rethrow as doing something', () {
+    // `rethrow` only parses inside a catch, so it needs a fuller snippet.
+    final unit = parseString(content: '''
+void f() {
+  try {
+    g();
+  } catch (e) {
+    rethrow;
+  }
+}
+''').unit;
+    final function = unit.declarations.single as FunctionDeclaration;
+    final body = function.functionExpression.body as BlockFunctionBody;
+    final tryStatement = body.block.statements.single as TryStatement;
+    final statement =
+        tryStatement.catchClauses.single.body.statements.single
+            as ExpressionStatement;
+
+    expect(hasSideEffects(statement.expression), isTrue);
+  });
+
   test('hasSideEffects does not treat plain negation as a mutation', () {
     expect(hasSideEffects(parseExpression('-a')), isFalse);
     expect(hasSideEffects(parseExpression('!a')), isFalse);

@@ -136,6 +136,13 @@ class _SideEffectDetector extends RecursiveAstVisitor<void> {
   }
 
   @override
+  void visitRethrowExpression(RethrowExpression node) {
+    // `rethrow` is its own node, not a ThrowExpression. Missing it made
+    // avoid-unnecessary-statements report every `catch { rethrow; }`.
+    found = true;
+  }
+
+  @override
   void visitPostfixExpression(PostfixExpression node) {
     if (_isIncrementOrDecrement(node.operator.lexeme)) {
       found = true;
