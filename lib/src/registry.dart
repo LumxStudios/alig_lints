@@ -62,6 +62,7 @@ import 'rules/common/no_equal_then_else.dart';
 import 'rules/common/prefer_correct_for_loop_increment.dart';
 import 'rules/common/prefer_parentheses_with_if_null.dart';
 import 'rules/common/prefer_returning_shorthands.dart';
+import 'rules/common/prefer_shorthands_with_enums.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -126,4 +127,5 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferCorrectForLoopIncrement.new,
   PreferParenthesesWithIfNull.new,
   PreferReturningShorthands.new,
+  PreferShorthandsWithEnums.new,
 ];

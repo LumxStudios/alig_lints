@@ -69,3 +69,4 @@ custom_lint:
     - prefer-correct-for-loop-increment
     - prefer-parentheses-with-if-null
     - prefer-returning-shorthands
+    - prefer-shorthands-with-enums
