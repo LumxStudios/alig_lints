@@ -17,6 +17,7 @@ import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
 import 'rules/common/avoid_unnecessary_compare_to.dart';
 import 'rules/common/no_equal_conditions.dart';
+import 'rules/common/no_equal_nested_conditions.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -36,4 +37,5 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidSelfCompare.new,
   AvoidUnnecessaryCompareTo.new,
   NoEqualConditions.new,
+  NoEqualNestedConditions.new,
 ];
