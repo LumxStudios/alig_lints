@@ -36,12 +36,14 @@ custom_lint:
     - avoid-explicit-pattern-field-name
     - avoid-flexible-outside-flex
     - avoid-future-tostring
+    - avoid-incorrect-image-opacity
     - avoid-inferrable-type-arguments
     - avoid-keywords-in-wildcard-pattern
     - avoid-map-keys-contains
     - avoid-missed-calls
     - avoid-missing-completer-stack-trace
     - avoid-missing-enum-constant-in-map
+    - avoid-missing-image-alt
     - avoid-misused-set-literals
     - avoid-mounted-in-setstate
     - avoid-multi-assignment
@@ -60,6 +62,7 @@ custom_lint:
     - avoid-redundant-pragma-inline
     - avoid-self-assignment
     - avoid-self-compare
+    - avoid-state-constructors
     - avoid-stream-tostring
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
@@ -73,6 +76,7 @@ custom_lint:
     - avoid-unnecessary-enum-arguments
     - avoid-unnecessary-extends
     - avoid-unnecessary-futures
+    - avoid-unnecessary-gesture-detector
     - avoid-unnecessary-if
     - avoid-unnecessary-late-fields
     - avoid-unnecessary-local-late

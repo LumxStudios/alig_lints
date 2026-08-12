@@ -38,6 +38,7 @@ custom_lint:
     - avoid-missed-calls
     - avoid-missing-completer-stack-trace
     - avoid-missing-enum-constant-in-map
+    - avoid-missing-image-alt
     - avoid-misused-set-literals
     - avoid-mounted-in-setstate
     - avoid-multi-assignment
@@ -54,12 +55,14 @@ custom_lint:
     - avoid-redundant-pragma-inline
     - avoid-self-assignment
     - avoid-self-compare
+    - avoid-state-constructors
     - avoid-stream-tostring
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
     - avoid-uncaught-future-errors
     - avoid-unconditional-break
     - avoid-unnecessary-collections
+    - avoid-unnecessary-gesture-detector
     - avoid-unnecessary-if
     - avoid-unnecessary-late-fields
     - avoid-unnecessary-local-variable

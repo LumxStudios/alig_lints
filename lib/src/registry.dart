@@ -29,12 +29,14 @@ import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_explicit_pattern_field_name.dart';
 import 'rules/flutter/avoid_flexible_outside_flex.dart';
 import 'rules/common/avoid_future_tostring.dart';
+import 'rules/flutter/avoid_incorrect_image_opacity.dart';
 import 'rules/common/avoid_inferrable_type_arguments.dart';
 import 'rules/common/avoid_keywords_in_wildcard_pattern.dart';
 import 'rules/common/avoid_map_keys_contains.dart';
 import 'rules/common/avoid_missed_calls.dart';
 import 'rules/common/avoid_missing_completer_stack_trace.dart';
 import 'rules/common/avoid_missing_enum_constant_in_map.dart';
+import 'rules/flutter/avoid_missing_image_alt.dart';
 import 'rules/common/avoid_misused_set_literals.dart';
 import 'rules/flutter/avoid_mounted_in_setstate.dart';
 import 'rules/common/avoid_multi_assignment.dart';
@@ -53,6 +55,7 @@ import 'rules/common/avoid_redundant_positional_field_name.dart';
 import 'rules/common/avoid_redundant_pragma_inline.dart';
 import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
+import 'rules/flutter/avoid_state_constructors.dart';
 import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
 import 'rules/common/avoid_throw_objects_without_tostring.dart';
@@ -66,6 +69,7 @@ import 'rules/common/avoid_unnecessary_continue.dart';
 import 'rules/common/avoid_unnecessary_enum_arguments.dart';
 import 'rules/common/avoid_unnecessary_extends.dart';
 import 'rules/common/avoid_unnecessary_futures.dart';
+import 'rules/flutter/avoid_unnecessary_gesture_detector.dart';
 import 'rules/common/avoid_unnecessary_if.dart';
 import 'rules/common/avoid_unnecessary_late_fields.dart';
 import 'rules/common/avoid_unnecessary_local_late.dart';
@@ -142,12 +146,14 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidExplicitPatternFieldName.new,
   AvoidFlexibleOutsideFlex.new,
   AvoidFutureTostring.new,
+  AvoidIncorrectImageOpacity.new,
   AvoidInferrableTypeArguments.new,
   AvoidKeywordsInWildcardPattern.new,
   AvoidMapKeysContains.new,
   AvoidMissedCalls.new,
   AvoidMissingCompleterStackTrace.new,
   AvoidMissingEnumConstantInMap.new,
+  AvoidMissingImageAlt.new,
   AvoidMisusedSetLiterals.new,
   AvoidMountedInSetstate.new,
   AvoidMultiAssignment.new,
@@ -166,6 +172,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidRedundantPragmaInline.new,
   AvoidSelfAssignment.new,
   AvoidSelfCompare.new,
+  AvoidStateConstructors.new,
   AvoidStreamTostring.new,
   AvoidThrowInCatchBlock.new,
   AvoidThrowObjectsWithoutTostring.new,
@@ -179,6 +186,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnnecessaryEnumArguments.new,
   AvoidUnnecessaryExtends.new,
   AvoidUnnecessaryFutures.new,
+  AvoidUnnecessaryGestureDetector.new,
   AvoidUnnecessaryIf.new,
   AvoidUnnecessaryLateFields.new,
   AvoidUnnecessaryLocalLate.new,

@@ -10,5 +10,9 @@ custom_lint:
   rules:
     - avoid-empty-setstate
     - avoid-flexible-outside-flex
+    - avoid-incorrect-image-opacity
+    - avoid-missing-image-alt
     - avoid-mounted-in-setstate
     - avoid-recursive-widget-calls
+    - avoid-state-constructors
+    - avoid-unnecessary-gesture-detector
