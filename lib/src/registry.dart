@@ -42,6 +42,7 @@ import 'rules/common/avoid_not_encodable_in_to_json.dart';
 import 'rules/common/avoid_nullable_interpolation.dart';
 import 'rules/common/avoid_nullable_tostring.dart';
 import 'rules/common/avoid_only_rethrow.dart';
+import 'rules/common/avoid_passing_async_when_sync_expected.dart';
 import 'rules/common/avoid_passing_self_as_argument.dart';
 import 'rules/common/avoid_recursive_tostring.dart';
 import 'rules/common/avoid_redundant_else.dart';
@@ -52,6 +53,7 @@ import 'rules/common/avoid_self_compare.dart';
 import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
 import 'rules/common/avoid_throw_objects_without_tostring.dart';
+import 'rules/common/avoid_uncaught_future_errors.dart';
 import 'rules/common/avoid_unconditional_break.dart';
 import 'rules/common/avoid_unnecessary_call.dart';
 import 'rules/common/avoid_unnecessary_collections.dart';
@@ -150,6 +152,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidNullableInterpolation.new,
   AvoidNullableTostring.new,
   AvoidOnlyRethrow.new,
+  AvoidPassingAsyncWhenSyncExpected.new,
   AvoidPassingSelfAsArgument.new,
   AvoidRecursiveTostring.new,
   AvoidRedundantElse.new,
@@ -160,6 +163,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidStreamTostring.new,
   AvoidThrowInCatchBlock.new,
   AvoidThrowObjectsWithoutTostring.new,
+  AvoidUncaughtFutureErrors.new,
   AvoidUnconditionalBreak.new,
   AvoidUnnecessaryCall.new,
   AvoidUnnecessaryCollections.new,

@@ -893,7 +893,7 @@
       "configurable": true,
       "severity": "warning",
       "phase": 6,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
@@ -1231,7 +1231,7 @@
       "configurable": false,
       "severity": "warning",
       "phase": 6,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
