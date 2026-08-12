@@ -32,6 +32,7 @@ import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_explicit_pattern_field_name.dart';
 import 'rules/flutter/avoid_flexible_outside_flex.dart';
 import 'rules/common/avoid_future_tostring.dart';
+import 'rules/common/avoid_generics_shadowing.dart';
 import 'rules/flutter/avoid_incomplete_copy_with.dart';
 import 'rules/common/avoid_inconsistent_digit_separators.dart';
 import 'rules/flutter/avoid_incorrect_image_opacity.dart';
@@ -61,6 +62,7 @@ import 'rules/flutter/avoid_recursive_widget_calls.dart';
 import 'rules/common/avoid_redundant_else.dart';
 import 'rules/common/avoid_redundant_positional_field_name.dart';
 import 'rules/common/avoid_redundant_pragma_inline.dart';
+import 'rules/common/avoid_referencing_discarded_variables.dart';
 import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
 import 'rules/flutter/avoid_state_constructors.dart';
@@ -174,6 +176,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidExplicitPatternFieldName.new,
   AvoidFlexibleOutsideFlex.new,
   AvoidFutureTostring.new,
+  AvoidGenericsShadowing.new,
   AvoidIncompleteCopyWith.new,
   AvoidInconsistentDigitSeparators.new,
   AvoidIncorrectImageOpacity.new,
@@ -203,6 +206,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidRedundantElse.new,
   AvoidRedundantPositionalFieldName.new,
   AvoidRedundantPragmaInline.new,
+  AvoidReferencingDiscardedVariables.new,
   AvoidSelfAssignment.new,
   AvoidSelfCompare.new,
   AvoidStateConstructors.new,

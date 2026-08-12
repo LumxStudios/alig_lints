@@ -39,6 +39,7 @@ custom_lint:
     - avoid-explicit-pattern-field-name
     - avoid-flexible-outside-flex
     - avoid-future-tostring
+    - avoid-generics-shadowing
     - avoid-incomplete-copy-with
     - avoid-inconsistent-digit-separators
     - avoid-incorrect-image-opacity
@@ -68,6 +69,7 @@ custom_lint:
     - avoid-redundant-else
     - avoid-redundant-positional-field-name
     - avoid-redundant-pragma-inline
+    - avoid-referencing-discarded-variables
     - avoid-self-assignment
     - avoid-self-compare
     - avoid-state-constructors

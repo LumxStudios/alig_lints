@@ -38,6 +38,7 @@ custom_lint:
     - avoid-equal-expressions
     - avoid-flexible-outside-flex
     - avoid-future-tostring
+    - avoid-generics-shadowing
     - avoid-incomplete-copy-with
     - avoid-missed-calls
     - avoid-missing-completer-stack-trace
@@ -59,6 +60,7 @@ custom_lint:
     - avoid-recursive-widget-calls
     - avoid-redundant-positional-field-name
     - avoid-redundant-pragma-inline
+    - avoid-referencing-discarded-variables
     - avoid-self-assignment
     - avoid-self-compare
     - avoid-state-constructors
