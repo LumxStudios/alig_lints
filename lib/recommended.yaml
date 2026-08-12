@@ -20,6 +20,7 @@ custom_lint:
     - avoid-constant-conditions
     - avoid-constant-switches
     - avoid-default-tostring
+    - avoid-double-slash-imports
     - avoid-duplicate-cascades
     - avoid-duplicate-constant-values
     - avoid-duplicate-exports

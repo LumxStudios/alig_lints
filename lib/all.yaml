@@ -20,6 +20,7 @@ custom_lint:
     - avoid-constant-conditions
     - avoid-constant-switches
     - avoid-default-tostring
+    - avoid-double-slash-imports
     - avoid-duplicate-cascades
     - avoid-duplicate-constant-values
     - avoid-duplicate-exports
@@ -38,6 +39,7 @@ custom_lint:
     - avoid-flexible-outside-flex
     - avoid-future-tostring
     - avoid-incomplete-copy-with
+    - avoid-inconsistent-digit-separators
     - avoid-incorrect-image-opacity
     - avoid-inferrable-type-arguments
     - avoid-keywords-in-wildcard-pattern
@@ -51,6 +53,7 @@ custom_lint:
     - avoid-mounted-in-setstate
     - avoid-multi-assignment
     - avoid-nested-futures
+    - avoid-nested-records
     - avoid-nested-shorthands
     - avoid-not-encodable-in-to-json
     - avoid-nullable-interpolation

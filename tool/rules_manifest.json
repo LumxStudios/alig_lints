@@ -250,7 +250,7 @@
       "configurable": false,
       "severity": "warning",
       "phase": 9,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
@@ -586,7 +586,7 @@
       "configurable": false,
       "severity": "info",
       "phase": 9,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
@@ -778,7 +778,7 @@
       "configurable": true,
       "severity": "info",
       "phase": 9,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },

@@ -13,6 +13,7 @@ import 'rules/common/avoid_constant_assert_conditions.dart';
 import 'rules/common/avoid_constant_conditions.dart';
 import 'rules/common/avoid_constant_switches.dart';
 import 'rules/common/avoid_default_tostring.dart';
+import 'rules/common/avoid_double_slash_imports.dart';
 import 'rules/common/avoid_duplicate_cascades.dart';
 import 'rules/common/avoid_duplicate_constant_values.dart';
 import 'rules/common/avoid_duplicate_exports.dart';
@@ -31,6 +32,7 @@ import 'rules/common/avoid_explicit_pattern_field_name.dart';
 import 'rules/flutter/avoid_flexible_outside_flex.dart';
 import 'rules/common/avoid_future_tostring.dart';
 import 'rules/flutter/avoid_incomplete_copy_with.dart';
+import 'rules/common/avoid_inconsistent_digit_separators.dart';
 import 'rules/flutter/avoid_incorrect_image_opacity.dart';
 import 'rules/common/avoid_inferrable_type_arguments.dart';
 import 'rules/common/avoid_keywords_in_wildcard_pattern.dart';
@@ -44,6 +46,7 @@ import 'rules/common/avoid_misused_set_literals.dart';
 import 'rules/flutter/avoid_mounted_in_setstate.dart';
 import 'rules/common/avoid_multi_assignment.dart';
 import 'rules/common/avoid_nested_futures.dart';
+import 'rules/common/avoid_nested_records.dart';
 import 'rules/common/avoid_nested_shorthands.dart';
 import 'rules/common/avoid_not_encodable_in_to_json.dart';
 import 'rules/common/avoid_nullable_interpolation.dart';
@@ -150,6 +153,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidConstantConditions.new,
   AvoidConstantSwitches.new,
   AvoidDefaultTostring.new,
+  AvoidDoubleSlashImports.new,
   AvoidDuplicateCascades.new,
   AvoidDuplicateConstantValues.new,
   AvoidDuplicateExports.new,
@@ -168,6 +172,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidFlexibleOutsideFlex.new,
   AvoidFutureTostring.new,
   AvoidIncompleteCopyWith.new,
+  AvoidInconsistentDigitSeparators.new,
   AvoidIncorrectImageOpacity.new,
   AvoidInferrableTypeArguments.new,
   AvoidKeywordsInWildcardPattern.new,
@@ -181,6 +186,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidMountedInSetstate.new,
   AvoidMultiAssignment.new,
   AvoidNestedFutures.new,
+  AvoidNestedRecords.new,
   AvoidNestedShorthands.new,
   AvoidNotEncodableInToJson.new,
   AvoidNullableInterpolation.new,
