@@ -2,10 +2,14 @@ import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/dart/element/element.dart';
 import 'package:analyzer/error/error.dart' hide LintCode;
+import 'package:analyzer/diagnostic/diagnostic.dart';
 import 'package:analyzer/error/listener.dart';
+import 'package:analyzer/source/source_range.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
 import '../../common/alig_rule.dart';
+import '../../common/ast_equality.dart';
+import '../../common/edit_utils.dart';
 
 const _meta = AligRuleMeta(
   name: 'avoid-unnecessary-reassignment',
@@ -35,9 +39,17 @@ const _meta = AligRuleMeta(
 /// Compound assignments — `value += 1`, `value = value + 1` — read the old value,
 /// so they end the scan rather than triggering it.
 ///
-/// No quick-fix is offered: the dead write's right-hand side may itself do work
-/// worth keeping, and whether the fix is to delete the write or to make the
-/// second one conditional depends on intent.
+/// The fix removes the dead write, and only where the value being discarded is
+/// side-effect-free: `var value = compute();` overwritten later is reported without
+/// one, because deleting it would delete the call as well.
+///
+/// For a declaration the fix removes only the **initializer**, not the statement.
+/// Deleting `var value = 1;` outright would leave the `value = 2;` below it with
+/// nothing declaring `value` — code that does not compile. `var value;` followed by
+/// the real assignment does.
+///
+/// The catalogue also lists this defect as `avoid-unused-assignment`. It is one
+/// defect, so there is one rule; see `doc/LIMITATIONS.md`.
 class AvoidUnnecessaryReassignment extends AligRule {
   /// Warns when a write is overwritten before being read.
   AvoidUnnecessaryReassignment(CustomLintConfigs configs)
@@ -50,16 +62,82 @@ class AvoidUnnecessaryReassignment extends AligRule {
     CustomLintContext context,
   ) {
     context.registry.addBlock((node) {
-      for (var index = 0; index < node.statements.length; index++) {
-        final write = _writeIn(node.statements[index]);
-        if (write == null) continue;
-
-        if (_isOverwrittenBeforeRead(node, index + 1, write.target)) {
-          reporter.atNode(write.reportOn, code);
-        }
+      for (final dead in _deadWritesIn(node)) {
+        reporter.atNode(dead.reportOn, code);
       }
     });
   }
+
+  @override
+  List<Fix> getFixes() => [_RemoveDeadWrite()];
+}
+
+/// The dead writes among [block]'s own statements.
+List<_Write> _deadWritesIn(Block block) {
+  final dead = <_Write>[];
+
+  for (var index = 0; index < block.statements.length; index++) {
+    final write = _writeIn(block.statements[index]);
+    if (write == null) continue;
+
+    if (_isOverwrittenBeforeRead(block, index + 1, write.target)) {
+      dead.add(write);
+    }
+  }
+
+  return dead;
+}
+
+class _RemoveDeadWrite extends DartFix {
+  @override
+  void run(
+    CustomLintResolver resolver,
+    ChangeReporter reporter,
+    CustomLintContext context,
+    Diagnostic diagnostic,
+    List<Diagnostic> others,
+  ) {
+    context.registry.addBlock((node) {
+      for (final dead in _deadWritesIn(node)) {
+        if (dead.reportOn.sourceRange != diagnostic.sourceRange) continue;
+
+        final value = _valueOf(dead.reportOn);
+        // Deleting a value that does something would delete the something.
+        if (value == null || hasSideEffects(value)) continue;
+
+        reporter
+            .createChangeBuilder(message: 'Remove the write', priority: 60)
+            .addDartFileEdit((builder) {
+          builder.addDeletion(_rangeToRemoveFor(dead.reportOn, value, resolver));
+        });
+      }
+    });
+  }
+}
+
+/// The value a dead write discards.
+Expression? _valueOf(AstNode dead) => switch (dead) {
+      VariableDeclaration(:final initializer) => initializer,
+      AssignmentExpression(:final rightHandSide) => rightHandSide,
+      _ => null,
+    };
+
+/// What the fix deletes.
+///
+/// A re-assignment goes whole. A declaration loses only its initializer: removing
+/// `var value = 1;` would leave the assignment below it undeclared.
+SourceRange _rangeToRemoveFor(
+  AstNode dead,
+  Expression value,
+  CustomLintResolver resolver,
+) {
+  if (dead is! VariableDeclaration) {
+    final statement = dead.thisOrAncestorOfType<Statement>() ?? dead;
+
+    return lineRangeOf(statement, resolver);
+  }
+
+  return SourceRange(dead.name.end, value.end - dead.name.end);
 }
 
 /// A write to a variable, and the node to report if it turns out to be dead.

@@ -1783,9 +1783,9 @@
       "configurable": false,
       "severity": "warning",
       "phase": 9,
-      "status": "todo",
+      "status": "covered",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Same defect as avoid-unnecessary-reassignment, which is implemented and now carries the fix. Measured: the two report each other's goldens."
     },
     {
       "name": "avoid-unused-generics",
