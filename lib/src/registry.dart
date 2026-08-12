@@ -64,6 +64,7 @@ import 'rules/common/avoid_redundant_else.dart';
 import 'rules/common/avoid_redundant_positional_field_name.dart';
 import 'rules/common/avoid_redundant_pragma_inline.dart';
 import 'rules/common/avoid_referencing_discarded_variables.dart';
+import 'rules/common/avoid_renaming_representation_getters.dart';
 import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
 import 'rules/common/avoid_shadowed_extension_methods.dart';
@@ -71,6 +72,7 @@ import 'rules/flutter/avoid_state_constructors.dart';
 import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
 import 'rules/common/avoid_throw_objects_without_tostring.dart';
+import 'rules/common/avoid_unassigned_fields.dart';
 import 'rules/common/avoid_unassigned_stream_subscriptions.dart';
 import 'rules/common/avoid_uncaught_future_errors.dart';
 import 'rules/common/avoid_unconditional_break.dart';
@@ -210,6 +212,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidRedundantPositionalFieldName.new,
   AvoidRedundantPragmaInline.new,
   AvoidReferencingDiscardedVariables.new,
+  AvoidRenamingRepresentationGetters.new,
   AvoidSelfAssignment.new,
   AvoidSelfCompare.new,
   AvoidShadowedExtensionMethods.new,
@@ -217,6 +220,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidStreamTostring.new,
   AvoidThrowInCatchBlock.new,
   AvoidThrowObjectsWithoutTostring.new,
+  AvoidUnassignedFields.new,
   AvoidUnassignedStreamSubscriptions.new,
   AvoidUncaughtFutureErrors.new,
   AvoidUnconditionalBreak.new,

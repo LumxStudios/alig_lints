@@ -62,6 +62,7 @@ custom_lint:
     - avoid-redundant-positional-field-name
     - avoid-redundant-pragma-inline
     - avoid-referencing-discarded-variables
+    - avoid-renaming-representation-getters
     - avoid-self-assignment
     - avoid-self-compare
     - avoid-shadowed-extension-methods
@@ -69,6 +70,7 @@ custom_lint:
     - avoid-stream-tostring
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
+    - avoid-unassigned-fields
     - avoid-unassigned-stream-subscriptions
     - avoid-uncaught-future-errors
     - avoid-unconditional-break
