@@ -1,0 +1,8 @@
+# A golden package of its own, because prefer-single-widget-per-file cannot be
+# verified in example_flutter: every golden there holds several widgets on
+# purpose, and custom_lint resolves rule configuration per package — a nested
+# analysis_options.yaml does not narrow it, measured. Disabling the rule there
+# would also silence its own expect_lint checks, leaving it unverified.
+analyzer:
+  plugins:
+    - custom_lint

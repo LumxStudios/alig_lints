@@ -118,6 +118,7 @@ import 'rules/common/prefer_shorthands_with_enums.dart';
 import 'rules/common/prefer_shorthands_with_static_fields.dart';
 import 'rules/common/prefer_simpler_boolean_expressions.dart';
 import 'rules/common/prefer_simpler_patterns_null_check.dart';
+import 'rules/flutter/prefer_single_widget_per_file.dart';
 import 'rules/common/prefer_specifying_future_value_type.dart';
 import 'rules/common/prefer_switch_with_enums.dart';
 import 'rules/common/prefer_wildcard_pattern.dart';
@@ -243,6 +244,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferShorthandsWithStaticFields.new,
   PreferSimplerBooleanExpressions.new,
   PreferSimplerPatternsNullCheck.new,
+  PreferSingleWidgetPerFile.new,
   PreferSpecifyingFutureValueType.new,
   PreferSwitchWithEnums.new,
   PreferWildcardPattern.new,

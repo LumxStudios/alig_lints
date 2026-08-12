@@ -9,3 +9,11 @@ analyzer:
     unused_element: ignore
     unused_field: ignore
     dead_code: ignore
+
+# Every golden here holds several widgets on purpose: a rule's positive and
+# negative cases belong side by side, where the contrast is readable.
+# prefer-single-widget-per-file is verified in example_single_widget instead — a
+# package whose files really do hold one widget each.
+custom_lint:
+  rules:
+    - prefer-single-widget-per-file: false

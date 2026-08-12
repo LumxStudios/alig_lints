@@ -37,7 +37,7 @@ Command line: `dart run custom_lint`.
 ```yaml
 custom_lint:
   rules:
-    - -avoid-unnecessary-setstate      # disable
+    - avoid-unnecessary-setstate: false  # disable
     - avoid-self-assignment:
         severity: info                 # downgrade
 ```
@@ -48,7 +48,7 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**122 / 181 rules implemented** — 5 awaiting clarification, 7 covered elsewhere
+**123 / 181 rules implemented** — 5 awaiting clarification, 7 covered elsewhere
 
 | Phase | Done |
 |---|---|
@@ -58,7 +58,7 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 | 4 | 16 / 16 |
 | 5 | 21 / 22 |
 | 6 | 8 / 8 |
-| 7 | 17 / 22 |
+| 7 | 18 / 22 |
 | 8 | 0 / 7 |
 | 9 | 0 / 35 |
 <!-- progress:end -->

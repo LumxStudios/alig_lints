@@ -125,6 +125,7 @@ custom_lint:
     - prefer-shorthands-with-static-fields
     - prefer-simpler-boolean-expressions
     - prefer-simpler-patterns-null-check
+    - prefer-single-widget-per-file
     - prefer-specifying-future-value-type
     - prefer-switch-with-enums
     - prefer-wildcard-pattern

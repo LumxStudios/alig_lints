@@ -40,6 +40,10 @@ analyze_example=$!
   >"$logs/analyze_example_flutter" 2>&1 &
 analyze_example_flutter=$!
 
+(cd example_single_widget && dart analyze --no-fatal-warnings) \
+  >"$logs/analyze_single_widget" 2>&1 &
+analyze_single_widget=$!
+
 dart test >"$logs/test" 2>&1 &
 test_pid=$!
 
@@ -49,10 +53,18 @@ example=$!
 (cd example_flutter && dart run custom_lint) >"$logs/example_flutter" 2>&1 &
 example_flutter=$!
 
+# prefer-single-widget-per-file needs a package whose files hold one widget each,
+# which example_flutter deliberately is not.
+(cd example_single_widget && dart run custom_lint) \
+  >"$logs/single_widget" 2>&1 &
+single_widget=$!
+
 status=0
 for pair in "analyze:$analyze" "analyze_example:$analyze_example" \
-  "analyze_example_flutter:$analyze_example_flutter" "test:$test_pid" \
-  "example:$example" "example_flutter:$example_flutter"; do
+  "analyze_example_flutter:$analyze_example_flutter" \
+  "analyze_single_widget:$analyze_single_widget" "test:$test_pid" \
+  "example:$example" "example_flutter:$example_flutter" \
+  "single_widget:$single_widget"; do
   name=${pair%%:*}
   pid=${pair##*:}
   if wait "$pid"; then
