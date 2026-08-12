@@ -5,7 +5,7 @@ class Base {
 
   void greet() {}
 
-  void log(String message) {}
+  void log(String _) {}
 }
 
 mixin Extra {

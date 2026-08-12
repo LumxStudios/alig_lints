@@ -8,9 +8,9 @@ class User {
   String greet(String other) => 'hi $other';
 }
 
-void log(Object? value) {}
+void log(Object? _) {}
 
-void register(void Function() callback) {}
+void register(void Function() _) {}
 
 void uses(User user) {
   // expect_lint: avoid-missed-calls

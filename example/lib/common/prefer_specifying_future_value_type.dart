@@ -1,10 +1,10 @@
-void takeText(Future<String> future) {}
+void takeText(Future<String> _) {}
 
-void takeCount(Future<int> future) {}
+void takeCount(Future<int> _) {}
 
-void takeMaybe(Future<String?> future) {}
+void takeMaybe(Future<String?> _) {}
 
-void takeNothing(Future<void> future) {}
+void takeNothing(Future<void> _) {}
 
 void calls(String? maybe, int? count, String text) {
   // expect_lint: prefer-specifying-future-value-type

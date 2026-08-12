@@ -2,7 +2,7 @@ class Builder {
   int width = 0;
   int height = 0;
 
-  void grow(int by) {}
+  void grow(int _) {}
 }
 
 void main() {

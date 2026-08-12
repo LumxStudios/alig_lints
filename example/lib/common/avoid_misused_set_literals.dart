@@ -1,4 +1,4 @@
-void log(String message) {}
+void log(String _) {}
 
 int compute() => 1;
 

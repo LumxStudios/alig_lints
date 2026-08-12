@@ -1,3 +1,4 @@
+// expect_lint: avoid-unused-parameters
 String classifyStatement(int value) {
   // expect_lint: avoid-constant-switches
   switch (1) {

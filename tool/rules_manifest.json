@@ -1832,9 +1832,9 @@
       "configurable": false,
       "severity": "warning",
       "phase": 9,
-      "status": "todo",
+      "status": "covered",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Covered by the analyzer warning unused_local_variable, which is on by default. Measured."
     },
     {
       "name": "avoid-unused-parameters",
@@ -1849,7 +1849,7 @@
       "configurable": true,
       "severity": "warning",
       "phase": 9,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },

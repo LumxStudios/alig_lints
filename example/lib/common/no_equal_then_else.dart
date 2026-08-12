@@ -1,5 +1,8 @@
 bool check() => true;
 
+// b is unused precisely because both branches return a, which is the finding
+// below. Renaming it to _ would hide what makes the two branches equal.
+// expect_lint: avoid-unused-parameters
 int pick(bool flag, int a, int b) {
   // Both findings are true here and suggest different remedies: collapse the
   // branches, or drop the else that follows a returning branch.

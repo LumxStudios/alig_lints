@@ -27,7 +27,7 @@ Future<String?> asyncNull() async {
 
 class Repository {
   // expect_lint: function-always-returns-null
-  String? find(int id) => null;
+  String? find(int _) => null;
 }
 
 abstract class Base {

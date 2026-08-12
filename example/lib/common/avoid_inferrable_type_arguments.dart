@@ -4,7 +4,7 @@ class Box<T> {
   final T value;
 }
 
-void take(List<int> items) {}
+void take(List<int> _) {}
 
 // expect_lint: avoid-inferrable-type-arguments
 final List<int> declared = <int>[];

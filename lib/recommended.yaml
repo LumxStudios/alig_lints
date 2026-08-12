@@ -99,6 +99,7 @@ custom_lint:
     - avoid-unsafe-collection-methods
     - avoid-unused-generics
     - avoid-unused-instances
+    - avoid-unused-parameters
     - avoid-wildcard-cases-with-enums
     - avoid-wildcard-cases-with-sealed-classes
     - check-for-equals-in-render-object-setters

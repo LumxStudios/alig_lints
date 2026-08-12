@@ -1,9 +1,9 @@
 class Box {
   final items = <int>[];
 
-  void copyFrom(Box other) {}
+  void copyFrom(Box _) {}
 
-  int compareTo(Box other) => 0;
+  int compareTo(Box _) => 0;
 
   void selfInside() {
     // expect_lint: avoid-passing-self-as-argument

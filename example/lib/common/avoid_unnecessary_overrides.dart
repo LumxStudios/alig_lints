@@ -1,8 +1,9 @@
 class Base {
   int get value => 1;
 
-  set value(int input) {}
+  set value(int _) {}
 
+  // expect_lint: avoid-unused-parameters
   void work(int amount, {String? label}) {}
 
   String describe() => 'base';
