@@ -1,5 +1,6 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/element/element.dart';
+import 'package:analyzer/dart/element/type.dart';
 
 /// Whether [element] is declared in `package:flutter/src/$libraryPath`.
 bool isFlutterElement(Element? element, String libraryPath) {
@@ -54,3 +55,9 @@ ClassDeclaration? enclosingStateClass(AstNode node) {
       ? declaration
       : null;
 }
+
+/// Whether [type] is Flutter's `BuildContext`.
+bool isBuildContext(DartType? type) =>
+    type is InterfaceType &&
+    type.element.name == 'BuildContext' &&
+    isFlutterElement(type.element, 'widgets/framework.dart');

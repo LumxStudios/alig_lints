@@ -1,6 +1,5 @@
 import 'package:analyzer/dart/ast/ast.dart';
 import 'package:analyzer/dart/element/element.dart';
-import 'package:analyzer/dart/element/type.dart';
 import 'package:analyzer/diagnostic/diagnostic.dart';
 import 'package:analyzer/error/error.dart' hide LintCode;
 import 'package:analyzer/error/listener.dart';
@@ -66,7 +65,7 @@ class UseClosestBuildContext extends AligRule {
 /// The name of a nearer `BuildContext` in scope at [node], or null when [node] is
 /// not a farther-than-necessary context reference.
 String? _closerContextFor(SimpleIdentifier node) {
-  if (!_isBuildContext(node.staticType)) return null;
+  if (!isBuildContext(node.staticType)) return null;
 
   final referenced = node.element;
   if (referenced is! FormalParameterElement) return null;
@@ -97,16 +96,11 @@ String? _closerContextFor(SimpleIdentifier node) {
 FormalParameter? _buildContextParameterOf(FormalParameterList parameters) {
   for (final parameter in parameters.parameters) {
     final element = parameter.declaredFragment?.element;
-    if (element != null && _isBuildContext(element.type)) return parameter;
+    if (element != null && isBuildContext(element.type)) return parameter;
   }
 
   return null;
 }
-
-bool _isBuildContext(DartType? type) =>
-    type is InterfaceType &&
-    type.element.name == 'BuildContext' &&
-    isFlutterElement(type.element, 'widgets/framework.dart');
 
 class _UseCloserContext extends DartFix {
   @override

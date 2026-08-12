@@ -69,6 +69,7 @@ import 'rules/common/avoid_renaming_representation_getters.dart';
 import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
 import 'rules/common/avoid_shadowed_extension_methods.dart';
+import 'rules/common/avoid_shadowing.dart';
 import 'rules/flutter/avoid_state_constructors.dart';
 import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
@@ -220,6 +221,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidSelfAssignment.new,
   AvoidSelfCompare.new,
   AvoidShadowedExtensionMethods.new,
+  AvoidShadowing.new,
   AvoidStateConstructors.new,
   AvoidStreamTostring.new,
   AvoidThrowInCatchBlock.new,
