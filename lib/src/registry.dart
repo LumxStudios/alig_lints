@@ -29,6 +29,7 @@ import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_explicit_pattern_field_name.dart';
 import 'rules/flutter/avoid_flexible_outside_flex.dart';
 import 'rules/common/avoid_future_tostring.dart';
+import 'rules/flutter/avoid_incomplete_copy_with.dart';
 import 'rules/flutter/avoid_incorrect_image_opacity.dart';
 import 'rules/common/avoid_inferrable_type_arguments.dart';
 import 'rules/common/avoid_keywords_in_wildcard_pattern.dart';
@@ -93,6 +94,7 @@ import 'rules/common/avoid_unsafe_collection_methods.dart';
 import 'rules/common/avoid_wildcard_cases_with_enums.dart';
 import 'rules/common/avoid_wildcard_cases_with_sealed_classes.dart';
 import 'rules/flutter/check_for_equals_in_render_object_setters.dart';
+import 'rules/flutter/consistent_update_render_object.dart';
 import 'rules/common/function_always_returns_null.dart';
 import 'rules/common/function_always_returns_same_value.dart';
 import 'rules/common/no_empty_block.dart';
@@ -119,10 +121,12 @@ import 'rules/common/prefer_shorthands_with_static_fields.dart';
 import 'rules/common/prefer_simpler_boolean_expressions.dart';
 import 'rules/common/prefer_simpler_patterns_null_check.dart';
 import 'rules/flutter/prefer_single_widget_per_file.dart';
+import 'rules/flutter/prefer_spacing.dart';
 import 'rules/common/prefer_specifying_future_value_type.dart';
 import 'rules/common/prefer_switch_with_enums.dart';
 import 'rules/common/prefer_wildcard_pattern.dart';
 import 'rules/flutter/proper_super_calls.dart';
+import 'rules/flutter/use_closest_build_context.dart';
 import 'rules/flutter/use_setstate_synchronously.dart';
 
 /// Every implemented rule in this package.
@@ -155,6 +159,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidExplicitPatternFieldName.new,
   AvoidFlexibleOutsideFlex.new,
   AvoidFutureTostring.new,
+  AvoidIncompleteCopyWith.new,
   AvoidIncorrectImageOpacity.new,
   AvoidInferrableTypeArguments.new,
   AvoidKeywordsInWildcardPattern.new,
@@ -219,6 +224,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidWildcardCasesWithEnums.new,
   AvoidWildcardCasesWithSealedClasses.new,
   CheckForEqualsInRenderObjectSetters.new,
+  ConsistentUpdateRenderObject.new,
   FunctionAlwaysReturnsNull.new,
   FunctionAlwaysReturnsSameValue.new,
   NoEmptyBlock.new,
@@ -245,9 +251,11 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferSimplerBooleanExpressions.new,
   PreferSimplerPatternsNullCheck.new,
   PreferSingleWidgetPerFile.new,
+  PreferSpacing.new,
   PreferSpecifyingFutureValueType.new,
   PreferSwitchWithEnums.new,
   PreferWildcardPattern.new,
   ProperSuperCalls.new,
+  UseClosestBuildContext.new,
   UseSetstateSynchronously.new,
 ];

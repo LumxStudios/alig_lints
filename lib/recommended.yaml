@@ -35,6 +35,7 @@ custom_lint:
     - avoid-equal-expressions
     - avoid-flexible-outside-flex
     - avoid-future-tostring
+    - avoid-incomplete-copy-with
     - avoid-missed-calls
     - avoid-missing-completer-stack-trace
     - avoid-missing-enum-constant-in-map
@@ -81,6 +82,7 @@ custom_lint:
     - avoid-wildcard-cases-with-enums
     - avoid-wildcard-cases-with-sealed-classes
     - check-for-equals-in-render-object-setters
+    - consistent-update-render-object
     - function-always-returns-null
     - function-always-returns-same-value
     - no-empty-block
@@ -100,4 +102,5 @@ custom_lint:
     - prefer-return-await
     - prefer-specifying-future-value-type
     - proper-super-calls
+    - use-closest-build-context
     - use-setstate-synchronously

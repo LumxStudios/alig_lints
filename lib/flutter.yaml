@@ -10,6 +10,7 @@ custom_lint:
   rules:
     - avoid-empty-setstate
     - avoid-flexible-outside-flex
+    - avoid-incomplete-copy-with
     - avoid-incorrect-image-opacity
     - avoid-missing-image-alt
     - avoid-mounted-in-setstate
@@ -19,9 +20,12 @@ custom_lint:
     - avoid-unnecessary-setstate
     - avoid-unnecessary-stateful-widgets
     - check-for-equals-in-render-object-setters
+    - consistent-update-render-object
     - pass-existing-future-to-future-builder
     - pass-existing-stream-to-stream-builder
     - prefer-dedicated-media-query-methods
     - prefer-single-widget-per-file
+    - prefer-spacing
     - proper-super-calls
+    - use-closest-build-context
     - use-setstate-synchronously

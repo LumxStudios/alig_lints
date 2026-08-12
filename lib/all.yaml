@@ -36,6 +36,7 @@ custom_lint:
     - avoid-explicit-pattern-field-name
     - avoid-flexible-outside-flex
     - avoid-future-tostring
+    - avoid-incomplete-copy-with
     - avoid-incorrect-image-opacity
     - avoid-inferrable-type-arguments
     - avoid-keywords-in-wildcard-pattern
@@ -100,6 +101,7 @@ custom_lint:
     - avoid-wildcard-cases-with-enums
     - avoid-wildcard-cases-with-sealed-classes
     - check-for-equals-in-render-object-setters
+    - consistent-update-render-object
     - function-always-returns-null
     - function-always-returns-same-value
     - no-empty-block
@@ -126,8 +128,10 @@ custom_lint:
     - prefer-simpler-boolean-expressions
     - prefer-simpler-patterns-null-check
     - prefer-single-widget-per-file
+    - prefer-spacing
     - prefer-specifying-future-value-type
     - prefer-switch-with-enums
     - prefer-wildcard-pattern
     - proper-super-calls
+    - use-closest-build-context
     - use-setstate-synchronously
