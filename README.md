@@ -18,7 +18,16 @@ says so in its own documentation rather than guessing.
 dev_dependencies:
   custom_lint: ^0.8.1
   alig_lints:
-    path: ../alig_linter
+    git: https://github.com/LumxStudios/alig_lints.git
+```
+
+The repository is public, so the git dependency needs no token or SSH key. To pin
+a version, add `ref:` with a tag or commit. Working on the rules themselves? Use a
+path dependency instead:
+
+```yaml
+  alig_lints:
+    path: ../alig_lints
 ```
 
 ```yaml
@@ -29,8 +38,9 @@ include: package:alig_lints/all.yaml
 Then run `dart pub get` and restart the analysis server in your IDE.
 Command line: `dart run custom_lint`.
 
-Verified from a clean Flutter project: both halves work through the single
-`include:` — the custom rules and the bundled built-in lints alike.
+Verified from a clean Flutter project, through the git dependency above: both
+halves work off the single `include:` — the custom rules and the bundled built-in
+lints alike.
 
 ### Presets
 
