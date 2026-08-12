@@ -3,3 +3,9 @@
 pubspec.lock
 build/
 .DS_Store
+
+# custom_lint writes a log beside each package it analyses.
+custom_lint.log
+
+# Session state from the editor tooling.
+.claude/
