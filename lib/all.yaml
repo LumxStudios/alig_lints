@@ -129,6 +129,7 @@ custom_lint:
     - dispose-fields
     - function-always-returns-null
     - function-always-returns-same-value
+    - match-base-class-default-value
     - match-getter-setter-field-names
     - no-empty-block
     - no-equal-conditions
@@ -147,6 +148,7 @@ custom_lint:
     - prefer-iterable-of
     - prefer-null-aware-elements
     - prefer-null-aware-spread
+    - prefer-overriding-parent-equality
     - prefer-parentheses-with-if-null
     - prefer-private-extension-type-field
     - prefer-public-exception-classes

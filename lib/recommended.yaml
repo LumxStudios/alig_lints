@@ -108,6 +108,7 @@ custom_lint:
     - dispose-fields
     - function-always-returns-null
     - function-always-returns-same-value
+    - match-base-class-default-value
     - match-getter-setter-field-names
     - no-empty-block
     - no-equal-conditions
@@ -123,6 +124,7 @@ custom_lint:
     - prefer-dedicated-media-query-methods
     - prefer-explicit-function-type
     - prefer-iterable-of
+    - prefer-overriding-parent-equality
     - prefer-parentheses-with-if-null
     - prefer-public-exception-classes
     - prefer-return-await
