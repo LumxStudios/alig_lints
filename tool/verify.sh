@@ -24,6 +24,22 @@ sed 's/^/      /' "$logs/generate"
 dart analyze >"$logs/analyze" 2>&1 &
 analyze=$!
 
+# The root analyze covers only this package. Without these two, a golden that
+# does not compile still passes the gate: `dart run custom_lint` reports its own
+# lints and stays quiet about the analyzer's errors.
+#
+# Warnings are not fatal here, deliberately. A golden for avoid-duplicate-map-keys
+# contains duplicate map keys, and the analyzer warns about them on its own — that
+# is the code being tested, not a defect. Only errors, which mean the golden does
+# not compile, fail the gate.
+(cd example && dart analyze --no-fatal-warnings) \
+  >"$logs/analyze_example" 2>&1 &
+analyze_example=$!
+
+(cd example_flutter && dart analyze --no-fatal-warnings) \
+  >"$logs/analyze_example_flutter" 2>&1 &
+analyze_example_flutter=$!
+
 dart test >"$logs/test" 2>&1 &
 test_pid=$!
 
@@ -34,8 +50,9 @@ example=$!
 example_flutter=$!
 
 status=0
-for pair in "analyze:$analyze" "test:$test_pid" "example:$example" \
-  "example_flutter:$example_flutter"; do
+for pair in "analyze:$analyze" "analyze_example:$analyze_example" \
+  "analyze_example_flutter:$analyze_example_flutter" "test:$test_pid" \
+  "example:$example" "example_flutter:$example_flutter"; do
   name=${pair%%:*}
   pid=${pair##*:}
   if wait "$pid"; then
