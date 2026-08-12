@@ -5,11 +5,14 @@ Future<void> work() async => throw StateError('boom');
 void runLater(void Function() action) => action();
 
 void listen(Stream<int> source) {
-  // expect_lint: avoid-passing-async-when-sync-expected
+  // Two rules land on this line: the callback is async where a void one is
+  // wanted, and the subscription is dropped.
+  // expect_lint: avoid-passing-async-when-sync-expected, avoid-unassigned-stream-subscriptions
   source.listen((event) async {
     await work();
   });
 
+  // expect_lint: avoid-unassigned-stream-subscriptions
   source.listen(print);
 }
 

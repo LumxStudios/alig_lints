@@ -8,10 +8,12 @@ analyzer:
 custom_lint:
   enable_all_lint_rules: false
   rules:
+    - always-remove-listener
     - avoid-empty-setstate
     - avoid-flexible-outside-flex
     - avoid-incomplete-copy-with
     - avoid-incorrect-image-opacity
+    - avoid-missing-controller
     - avoid-missing-image-alt
     - avoid-mounted-in-setstate
     - avoid-recursive-widget-calls

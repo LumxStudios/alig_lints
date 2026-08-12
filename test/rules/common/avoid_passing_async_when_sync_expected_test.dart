@@ -9,7 +9,7 @@ void main() {
     await expectRuleReports(
       AvoidPassingAsyncWhenSyncExpected(CustomLintConfigs.empty),
       'test/fixtures/common/avoid_passing_async_when_sync_expected.dart',
-      onLines: [8, 16, 20],
+      onLines: [10, 18, 22],
     );
   });
 }

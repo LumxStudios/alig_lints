@@ -8,6 +8,7 @@ analyzer:
 custom_lint:
   enable_all_lint_rules: false
   rules:
+    - always-remove-listener
     - avoid-accessing-collections-by-constant-index
     - avoid-always-null-parameters
     - avoid-assignments-as-conditions
@@ -43,6 +44,7 @@ custom_lint:
     - avoid-map-keys-contains
     - avoid-missed-calls
     - avoid-missing-completer-stack-trace
+    - avoid-missing-controller
     - avoid-missing-enum-constant-in-map
     - avoid-missing-image-alt
     - avoid-misused-set-literals
@@ -67,6 +69,7 @@ custom_lint:
     - avoid-stream-tostring
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
+    - avoid-unassigned-stream-subscriptions
     - avoid-uncaught-future-errors
     - avoid-unconditional-break
     - avoid-unnecessary-call
@@ -97,6 +100,7 @@ custom_lint:
     - avoid-unreachable-for-loop
     - avoid-unrelated-type-assertions
     - avoid-unrelated-type-casts
+    - avoid-unremovable-callbacks-in-listeners
     - avoid-unsafe-collection-methods
     - avoid-wildcard-cases-with-enums
     - avoid-wildcard-cases-with-sealed-classes
