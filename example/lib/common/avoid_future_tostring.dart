@@ -1,3 +1,4 @@
+// expect_lint: avoid-unnecessary-futures
 Future<int> load() async => 1;
 
 abstract class Pending implements Future<int> {}

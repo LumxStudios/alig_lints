@@ -36,6 +36,7 @@ import 'rules/common/avoid_missing_completer_stack_trace.dart';
 import 'rules/common/avoid_missing_enum_constant_in_map.dart';
 import 'rules/common/avoid_misused_set_literals.dart';
 import 'rules/common/avoid_multi_assignment.dart';
+import 'rules/common/avoid_nested_futures.dart';
 import 'rules/common/avoid_nested_shorthands.dart';
 import 'rules/common/avoid_not_encodable_in_to_json.dart';
 import 'rules/common/avoid_nullable_interpolation.dart';
@@ -59,6 +60,7 @@ import 'rules/common/avoid_unnecessary_conditionals.dart';
 import 'rules/common/avoid_unnecessary_continue.dart';
 import 'rules/common/avoid_unnecessary_enum_arguments.dart';
 import 'rules/common/avoid_unnecessary_extends.dart';
+import 'rules/common/avoid_unnecessary_futures.dart';
 import 'rules/common/avoid_unnecessary_if.dart';
 import 'rules/common/avoid_unnecessary_late_fields.dart';
 import 'rules/common/avoid_unnecessary_local_late.dart';
@@ -95,6 +97,7 @@ import 'rules/common/prefer_iterable_of.dart';
 import 'rules/common/prefer_null_aware_elements.dart';
 import 'rules/common/prefer_null_aware_spread.dart';
 import 'rules/common/prefer_parentheses_with_if_null.dart';
+import 'rules/common/prefer_return_await.dart';
 import 'rules/common/prefer_returning_shorthands.dart';
 import 'rules/common/prefer_shorthands_with_enums.dart';
 import 'rules/common/prefer_shorthands_with_static_fields.dart';
@@ -141,6 +144,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidMissingEnumConstantInMap.new,
   AvoidMisusedSetLiterals.new,
   AvoidMultiAssignment.new,
+  AvoidNestedFutures.new,
   AvoidNestedShorthands.new,
   AvoidNotEncodableInToJson.new,
   AvoidNullableInterpolation.new,
@@ -164,6 +168,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnnecessaryContinue.new,
   AvoidUnnecessaryEnumArguments.new,
   AvoidUnnecessaryExtends.new,
+  AvoidUnnecessaryFutures.new,
   AvoidUnnecessaryIf.new,
   AvoidUnnecessaryLateFields.new,
   AvoidUnnecessaryLocalLate.new,
@@ -200,6 +205,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferNullAwareElements.new,
   PreferNullAwareSpread.new,
   PreferParenthesesWithIfNull.new,
+  PreferReturnAwait.new,
   PreferReturningShorthands.new,
   PreferShorthandsWithEnums.new,
   PreferShorthandsWithStaticFields.new,

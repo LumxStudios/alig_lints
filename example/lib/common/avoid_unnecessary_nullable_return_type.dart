@@ -8,7 +8,7 @@ String? pick(bool first) {
   return 'b';
 }
 
-// expect_lint: avoid-unnecessary-nullable-return-type
+// expect_lint: avoid-unnecessary-nullable-return-type, avoid-unnecessary-futures
 Future<String?> load() async => 'ready';
 
 // Falling off the end returns null, so the ? is doing work.

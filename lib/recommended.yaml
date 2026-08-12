@@ -39,6 +39,7 @@ custom_lint:
     - avoid-missing-enum-constant-in-map
     - avoid-misused-set-literals
     - avoid-multi-assignment
+    - avoid-nested-futures
     - avoid-not-encodable-in-to-json
     - avoid-nullable-interpolation
     - avoid-nullable-tostring
@@ -83,4 +84,5 @@ custom_lint:
     - prefer-explicit-function-type
     - prefer-iterable-of
     - prefer-parentheses-with-if-null
+    - prefer-return-await
     - prefer-specifying-future-value-type

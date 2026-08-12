@@ -9,6 +9,7 @@ void onlyStatement() {
   return;
 }
 
+// expect_lint: avoid-unnecessary-futures
 Future<void> asyncTrailing() async {
   print('work');
   // expect_lint: avoid-unnecessary-return

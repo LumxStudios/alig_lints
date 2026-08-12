@@ -43,6 +43,7 @@ custom_lint:
     - avoid-missing-enum-constant-in-map
     - avoid-misused-set-literals
     - avoid-multi-assignment
+    - avoid-nested-futures
     - avoid-nested-shorthands
     - avoid-not-encodable-in-to-json
     - avoid-nullable-interpolation
@@ -66,6 +67,7 @@ custom_lint:
     - avoid-unnecessary-continue
     - avoid-unnecessary-enum-arguments
     - avoid-unnecessary-extends
+    - avoid-unnecessary-futures
     - avoid-unnecessary-if
     - avoid-unnecessary-late-fields
     - avoid-unnecessary-local-late
@@ -102,6 +104,7 @@ custom_lint:
     - prefer-null-aware-elements
     - prefer-null-aware-spread
     - prefer-parentheses-with-if-null
+    - prefer-return-await
     - prefer-returning-shorthands
     - prefer-shorthands-with-enums
     - prefer-shorthands-with-static-fields

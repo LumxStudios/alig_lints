@@ -20,7 +20,7 @@ String? everyBranch(bool flag) {
 // Falling off the end without returning is Dart's own
 // body_might_complete_normally_nullable, so this rule stays out of it.
 
-// expect_lint: function-always-returns-null
+// expect_lint: function-always-returns-null, avoid-unnecessary-futures
 Future<String?> asyncNull() async {
   return null;
 }
