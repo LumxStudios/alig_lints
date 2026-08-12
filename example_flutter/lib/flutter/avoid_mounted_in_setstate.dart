@@ -12,6 +12,9 @@ class _SampleState extends State<Sample> {
 
   Future<void> bad() async {
     await Future<void>.delayed(.zero);
+    // The check inside the callback does not protect the call itself, so both
+    // rules have something to say here.
+    // expect_lint: use-setstate-synchronously
     setState(() {
       // expect_lint: avoid-mounted-in-setstate
       if (mounted) counter++;
@@ -20,6 +23,7 @@ class _SampleState extends State<Sample> {
 
   Future<void> alsoBad() async {
     await Future<void>.delayed(.zero);
+    // expect_lint: use-setstate-synchronously
     setState(() {
       // expect_lint: avoid-mounted-in-setstate
       if (!mounted) return;

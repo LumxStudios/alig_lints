@@ -22,3 +22,5 @@ custom_lint:
     - pass-existing-future-to-future-builder
     - pass-existing-stream-to-stream-builder
     - prefer-dedicated-media-query-methods
+    - proper-super-calls
+    - use-setstate-synchronously

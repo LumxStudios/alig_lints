@@ -121,6 +121,8 @@ import 'rules/common/prefer_simpler_patterns_null_check.dart';
 import 'rules/common/prefer_specifying_future_value_type.dart';
 import 'rules/common/prefer_switch_with_enums.dart';
 import 'rules/common/prefer_wildcard_pattern.dart';
+import 'rules/flutter/proper_super_calls.dart';
+import 'rules/flutter/use_setstate_synchronously.dart';
 
 /// Every implemented rule in this package.
 const List<AligRuleFactory> aligRuleFactories = [
@@ -244,4 +246,6 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferSpecifyingFutureValueType.new,
   PreferSwitchWithEnums.new,
   PreferWildcardPattern.new,
+  ProperSuperCalls.new,
+  UseSetstateSynchronously.new,
 ];

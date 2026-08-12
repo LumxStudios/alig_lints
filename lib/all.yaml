@@ -128,3 +128,5 @@ custom_lint:
     - prefer-specifying-future-value-type
     - prefer-switch-with-enums
     - prefer-wildcard-pattern
+    - proper-super-calls
+    - use-setstate-synchronously

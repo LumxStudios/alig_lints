@@ -99,3 +99,5 @@ custom_lint:
     - prefer-parentheses-with-if-null
     - prefer-return-await
     - prefer-specifying-future-value-type
+    - proper-super-calls
+    - use-setstate-synchronously
