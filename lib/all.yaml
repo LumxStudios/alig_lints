@@ -15,6 +15,7 @@ custom_lint:
     - avoid-cascade-after-if-null
     - avoid-casting-to-extension-type
     - avoid-collection-equality-checks
+    - avoid-commented-out-code
     - avoid-conditions-with-boolean-literals
     - avoid-constant-assert-conditions
     - avoid-constant-conditions

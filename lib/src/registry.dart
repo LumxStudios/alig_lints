@@ -8,6 +8,7 @@ import 'rules/common/avoid_assignments_as_conditions.dart';
 import 'rules/common/avoid_cascade_after_if_null.dart';
 import 'rules/common/avoid_casting_to_extension_type.dart';
 import 'rules/common/avoid_collection_equality_checks.dart';
+import 'rules/common/avoid_commented_out_code.dart';
 import 'rules/common/avoid_conditions_with_boolean_literals.dart';
 import 'rules/common/avoid_constant_assert_conditions.dart';
 import 'rules/common/avoid_constant_conditions.dart';
@@ -156,6 +157,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidCascadeAfterIfNull.new,
   AvoidCastingToExtensionType.new,
   AvoidCollectionEqualityChecks.new,
+  AvoidCommentedOutCode.new,
   AvoidConditionsWithBooleanLiterals.new,
   AvoidConstantAssertConditions.new,
   AvoidConstantConditions.new,
