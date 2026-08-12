@@ -140,6 +140,7 @@ custom_lint:
     - prefer-any-or-every
     - prefer-correct-for-loop-increment
     - prefer-correct-json-casts
+    - prefer-correct-test-file-name
     - prefer-dedicated-media-query-methods
     - prefer-explicit-function-type
     - prefer-iterable-of
@@ -156,6 +157,7 @@ custom_lint:
     - prefer-spacing
     - prefer-specifying-future-value-type
     - prefer-switch-with-enums
+    - prefer-unique-test-names
     - prefer-wildcard-pattern
     - proper-super-calls
     - use-closest-build-context

@@ -118,12 +118,14 @@ custom_lint:
     - pass-existing-stream-to-stream-builder
     - prefer-correct-for-loop-increment
     - prefer-correct-json-casts
+    - prefer-correct-test-file-name
     - prefer-dedicated-media-query-methods
     - prefer-explicit-function-type
     - prefer-iterable-of
     - prefer-parentheses-with-if-null
     - prefer-return-await
     - prefer-specifying-future-value-type
+    - prefer-unique-test-names
     - proper-super-calls
     - use-closest-build-context
     - use-setstate-synchronously

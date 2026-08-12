@@ -133,6 +133,7 @@ import 'rules/flutter/pass_existing_stream_to_stream_builder.dart';
 import 'rules/common/prefer_any_or_every.dart';
 import 'rules/common/prefer_correct_for_loop_increment.dart';
 import 'rules/common/prefer_correct_json_casts.dart';
+import 'rules/common/prefer_correct_test_file_name.dart';
 import 'rules/flutter/prefer_dedicated_media_query_methods.dart';
 import 'rules/common/prefer_explicit_function_type.dart';
 import 'rules/common/prefer_iterable_of.dart';
@@ -149,6 +150,7 @@ import 'rules/flutter/prefer_single_widget_per_file.dart';
 import 'rules/flutter/prefer_spacing.dart';
 import 'rules/common/prefer_specifying_future_value_type.dart';
 import 'rules/common/prefer_switch_with_enums.dart';
+import 'rules/common/prefer_unique_test_names.dart';
 import 'rules/common/prefer_wildcard_pattern.dart';
 import 'rules/flutter/proper_super_calls.dart';
 import 'rules/flutter/use_closest_build_context.dart';
@@ -288,6 +290,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferAnyOrEvery.new,
   PreferCorrectForLoopIncrement.new,
   PreferCorrectJsonCasts.new,
+  PreferCorrectTestFileName.new,
   PreferDedicatedMediaQueryMethods.new,
   PreferExplicitFunctionType.new,
   PreferIterableOf.new,
@@ -304,6 +307,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferSpacing.new,
   PreferSpecifyingFutureValueType.new,
   PreferSwitchWithEnums.new,
+  PreferUniqueTestNames.new,
   PreferWildcardPattern.new,
   ProperSuperCalls.new,
   UseClosestBuildContext.new,
