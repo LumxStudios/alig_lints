@@ -97,6 +97,8 @@ custom_lint:
     - avoid-unrelated-type-casts
     - avoid-unremovable-callbacks-in-listeners
     - avoid-unsafe-collection-methods
+    - avoid-unused-generics
+    - avoid-unused-instances
     - avoid-wildcard-cases-with-enums
     - avoid-wildcard-cases-with-sealed-classes
     - check-for-equals-in-render-object-setters

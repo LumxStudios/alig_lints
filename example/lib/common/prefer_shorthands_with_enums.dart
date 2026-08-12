@@ -10,7 +10,7 @@ class Job {
 }
 
 void argument() {
-  // expect_lint: prefer-shorthands-with-enums
+  // expect_lint: prefer-shorthands-with-enums, avoid-unused-instances
   Job(status: Status.active);
 }
 
@@ -35,6 +35,7 @@ String pattern(Status status) => switch (status) {
 
 // Already shorthand.
 void already() {
+  // expect_lint: avoid-unused-instances
   Job(status: .active);
 }
 

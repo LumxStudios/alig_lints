@@ -14,7 +14,7 @@ class Job {
 }
 
 void argument() {
-  // expect_lint: prefer-shorthands-with-static-fields
+  // expect_lint: prefer-shorthands-with-static-fields, avoid-unused-instances
   Job(size: Size.small);
 }
 
@@ -32,6 +32,7 @@ void comparison(Size size) {
 
 // Already shorthand.
 void already() {
+  // expect_lint: avoid-unused-instances
   Job(size: .small);
 }
 

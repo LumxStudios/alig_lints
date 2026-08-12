@@ -31,6 +31,7 @@ void main() {
   box.work();
   count = compute();
   count++;
+  // expect_lint: avoid-unused-instances
   Box();
   print(box.doubled);
 }

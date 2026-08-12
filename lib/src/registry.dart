@@ -111,6 +111,8 @@ import 'rules/common/avoid_unrelated_type_assertions.dart';
 import 'rules/common/avoid_unrelated_type_casts.dart';
 import 'rules/common/avoid_unremovable_callbacks_in_listeners.dart';
 import 'rules/common/avoid_unsafe_collection_methods.dart';
+import 'rules/common/avoid_unused_generics.dart';
+import 'rules/common/avoid_unused_instances.dart';
 import 'rules/common/avoid_wildcard_cases_with_enums.dart';
 import 'rules/common/avoid_wildcard_cases_with_sealed_classes.dart';
 import 'rules/flutter/check_for_equals_in_render_object_setters.dart';
@@ -263,6 +265,8 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnrelatedTypeCasts.new,
   AvoidUnremovableCallbacksInListeners.new,
   AvoidUnsafeCollectionMethods.new,
+  AvoidUnusedGenerics.new,
+  AvoidUnusedInstances.new,
   AvoidWildcardCasesWithEnums.new,
   AvoidWildcardCasesWithSealedClasses.new,
   CheckForEqualsInRenderObjectSetters.new,
