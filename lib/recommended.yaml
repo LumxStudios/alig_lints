@@ -71,6 +71,7 @@ custom_lint:
     - avoid-state-constructors
     - avoid-stream-tostring
     - avoid-suspicious-global-reference
+    - avoid-suspicious-super-overrides
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
     - avoid-unassigned-fields

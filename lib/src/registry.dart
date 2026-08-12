@@ -73,6 +73,7 @@ import 'rules/common/avoid_shadowing.dart';
 import 'rules/flutter/avoid_state_constructors.dart';
 import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_suspicious_global_reference.dart';
+import 'rules/common/avoid_suspicious_super_overrides.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
 import 'rules/common/avoid_throw_objects_without_tostring.dart';
 import 'rules/common/avoid_unassigned_fields.dart';
@@ -142,6 +143,7 @@ import 'rules/common/prefer_declaring_const_constructor.dart';
 import 'rules/flutter/prefer_dedicated_media_query_methods.dart';
 import 'rules/common/prefer_explicit_function_type.dart';
 import 'rules/common/prefer_iterable_of.dart';
+import 'rules/common/prefer_match_file_name.dart';
 import 'rules/common/prefer_null_aware_elements.dart';
 import 'rules/common/prefer_null_aware_spread.dart';
 import 'rules/common/prefer_overriding_parent_equality.dart';
@@ -238,6 +240,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidStateConstructors.new,
   AvoidStreamTostring.new,
   AvoidSuspiciousGlobalReference.new,
+  AvoidSuspiciousSuperOverrides.new,
   AvoidThrowInCatchBlock.new,
   AvoidThrowObjectsWithoutTostring.new,
   AvoidUnassignedFields.new,
@@ -307,6 +310,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferDedicatedMediaQueryMethods.new,
   PreferExplicitFunctionType.new,
   PreferIterableOf.new,
+  PreferMatchFileName.new,
   PreferNullAwareElements.new,
   PreferNullAwareSpread.new,
   PreferOverridingParentEquality.new,

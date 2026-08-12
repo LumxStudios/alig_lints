@@ -9,3 +9,10 @@ analyzer:
     unused_element: ignore
     unused_field: ignore
     dead_code: ignore
+
+custom_lint:
+  rules:
+    # Goldens pair one helper type with the functions that demonstrate a rule, so
+    # the file is named after the rule rather than the type. Verified in
+    # example_single_widget instead.
+    - prefer-match-file-name: false

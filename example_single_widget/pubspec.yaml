@@ -1,7 +1,9 @@
 name: example_single_widget
 description: >
-  expect_lint goldens for prefer-single-widget-per-file, which needs a package
-  whose other files each hold one widget — see doc/LIMITATIONS.md.
+  expect_lint goldens for the two rules about file layout —
+  prefer-single-widget-per-file and prefer-match-file-name. Both need a package
+  laid out the way they prescribe, which the main golden packages deliberately are
+  not; see doc/LIMITATIONS.md.
 publish_to: none
 
 environment:
