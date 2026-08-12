@@ -65,3 +65,15 @@ bool _isClosed(DartType type) {
       type.isDartCoreBool ||
       type.isDartCoreNull;
 }
+
+/// Whether [type] is a `dart:async` `Completer`.
+bool implementsCompleter(DartType? type) {
+  if (type is! InterfaceType) return false;
+
+  for (final candidate in [type, ...type.allSupertypes]) {
+    final element = candidate.element;
+    if (element.name == 'Completer' && element.library.isDartAsync) return true;
+  }
+
+  return false;
+}

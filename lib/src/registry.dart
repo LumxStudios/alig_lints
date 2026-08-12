@@ -32,6 +32,7 @@ import 'rules/common/avoid_inferrable_type_arguments.dart';
 import 'rules/common/avoid_keywords_in_wildcard_pattern.dart';
 import 'rules/common/avoid_map_keys_contains.dart';
 import 'rules/common/avoid_missed_calls.dart';
+import 'rules/common/avoid_missing_completer_stack_trace.dart';
 import 'rules/common/avoid_missing_enum_constant_in_map.dart';
 import 'rules/common/avoid_misused_set_literals.dart';
 import 'rules/common/avoid_multi_assignment.dart';
@@ -136,6 +137,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidKeywordsInWildcardPattern.new,
   AvoidMapKeysContains.new,
   AvoidMissedCalls.new,
+  AvoidMissingCompleterStackTrace.new,
   AvoidMissingEnumConstantInMap.new,
   AvoidMisusedSetLiterals.new,
   AvoidMultiAssignment.new,

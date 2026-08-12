@@ -39,6 +39,7 @@ custom_lint:
     - avoid-keywords-in-wildcard-pattern
     - avoid-map-keys-contains
     - avoid-missed-calls
+    - avoid-missing-completer-stack-trace
     - avoid-missing-enum-constant-in-map
     - avoid-misused-set-literals
     - avoid-multi-assignment
