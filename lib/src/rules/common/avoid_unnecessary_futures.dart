@@ -96,7 +96,8 @@ bool _isPointless(FunctionBody body, TypeAnnotation returnType) {
 ///
 /// An `await` is the obvious one. Returning a future counts too: the async
 /// machinery waits for it before completing, so the declared `Future` is carrying
-/// a real wait even though no `await` is written.
+/// a real wait even though no `await` is written. So does a `throw`, which an
+/// async body turns into a failed future instead of a synchronous throw.
 class _AsyncWorkDetector extends RecursiveAstVisitor<void> {
   bool found = false;
 
@@ -114,6 +115,11 @@ class _AsyncWorkDetector extends RecursiveAstVisitor<void> {
     if (_isFuture(node.expression?.staticType)) found = true;
     super.visitReturnStatement(node);
   }
+
+  // Throwing from an async body produces a failed future; without the modifier
+  // the same code would throw synchronously, so the Future is carrying that.
+  @override
+  void visitThrowExpression(ThrowExpression node) => found = true;
 
   @override
   void visitExpressionFunctionBody(ExpressionFunctionBody node) {
