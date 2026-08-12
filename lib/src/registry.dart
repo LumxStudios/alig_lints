@@ -72,6 +72,7 @@ import 'rules/common/avoid_shadowed_extension_methods.dart';
 import 'rules/common/avoid_shadowing.dart';
 import 'rules/flutter/avoid_state_constructors.dart';
 import 'rules/common/avoid_stream_tostring.dart';
+import 'rules/common/avoid_suspicious_global_reference.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
 import 'rules/common/avoid_throw_objects_without_tostring.dart';
 import 'rules/common/avoid_unassigned_fields.dart';
@@ -236,6 +237,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidShadowing.new,
   AvoidStateConstructors.new,
   AvoidStreamTostring.new,
+  AvoidSuspiciousGlobalReference.new,
   AvoidThrowInCatchBlock.new,
   AvoidThrowObjectsWithoutTostring.new,
   AvoidUnassignedFields.new,

@@ -70,6 +70,7 @@ custom_lint:
     - avoid-shadowing
     - avoid-state-constructors
     - avoid-stream-tostring
+    - avoid-suspicious-global-reference
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
     - avoid-unassigned-fields
