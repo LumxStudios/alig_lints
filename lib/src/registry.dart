@@ -101,9 +101,12 @@ import 'rules/common/no_equal_nested_conditions.dart';
 import 'rules/common/no_equal_switch_case.dart';
 import 'rules/common/no_equal_switch_expression_cases.dart';
 import 'rules/common/no_equal_then_else.dart';
+import 'rules/flutter/pass_existing_future_to_future_builder.dart';
+import 'rules/flutter/pass_existing_stream_to_stream_builder.dart';
 import 'rules/common/prefer_any_or_every.dart';
 import 'rules/common/prefer_correct_for_loop_increment.dart';
 import 'rules/common/prefer_correct_json_casts.dart';
+import 'rules/flutter/prefer_dedicated_media_query_methods.dart';
 import 'rules/common/prefer_explicit_function_type.dart';
 import 'rules/common/prefer_iterable_of.dart';
 import 'rules/common/prefer_null_aware_elements.dart';
@@ -221,9 +224,12 @@ const List<AligRuleFactory> aligRuleFactories = [
   NoEqualSwitchCase.new,
   NoEqualSwitchExpressionCases.new,
   NoEqualThenElse.new,
+  PassExistingFutureToFutureBuilder.new,
+  PassExistingStreamToStreamBuilder.new,
   PreferAnyOrEvery.new,
   PreferCorrectForLoopIncrement.new,
   PreferCorrectJsonCasts.new,
+  PreferDedicatedMediaQueryMethods.new,
   PreferExplicitFunctionType.new,
   PreferIterableOf.new,
   PreferNullAwareElements.new,

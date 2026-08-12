@@ -108,9 +108,12 @@ custom_lint:
     - no-equal-switch-case
     - no-equal-switch-expression-cases
     - no-equal-then-else
+    - pass-existing-future-to-future-builder
+    - pass-existing-stream-to-stream-builder
     - prefer-any-or-every
     - prefer-correct-for-loop-increment
     - prefer-correct-json-casts
+    - prefer-dedicated-media-query-methods
     - prefer-explicit-function-type
     - prefer-iterable-of
     - prefer-null-aware-elements
