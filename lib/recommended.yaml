@@ -34,6 +34,7 @@ custom_lint:
     - avoid-enum-values-by-index
     - avoid-equal-expressions
     - avoid-future-tostring
+    - avoid-missed-calls
     - avoid-missing-enum-constant-in-map
     - avoid-misused-set-literals
     - avoid-multi-assignment

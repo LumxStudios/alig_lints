@@ -38,6 +38,7 @@ custom_lint:
     - avoid-inferrable-type-arguments
     - avoid-keywords-in-wildcard-pattern
     - avoid-map-keys-contains
+    - avoid-missed-calls
     - avoid-missing-enum-constant-in-map
     - avoid-misused-set-literals
     - avoid-multi-assignment
