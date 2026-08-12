@@ -74,10 +74,12 @@ import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
 import 'rules/common/avoid_throw_objects_without_tostring.dart';
 import 'rules/common/avoid_unassigned_fields.dart';
+import 'rules/common/avoid_unassigned_late_fields.dart';
 import 'rules/common/avoid_unassigned_stream_subscriptions.dart';
 import 'rules/common/avoid_uncaught_future_errors.dart';
 import 'rules/common/avoid_unconditional_break.dart';
 import 'rules/flutter/avoid_undisposed_instances.dart';
+import 'rules/common/avoid_unknown_pragma.dart';
 import 'rules/common/avoid_unnecessary_call.dart';
 import 'rules/common/avoid_unnecessary_collections.dart';
 import 'rules/common/avoid_unnecessary_compare_to.dart';
@@ -223,10 +225,12 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidThrowInCatchBlock.new,
   AvoidThrowObjectsWithoutTostring.new,
   AvoidUnassignedFields.new,
+  AvoidUnassignedLateFields.new,
   AvoidUnassignedStreamSubscriptions.new,
   AvoidUncaughtFutureErrors.new,
   AvoidUnconditionalBreak.new,
   AvoidUndisposedInstances.new,
+  AvoidUnknownPragma.new,
   AvoidUnnecessaryCall.new,
   AvoidUnnecessaryCollections.new,
   AvoidUnnecessaryCompareTo.new,

@@ -81,10 +81,12 @@ custom_lint:
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
     - avoid-unassigned-fields
+    - avoid-unassigned-late-fields
     - avoid-unassigned-stream-subscriptions
     - avoid-uncaught-future-errors
     - avoid-unconditional-break
     - avoid-undisposed-instances
+    - avoid-unknown-pragma
     - avoid-unnecessary-call
     - avoid-unnecessary-collections
     - avoid-unnecessary-compare-to
