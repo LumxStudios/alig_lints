@@ -9,3 +9,6 @@ custom_lint:
   enable_all_lint_rules: false
   rules:
     - avoid-empty-setstate
+    - avoid-flexible-outside-flex
+    - avoid-mounted-in-setstate
+    - avoid-recursive-widget-calls

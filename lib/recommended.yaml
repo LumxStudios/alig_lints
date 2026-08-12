@@ -33,11 +33,13 @@ custom_lint:
     - avoid-empty-spread
     - avoid-enum-values-by-index
     - avoid-equal-expressions
+    - avoid-flexible-outside-flex
     - avoid-future-tostring
     - avoid-missed-calls
     - avoid-missing-completer-stack-trace
     - avoid-missing-enum-constant-in-map
     - avoid-misused-set-literals
+    - avoid-mounted-in-setstate
     - avoid-multi-assignment
     - avoid-nested-futures
     - avoid-not-encodable-in-to-json
@@ -47,6 +49,7 @@ custom_lint:
     - avoid-passing-async-when-sync-expected
     - avoid-passing-self-as-argument
     - avoid-recursive-tostring
+    - avoid-recursive-widget-calls
     - avoid-redundant-positional-field-name
     - avoid-redundant-pragma-inline
     - avoid-self-assignment

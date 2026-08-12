@@ -34,6 +34,7 @@ custom_lint:
     - avoid-enum-values-by-index
     - avoid-equal-expressions
     - avoid-explicit-pattern-field-name
+    - avoid-flexible-outside-flex
     - avoid-future-tostring
     - avoid-inferrable-type-arguments
     - avoid-keywords-in-wildcard-pattern
@@ -42,6 +43,7 @@ custom_lint:
     - avoid-missing-completer-stack-trace
     - avoid-missing-enum-constant-in-map
     - avoid-misused-set-literals
+    - avoid-mounted-in-setstate
     - avoid-multi-assignment
     - avoid-nested-futures
     - avoid-nested-shorthands
@@ -52,6 +54,7 @@ custom_lint:
     - avoid-passing-async-when-sync-expected
     - avoid-passing-self-as-argument
     - avoid-recursive-tostring
+    - avoid-recursive-widget-calls
     - avoid-redundant-else
     - avoid-redundant-positional-field-name
     - avoid-redundant-pragma-inline

@@ -27,6 +27,7 @@ import 'rules/common/avoid_empty_spread.dart';
 import 'rules/common/avoid_enum_values_by_index.dart';
 import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_explicit_pattern_field_name.dart';
+import 'rules/flutter/avoid_flexible_outside_flex.dart';
 import 'rules/common/avoid_future_tostring.dart';
 import 'rules/common/avoid_inferrable_type_arguments.dart';
 import 'rules/common/avoid_keywords_in_wildcard_pattern.dart';
@@ -35,6 +36,7 @@ import 'rules/common/avoid_missed_calls.dart';
 import 'rules/common/avoid_missing_completer_stack_trace.dart';
 import 'rules/common/avoid_missing_enum_constant_in_map.dart';
 import 'rules/common/avoid_misused_set_literals.dart';
+import 'rules/flutter/avoid_mounted_in_setstate.dart';
 import 'rules/common/avoid_multi_assignment.dart';
 import 'rules/common/avoid_nested_futures.dart';
 import 'rules/common/avoid_nested_shorthands.dart';
@@ -45,6 +47,7 @@ import 'rules/common/avoid_only_rethrow.dart';
 import 'rules/common/avoid_passing_async_when_sync_expected.dart';
 import 'rules/common/avoid_passing_self_as_argument.dart';
 import 'rules/common/avoid_recursive_tostring.dart';
+import 'rules/flutter/avoid_recursive_widget_calls.dart';
 import 'rules/common/avoid_redundant_else.dart';
 import 'rules/common/avoid_redundant_positional_field_name.dart';
 import 'rules/common/avoid_redundant_pragma_inline.dart';
@@ -137,6 +140,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidEnumValuesByIndex.new,
   AvoidEqualExpressions.new,
   AvoidExplicitPatternFieldName.new,
+  AvoidFlexibleOutsideFlex.new,
   AvoidFutureTostring.new,
   AvoidInferrableTypeArguments.new,
   AvoidKeywordsInWildcardPattern.new,
@@ -145,6 +149,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidMissingCompleterStackTrace.new,
   AvoidMissingEnumConstantInMap.new,
   AvoidMisusedSetLiterals.new,
+  AvoidMountedInSetstate.new,
   AvoidMultiAssignment.new,
   AvoidNestedFutures.new,
   AvoidNestedShorthands.new,
@@ -155,6 +160,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidPassingAsyncWhenSyncExpected.new,
   AvoidPassingSelfAsArgument.new,
   AvoidRecursiveTostring.new,
+  AvoidRecursiveWidgetCalls.new,
   AvoidRedundantElse.new,
   AvoidRedundantPositionalFieldName.new,
   AvoidRedundantPragmaInline.new,
