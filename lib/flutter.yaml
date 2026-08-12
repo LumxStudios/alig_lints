@@ -18,11 +18,13 @@ custom_lint:
     - avoid-mounted-in-setstate
     - avoid-recursive-widget-calls
     - avoid-state-constructors
+    - avoid-undisposed-instances
     - avoid-unnecessary-gesture-detector
     - avoid-unnecessary-setstate
     - avoid-unnecessary-stateful-widgets
     - check-for-equals-in-render-object-setters
     - consistent-update-render-object
+    - dispose-fields
     - pass-existing-future-to-future-builder
     - pass-existing-stream-to-stream-builder
     - prefer-dedicated-media-query-methods

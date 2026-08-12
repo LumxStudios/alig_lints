@@ -8,6 +8,7 @@ class Sample extends StatefulWidget {
 }
 
 class _SampleState extends State<Sample> {
+  // expect_lint: dispose-fields
   final _notifier = ValueNotifier<int>(0);
 
   @override

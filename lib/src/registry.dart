@@ -65,6 +65,7 @@ import 'rules/common/avoid_throw_objects_without_tostring.dart';
 import 'rules/common/avoid_unassigned_stream_subscriptions.dart';
 import 'rules/common/avoid_uncaught_future_errors.dart';
 import 'rules/common/avoid_unconditional_break.dart';
+import 'rules/flutter/avoid_undisposed_instances.dart';
 import 'rules/common/avoid_unnecessary_call.dart';
 import 'rules/common/avoid_unnecessary_collections.dart';
 import 'rules/common/avoid_unnecessary_compare_to.dart';
@@ -99,6 +100,8 @@ import 'rules/common/avoid_wildcard_cases_with_enums.dart';
 import 'rules/common/avoid_wildcard_cases_with_sealed_classes.dart';
 import 'rules/flutter/check_for_equals_in_render_object_setters.dart';
 import 'rules/flutter/consistent_update_render_object.dart';
+import 'rules/common/dispose_class_fields.dart';
+import 'rules/flutter/dispose_fields.dart';
 import 'rules/common/function_always_returns_null.dart';
 import 'rules/common/function_always_returns_same_value.dart';
 import 'rules/common/no_empty_block.dart';
@@ -199,6 +202,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnassignedStreamSubscriptions.new,
   AvoidUncaughtFutureErrors.new,
   AvoidUnconditionalBreak.new,
+  AvoidUndisposedInstances.new,
   AvoidUnnecessaryCall.new,
   AvoidUnnecessaryCollections.new,
   AvoidUnnecessaryCompareTo.new,
@@ -233,6 +237,8 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidWildcardCasesWithSealedClasses.new,
   CheckForEqualsInRenderObjectSetters.new,
   ConsistentUpdateRenderObject.new,
+  DisposeClassFields.new,
+  DisposeFields.new,
   FunctionAlwaysReturnsNull.new,
   FunctionAlwaysReturnsSameValue.new,
   NoEmptyBlock.new,

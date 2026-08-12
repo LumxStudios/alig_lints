@@ -65,6 +65,7 @@ custom_lint:
     - avoid-unassigned-stream-subscriptions
     - avoid-uncaught-future-errors
     - avoid-unconditional-break
+    - avoid-undisposed-instances
     - avoid-unnecessary-collections
     - avoid-unnecessary-gesture-detector
     - avoid-unnecessary-if
@@ -87,6 +88,8 @@ custom_lint:
     - avoid-wildcard-cases-with-sealed-classes
     - check-for-equals-in-render-object-setters
     - consistent-update-render-object
+    - dispose-class-fields
+    - dispose-fields
     - function-always-returns-null
     - function-always-returns-same-value
     - no-empty-block
