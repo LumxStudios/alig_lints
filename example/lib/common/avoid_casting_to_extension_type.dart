@@ -1,8 +1,8 @@
-extension type Meters(int value) {}
+extension type Meters(int _value) {}
 
-extension type Label.wrap(String text) {}
+extension type Label.wrap(String _text) {}
 
-extension type Boxed<T>(T value) {}
+extension type Boxed<T>(T _value) {}
 
 // expect_lint: avoid-dynamic
 void casts(Object object, int number, dynamic anything) {

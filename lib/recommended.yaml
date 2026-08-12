@@ -108,6 +108,7 @@ custom_lint:
     - dispose-fields
     - function-always-returns-null
     - function-always-returns-same-value
+    - match-getter-setter-field-names
     - no-empty-block
     - no-equal-conditions
     - no-equal-nested-conditions
@@ -123,6 +124,7 @@ custom_lint:
     - prefer-explicit-function-type
     - prefer-iterable-of
     - prefer-parentheses-with-if-null
+    - prefer-public-exception-classes
     - prefer-return-await
     - prefer-specifying-future-value-type
     - prefer-unique-test-names

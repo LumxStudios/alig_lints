@@ -122,6 +122,7 @@ import 'rules/common/dispose_class_fields.dart';
 import 'rules/flutter/dispose_fields.dart';
 import 'rules/common/function_always_returns_null.dart';
 import 'rules/common/function_always_returns_same_value.dart';
+import 'rules/common/match_getter_setter_field_names.dart';
 import 'rules/common/no_empty_block.dart';
 import 'rules/common/no_equal_conditions.dart';
 import 'rules/common/no_equal_nested_conditions.dart';
@@ -140,6 +141,8 @@ import 'rules/common/prefer_iterable_of.dart';
 import 'rules/common/prefer_null_aware_elements.dart';
 import 'rules/common/prefer_null_aware_spread.dart';
 import 'rules/common/prefer_parentheses_with_if_null.dart';
+import 'rules/common/prefer_private_extension_type_field.dart';
+import 'rules/common/prefer_public_exception_classes.dart';
 import 'rules/common/prefer_return_await.dart';
 import 'rules/common/prefer_returning_shorthands.dart';
 import 'rules/common/prefer_shorthands_with_enums.dart';
@@ -279,6 +282,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   DisposeFields.new,
   FunctionAlwaysReturnsNull.new,
   FunctionAlwaysReturnsSameValue.new,
+  MatchGetterSetterFieldNames.new,
   NoEmptyBlock.new,
   NoEqualConditions.new,
   NoEqualNestedConditions.new,
@@ -297,6 +301,8 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferNullAwareElements.new,
   PreferNullAwareSpread.new,
   PreferParenthesesWithIfNull.new,
+  PreferPrivateExtensionTypeField.new,
+  PreferPublicExceptionClasses.new,
   PreferReturnAwait.new,
   PreferReturningShorthands.new,
   PreferShorthandsWithEnums.new,
