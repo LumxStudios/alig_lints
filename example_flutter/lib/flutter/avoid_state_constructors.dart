@@ -19,6 +19,7 @@ class _SampleState extends State<Sample> {
   Widget build(BuildContext context) => Text('$counter');
 }
 
+// expect_lint: avoid-unnecessary-stateful-widgets
 class Empty extends StatefulWidget {
   const Empty({super.key});
 

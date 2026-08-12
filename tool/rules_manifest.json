@@ -2773,9 +2773,9 @@
       "configurable": false,
       "severity": "warning",
       "phase": 7,
-      "status": "todo",
+      "status": "covered",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Covered by this package own avoid-unnecessary-overrides, which reports State lifecycle overrides that only forward to super. Measured; enabling a second rule would double-report."
     },
     {
       "name": "avoid-unnecessary-setstate",
@@ -2789,7 +2789,7 @@
       "configurable": false,
       "severity": "warning",
       "phase": 7,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
@@ -2805,7 +2805,7 @@
       "configurable": false,
       "severity": "info",
       "phase": 7,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },
@@ -2820,7 +2820,7 @@
       "configurable": false,
       "severity": "warning",
       "phase": 7,
-      "status": "todo",
+      "status": "done",
       "needsSpec": false,
       "notes": ""
     },

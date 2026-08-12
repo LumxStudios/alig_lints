@@ -23,6 +23,7 @@ class Nested extends StatelessWidget {
   }
 }
 
+// expect_lint: avoid-unnecessary-stateful-widgets
 class Stateful extends StatefulWidget {
   const Stateful({super.key});
 

@@ -87,7 +87,7 @@ void _updateReadmeProgress(Manifest manifest) {
   final covered = manifest.covered.length;
   final notes = [
     if (needsSpec > 0) '$needsSpec awaiting clarification',
-    if (covered > 0) '$covered covered by the analyzer itself',
+    if (covered > 0) '$covered covered elsewhere',
   ];
   final suffix = notes.isEmpty ? '' : ' — ${notes.join(', ')}';
 

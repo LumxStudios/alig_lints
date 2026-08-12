@@ -16,3 +16,6 @@ custom_lint:
     - avoid-recursive-widget-calls
     - avoid-state-constructors
     - avoid-unnecessary-gesture-detector
+    - avoid-unnecessary-setstate
+    - avoid-unnecessary-stateful-widgets
+    - check-for-equals-in-render-object-setters

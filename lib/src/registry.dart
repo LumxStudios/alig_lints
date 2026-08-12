@@ -80,6 +80,8 @@ import 'rules/common/avoid_unnecessary_nullable_return_type.dart';
 import 'rules/common/avoid_unnecessary_overrides.dart';
 import 'rules/common/avoid_unnecessary_reassignment.dart';
 import 'rules/common/avoid_unnecessary_return.dart';
+import 'rules/flutter/avoid_unnecessary_setstate.dart';
+import 'rules/flutter/avoid_unnecessary_stateful_widgets.dart';
 import 'rules/common/avoid_unnecessary_statements.dart';
 import 'rules/common/avoid_unnecessary_super.dart';
 import 'rules/common/avoid_unnecessary_type_assertions.dart';
@@ -90,6 +92,7 @@ import 'rules/common/avoid_unrelated_type_casts.dart';
 import 'rules/common/avoid_unsafe_collection_methods.dart';
 import 'rules/common/avoid_wildcard_cases_with_enums.dart';
 import 'rules/common/avoid_wildcard_cases_with_sealed_classes.dart';
+import 'rules/flutter/check_for_equals_in_render_object_setters.dart';
 import 'rules/common/function_always_returns_null.dart';
 import 'rules/common/function_always_returns_same_value.dart';
 import 'rules/common/no_empty_block.dart';
@@ -197,6 +200,8 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnnecessaryOverrides.new,
   AvoidUnnecessaryReassignment.new,
   AvoidUnnecessaryReturn.new,
+  AvoidUnnecessarySetstate.new,
+  AvoidUnnecessaryStatefulWidgets.new,
   AvoidUnnecessaryStatements.new,
   AvoidUnnecessarySuper.new,
   AvoidUnnecessaryTypeAssertions.new,
@@ -207,6 +212,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnsafeCollectionMethods.new,
   AvoidWildcardCasesWithEnums.new,
   AvoidWildcardCasesWithSealedClasses.new,
+  CheckForEqualsInRenderObjectSetters.new,
   FunctionAlwaysReturnsNull.new,
   FunctionAlwaysReturnsSameValue.new,
   NoEmptyBlock.new,

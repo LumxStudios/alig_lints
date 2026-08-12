@@ -70,6 +70,7 @@ custom_lint:
     - avoid-unnecessary-nullable-return-type
     - avoid-unnecessary-overrides
     - avoid-unnecessary-reassignment
+    - avoid-unnecessary-setstate
     - avoid-unnecessary-statements
     - avoid-unnecessary-type-assertions
     - avoid-unnecessary-type-casts
@@ -79,6 +80,7 @@ custom_lint:
     - avoid-unsafe-collection-methods
     - avoid-wildcard-cases-with-enums
     - avoid-wildcard-cases-with-sealed-classes
+    - check-for-equals-in-render-object-setters
     - function-always-returns-null
     - function-always-returns-same-value
     - no-empty-block
