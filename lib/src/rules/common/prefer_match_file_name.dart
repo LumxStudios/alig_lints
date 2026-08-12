@@ -35,6 +35,10 @@ const _meta = AligRuleMeta(
 /// The comparison is against the declaration's name in snake_case, so `SubmitButton` pairs
 /// with `submit_button.dart`. A private declaration is compared without its underscore.
 ///
+/// A file declaring a top-level `main` is never reported. An entry point is named for its
+/// function, and `main.dart` holding `main()` beside the root widget is the convention — a
+/// smoke test against a clean consumer project found this rule objecting to exactly that.
+///
 /// No quick-fix is offered, and the catalogue's fix is deliberately not reproduced: renaming
 /// a file is not an edit inside it, and every import of it has to change too.
 class PreferMatchFileName extends AligRule {
@@ -51,6 +55,11 @@ class PreferMatchFileName extends AligRule {
       // Types only. The catalogue describes this as matching the *class* name, and a
       // file whose one declaration is a function — `main`, a helper — is not expected to
       // be named after it.
+      // An entry point is named for its function, not for whatever type sits beside
+      // it: `main.dart` holding `main()` and the root widget is the convention, and a
+      // consumer smoke test found this rule objecting to it.
+      if (_declaresMain(unit)) return;
+
       final types = unit.declarations
           .whereType<NamedCompilationUnitMember>()
           .where(_isTypeDeclaration)
@@ -66,6 +75,13 @@ class PreferMatchFileName extends AligRule {
     });
   }
 }
+
+/// Whether [unit] is an entry point, named for its `main` rather than a type.
+bool _declaresMain(CompilationUnit unit) => unit.declarations.any(
+      (declaration) =>
+          declaration is FunctionDeclaration &&
+          declaration.name.lexeme == 'main',
+    );
 
 /// Whether [declaration] is a type, which is what a file is named after.
 bool _isTypeDeclaration(NamedCompilationUnitMember declaration) =>

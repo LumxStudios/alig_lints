@@ -1,7 +1,13 @@
 # alig_lints
 
 Custom analysis rules for Dart and Flutter, built on [`custom_lint`], plus a
-bundled selection of built-in Dart lints.
+curated selection of the built-in Dart lints. One dependency and one `include:`
+line give you both halves, so this replaces a shared-lint package as well.
+
+Every rule reports something that compiles and runs, and is wrong anyway: a value
+the type system cannot catch, a listener nothing removes, a default that depends on
+how a variable was declared. Where a rule cannot establish that from one file, it
+says so in its own documentation rather than guessing.
 
 [`custom_lint`]: https://pub.dev/packages/custom_lint
 
@@ -22,6 +28,9 @@ include: package:alig_lints/all.yaml
 
 Then run `dart pub get` and restart the analysis server in your IDE.
 Command line: `dart run custom_lint`.
+
+Verified from a clean Flutter project: both halves work through the single
+`include:` — the custom rules and the bundled built-in lints alike.
 
 ### Presets
 
@@ -50,23 +59,31 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 <!-- progress:start -->
 **164 / 181 rules implemented** — 7 awaiting clarification, 10 covered elsewhere
 
-| Phase | Done |
+| Theme | Settled |
 |---|---|
-| 1 | 19 / 21 |
-| 2 | 17 / 18 |
-| 3 | 31 / 32 |
-| 4 | 16 / 16 |
-| 5 | 21 / 22 |
-| 6 | 8 / 8 |
-| 7 | 22 / 22 |
-| 8 | 7 / 7 |
-| 9 | 33 / 35 |
+| Structural equality | 19 / 21 |
+| Unnecessary and redundant code | 17 / 18 |
+| Conditions, control flow, patterns | 31 / 32 |
+| Collections and Iterable members | 16 / 16 |
+| Nullability, toString, casts | 21 / 22 |
+| Async and futures | 8 / 8 |
+| Flutter widgets and life cycle | 22 / 22 |
+| Disposal and memory leaks | 7 / 7 |
+| Unused code, naming, style | 33 / 35 |
 <!-- progress:end -->
 
-Rules implemented with documented approximations are listed in
-[`doc/LIMITATIONS.md`](doc/LIMITATIONS.md). Rules whose intent could not be
-inferred from the available specification are listed in
-[`doc/UNCLEAR.md`](doc/UNCLEAR.md).
+**What the three numbers mean.** *Implemented* rules each have a golden that
+asserts where they fire and where they do not. *Covered elsewhere* means the
+defect is already reported — by an analyzer warning that is on by default, by a
+built-in lint this package enables, or by a sibling rule here — and was verified
+by measurement rather than assumed; a second rule would only put two warnings on
+one line. *Awaiting clarification* means the rule's name and description did not
+settle what it should report, most often because the whole rule is a configured
+name or list; guessing would have produced a rule that either never fires or
+fires on correct code.
+
+Every rule's own doc comment states what it deliberately does **not** report, and
+why. That is the first place to look when a rule surprises you.
 
 ## Development
 
@@ -76,11 +93,26 @@ inferred from the available specification are listed in
 - `dart run tool/generate.dart` regenerates `lib/src/registry.dart`, the
   presets and the table above. `tool/verify.sh` runs it first, so marking a rule
   done in the manifest is enough.
-- `./tool/verify.sh` is the full gate: analyze, tests and both golden suites,
-  run in parallel. Prints the log only for the parts that failed, and ends with
+- `./tool/verify.sh` is the full gate, run in parallel: `dart analyze` here and in
+  each golden package, `dart test`, and `dart run custom_lint` in each golden
+  package. It prints the log only for the parts that failed and ends with
   `GATE: PASS` or `GATE: FAIL`. Do not chain a commit after a piped run of it —
   the pipe hides the exit code, so read the verdict line instead.
-- Individually: `dart analyze`, `dart test`,
-  `(cd example && dart run custom_lint)` for the `common` rule goldens, and
-  `(cd example_flutter && dart run custom_lint)` for the Flutter ones.
-- `doc/API_NOTES.md` records verified analyzer/custom_lint API details.
+- Golden packages, each a real package that path-depends on this one:
+  - `example/` — the `common` rules. `example/test/` holds the goldens for rules
+    that need to be under a `test` directory.
+  - `example_flutter/` — the Flutter rules.
+  - `example_single_widget/` — the two rules about file layout,
+    `prefer-single-widget-per-file` and `prefer-match-file-name`. They cannot be
+    verified in the other packages, whose goldens deliberately group several
+    widgets or types per file, and disabling a rule in the package that holds its
+    golden would silence its own `expect_lint` checks too.
+- A golden must **compile**. The gate analyses each golden package for errors, so
+  a golden that does not build fails it — warnings are allowed, since a golden for
+  `avoid-duplicate-map-keys` contains duplicate map keys on purpose.
+- An `expect_lint` comment goes on the line immediately before the **reported**
+  line, which for a rule that reports on a method's name is between the
+  annotation and the signature.
+- When a rule has a fix, check that the fix's output **compiles**. Two fixes in
+  this package produced code that did not, and only compiling the result showed
+  it.

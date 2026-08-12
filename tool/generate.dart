@@ -78,9 +78,22 @@ void _updateReadmeProgress(Manifest manifest) {
     byPhase.putIfAbsent(rule.phase, () => []).add(rule);
   }
 
+  const themes = {
+    1: 'Structural equality',
+    2: 'Unnecessary and redundant code',
+    3: 'Conditions, control flow, patterns',
+    4: 'Collections and Iterable members',
+    5: 'Nullability, toString, casts',
+    6: 'Async and futures',
+    7: 'Flutter widgets and life cycle',
+    8: 'Disposal and memory leaks',
+    9: 'Unused code, naming, style',
+  };
+
   final rows = [
     for (final phase in byPhase.keys.toList()..sort())
-      '| $phase | ${byPhase[phase]!.where((r) => r.isSettled).length} / '
+      '| ${themes[phase] ?? phase} | '
+          '${byPhase[phase]!.where((r) => r.isSettled).length} / '
           '${byPhase[phase]!.length} |',
   ];
   final needsSpec = manifest.rules.where((r) => r.needsSpec).length;
@@ -95,7 +108,7 @@ void _updateReadmeProgress(Manifest manifest) {
 <!-- progress:start -->
 **${manifest.done.length} / ${manifest.rules.length} rules implemented**$suffix
 
-| Phase | Done |
+| Theme | Settled |
 |---|---|
 ${rows.join('\n')}
 <!-- progress:end -->''';
