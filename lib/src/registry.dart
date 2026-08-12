@@ -26,6 +26,7 @@ import 'rules/common/avoid_duplicate_test_assertions.dart';
 import 'rules/common/avoid_dynamic.dart';
 import 'rules/flutter/avoid_empty_setstate.dart';
 import 'rules/common/avoid_empty_spread.dart';
+import 'rules/common/avoid_empty_test_groups.dart';
 import 'rules/common/avoid_enum_values_by_index.dart';
 import 'rules/common/avoid_equal_expressions.dart';
 import 'rules/common/avoid_explicit_pattern_field_name.dart';
@@ -43,6 +44,7 @@ import 'rules/flutter/avoid_missing_controller.dart';
 import 'rules/common/avoid_missing_enum_constant_in_map.dart';
 import 'rules/flutter/avoid_missing_image_alt.dart';
 import 'rules/common/avoid_misused_set_literals.dart';
+import 'rules/common/avoid_misused_test_matchers.dart';
 import 'rules/flutter/avoid_mounted_in_setstate.dart';
 import 'rules/common/avoid_multi_assignment.dart';
 import 'rules/common/avoid_nested_futures.dart';
@@ -166,6 +168,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidDynamic.new,
   AvoidEmptySetstate.new,
   AvoidEmptySpread.new,
+  AvoidEmptyTestGroups.new,
   AvoidEnumValuesByIndex.new,
   AvoidEqualExpressions.new,
   AvoidExplicitPatternFieldName.new,
@@ -183,6 +186,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidMissingEnumConstantInMap.new,
   AvoidMissingImageAlt.new,
   AvoidMisusedSetLiterals.new,
+  AvoidMisusedTestMatchers.new,
   AvoidMountedInSetstate.new,
   AvoidMultiAssignment.new,
   AvoidNestedFutures.new,

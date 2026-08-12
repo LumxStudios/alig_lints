@@ -33,10 +33,10 @@ void main() {
   });
 
   test('assertions in separate tests are unrelated', () {
-    expect(counter, isNotNull);
+    expect(counter, isNonNegative);
   });
 
   test('another test with the same assertion', () {
-    expect(counter, isNotNull);
+    expect(counter, isNonNegative);
   });
 }

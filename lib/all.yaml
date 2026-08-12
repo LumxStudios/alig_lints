@@ -33,6 +33,7 @@ custom_lint:
     - avoid-dynamic
     - avoid-empty-setstate
     - avoid-empty-spread
+    - avoid-empty-test-groups
     - avoid-enum-values-by-index
     - avoid-equal-expressions
     - avoid-explicit-pattern-field-name
@@ -50,6 +51,7 @@ custom_lint:
     - avoid-missing-enum-constant-in-map
     - avoid-missing-image-alt
     - avoid-misused-set-literals
+    - avoid-misused-test-matchers
     - avoid-mounted-in-setstate
     - avoid-multi-assignment
     - avoid-nested-futures
