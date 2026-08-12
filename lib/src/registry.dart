@@ -51,6 +51,7 @@ import 'rules/common/avoid_multi_assignment.dart';
 import 'rules/common/avoid_nested_futures.dart';
 import 'rules/common/avoid_nested_records.dart';
 import 'rules/common/avoid_nested_shorthands.dart';
+import 'rules/common/avoid_never_passed_parameters.dart';
 import 'rules/common/avoid_not_encodable_in_to_json.dart';
 import 'rules/common/avoid_nullable_interpolation.dart';
 import 'rules/common/avoid_nullable_tostring.dart';
@@ -65,6 +66,7 @@ import 'rules/common/avoid_redundant_pragma_inline.dart';
 import 'rules/common/avoid_referencing_discarded_variables.dart';
 import 'rules/common/avoid_self_assignment.dart';
 import 'rules/common/avoid_self_compare.dart';
+import 'rules/common/avoid_shadowed_extension_methods.dart';
 import 'rules/flutter/avoid_state_constructors.dart';
 import 'rules/common/avoid_stream_tostring.dart';
 import 'rules/common/avoid_throw_in_catch_block.dart';
@@ -195,6 +197,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidNestedFutures.new,
   AvoidNestedRecords.new,
   AvoidNestedShorthands.new,
+  AvoidNeverPassedParameters.new,
   AvoidNotEncodableInToJson.new,
   AvoidNullableInterpolation.new,
   AvoidNullableTostring.new,
@@ -209,6 +212,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidReferencingDiscardedVariables.new,
   AvoidSelfAssignment.new,
   AvoidSelfCompare.new,
+  AvoidShadowedExtensionMethods.new,
   AvoidStateConstructors.new,
   AvoidStreamTostring.new,
   AvoidThrowInCatchBlock.new,

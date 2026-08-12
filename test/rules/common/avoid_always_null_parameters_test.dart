@@ -9,7 +9,7 @@ void main() {
     await expectRuleReports(
       AvoidAlwaysNullParameters(CustomLintConfigs.empty),
       'test/fixtures/common/avoid_always_null_parameters.dart',
-      onLines: [1, 8],
+      onLines: [1],
     );
   });
 }

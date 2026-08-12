@@ -31,8 +31,13 @@ const _meta = AligRuleMeta(
 /// }
 /// ```
 /// `prefix` looks like a knob but no caller ever turns it, so the branch that
-/// reads it is dead weight. An optional parameter nobody ever supplies counts
-/// too, as long as its default is `null`.
+/// reads it is dead weight.
+///
+/// At least one caller has to pass `null` for this to be that caller's mistake.
+/// An optional parameter nobody supplies at all is
+/// `avoid-never-passed-parameters`' report — the two rules would otherwise both
+/// fire on an optional with a null default, which is one defect and would read as
+/// two.
 ///
 /// Only private declarations are considered, and only those whose calls can all
 /// be seen — `lib/src/common/private_call_sites.dart` says which those are and
@@ -77,6 +82,7 @@ bool _isAlwaysNull(FormalParameter parameter, List<ArgumentList> calls) {
 
   // Omitting the argument only means "null" when the default says so.
   final defaultsToNull = defaultValueOf(parameter) == null;
+  var passedExplicitly = false;
 
   for (final call in calls) {
     final argument = argumentFor(element, call);
@@ -85,9 +91,13 @@ bool _isAlwaysNull(FormalParameter parameter, List<ArgumentList> calls) {
       continue;
     }
     if (argument.unParenthesized is! NullLiteral) return false;
+    passedExplicitly = true;
   }
 
-  return true;
+  // A parameter no caller supplies at all is
+  // `avoid-never-passed-parameters`' report, not this one: the two would
+  // otherwise both fire on an optional with a null default.
+  return passedExplicitly;
 }
 
 /// Whether a null argument would even be legal for [type].

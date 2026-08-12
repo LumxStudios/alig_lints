@@ -50,6 +50,7 @@ custom_lint:
     - avoid-mounted-in-setstate
     - avoid-multi-assignment
     - avoid-nested-futures
+    - avoid-never-passed-parameters
     - avoid-not-encodable-in-to-json
     - avoid-nullable-interpolation
     - avoid-nullable-tostring
@@ -63,6 +64,7 @@ custom_lint:
     - avoid-referencing-discarded-variables
     - avoid-self-assignment
     - avoid-self-compare
+    - avoid-shadowed-extension-methods
     - avoid-state-constructors
     - avoid-stream-tostring
     - avoid-throw-in-catch-block

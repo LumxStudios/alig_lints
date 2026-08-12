@@ -17,8 +17,8 @@ class Report {
   }
 }
 
-// A named parameter nobody ever supplies.
-// expect_lint: avoid-always-null-parameters
+// A named parameter nobody ever supplies: never-passed rather than always-null.
+// expect_lint: avoid-never-passed-parameters
 String _label(String text, {String? suffix}) => '$text${suffix ?? ''}';
 
 void usesLabel() {
