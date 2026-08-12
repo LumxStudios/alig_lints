@@ -1,5 +1,5 @@
 class Node {
-  Node(this.label);
+  const Node(this.label);
 
   final String label;
 
@@ -17,7 +17,7 @@ class Direct {
 }
 
 class Fine {
-  Fine(this.label);
+  const Fine(this.label);
 
   final String label;
 

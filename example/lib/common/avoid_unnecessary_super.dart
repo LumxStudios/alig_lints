@@ -1,7 +1,7 @@
 class Base {
-  Base();
+  const Base();
 
-  Base.named(int value);
+  const Base.named(int value);
 
   void greet() {}
 

@@ -8,7 +8,7 @@ mixin Describing {}
 
 // expect_lint: avoid-generics-shadowing
 class Holder<Payload> {
-  Holder(this.value);
+  const Holder(this.value);
 
   final Payload value;
 }
@@ -18,20 +18,20 @@ void handle<Handler>(Handler value) => print(value);
 
 // expect_lint: avoid-generics-shadowing
 class Wrapper<Status> {
-  Wrapper(this.value);
+  const Wrapper(this.value);
 
   final Status value;
 }
 
 // A name of its own shadows nothing.
 class Box<T> {
-  Box(this.value);
+  const Box(this.value);
 
   final T value;
 }
 
 class Pair<K, V> {
-  Pair(this.key, this.value);
+  const Pair(this.key, this.value);
 
   final K key;
   final V value;

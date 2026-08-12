@@ -16,7 +16,7 @@ class Child extends Base {
 }
 
 class Holder {
-  Holder(this.value, int unusedInConstructor);
+  const Holder(this.value, int unusedInConstructor);
 
   final int value;
 

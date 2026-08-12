@@ -15,7 +15,7 @@ int fromBody<T>() {
 }
 
 class Holder<T> {
-  Holder(this.value);
+  const Holder(this.value);
 
   final T value;
 

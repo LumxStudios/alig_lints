@@ -3,7 +3,7 @@ enum Status { active, paused }
 enum Level { low, high }
 
 class Job {
-  Job({required this.status, this.level = Level.low});
+  const Job({required this.status, this.level = Level.low});
 
   final Status status;
   final Level level;

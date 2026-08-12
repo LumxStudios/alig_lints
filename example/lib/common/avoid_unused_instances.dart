@@ -1,7 +1,7 @@
 class Thing {
-  Thing();
+  const Thing();
 
-  Thing.named();
+  const Thing.named();
 }
 
 class Registered {

@@ -1,5 +1,5 @@
 class WrappedError implements Exception {
-  WrappedError(this.cause);
+  const WrappedError(this.cause);
 
   final Object cause;
 

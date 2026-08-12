@@ -1,5 +1,5 @@
 class Base {
-  Base(this.id);
+  const Base(this.id);
 
   final int id;
 
@@ -12,13 +12,13 @@ class Base {
 
 // expect_lint: prefer-overriding-parent-equality
 class Child extends Base {
-  Child(super.id, this.label);
+  const Child(super.id, this.label);
 
   final String label;
 }
 
 class Complete extends Base {
-  Complete(super.id, this.label);
+  const Complete(super.id, this.label);
 
   final String label;
 
@@ -31,11 +31,11 @@ class Complete extends Base {
 }
 
 class Plain {
-  Plain(this.value);
+  const Plain(this.value);
 
   final int value;
 }
 
 class PlainChild extends Plain {
-  PlainChild(super.value);
+  const PlainChild(super.value);
 }

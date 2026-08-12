@@ -1,5 +1,5 @@
 class Box<T> {
-  Box(this.value);
+  const Box(this.value);
 
   final T value;
 }

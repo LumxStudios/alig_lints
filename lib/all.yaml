@@ -131,6 +131,7 @@ custom_lint:
     - function-always-returns-same-value
     - match-base-class-default-value
     - match-getter-setter-field-names
+    - move-variable-closer-to-its-usage
     - no-empty-block
     - no-equal-conditions
     - no-equal-nested-conditions
@@ -143,6 +144,7 @@ custom_lint:
     - prefer-correct-for-loop-increment
     - prefer-correct-json-casts
     - prefer-correct-test-file-name
+    - prefer-declaring-const-constructor
     - prefer-dedicated-media-query-methods
     - prefer-explicit-function-type
     - prefer-iterable-of

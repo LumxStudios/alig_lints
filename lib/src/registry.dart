@@ -124,6 +124,7 @@ import 'rules/common/function_always_returns_null.dart';
 import 'rules/common/function_always_returns_same_value.dart';
 import 'rules/common/match_base_class_default_value.dart';
 import 'rules/common/match_getter_setter_field_names.dart';
+import 'rules/common/move_variable_closer_to_its_usage.dart';
 import 'rules/common/no_empty_block.dart';
 import 'rules/common/no_equal_conditions.dart';
 import 'rules/common/no_equal_nested_conditions.dart';
@@ -136,6 +137,7 @@ import 'rules/common/prefer_any_or_every.dart';
 import 'rules/common/prefer_correct_for_loop_increment.dart';
 import 'rules/common/prefer_correct_json_casts.dart';
 import 'rules/common/prefer_correct_test_file_name.dart';
+import 'rules/common/prefer_declaring_const_constructor.dart';
 import 'rules/flutter/prefer_dedicated_media_query_methods.dart';
 import 'rules/common/prefer_explicit_function_type.dart';
 import 'rules/common/prefer_iterable_of.dart';
@@ -286,6 +288,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   FunctionAlwaysReturnsSameValue.new,
   MatchBaseClassDefaultValue.new,
   MatchGetterSetterFieldNames.new,
+  MoveVariableCloserToItsUsage.new,
   NoEmptyBlock.new,
   NoEqualConditions.new,
   NoEqualNestedConditions.new,
@@ -298,6 +301,7 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferCorrectForLoopIncrement.new,
   PreferCorrectJsonCasts.new,
   PreferCorrectTestFileName.new,
+  PreferDeclaringConstConstructor.new,
   PreferDedicatedMediaQueryMethods.new,
   PreferExplicitFunctionType.new,
   PreferIterableOf.new,

@@ -47,7 +47,7 @@ void filled() {
 
 // Not a core collection.
 class Registry {
-  Registry.from(this.name);
+  const Registry.from(this.name);
 
   final String name;
 }

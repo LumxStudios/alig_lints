@@ -34,7 +34,7 @@ void distinctNames() {
 }
 
 class Holder {
-  Holder(this.value);
+  const Holder(this.value);
 
   final int value;
 

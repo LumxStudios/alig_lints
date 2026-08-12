@@ -1,6 +1,6 @@
 // expect_lint: prefer-public-exception-classes
 class _HiddenException implements Exception {
-  _HiddenException(this.reason);
+  const _HiddenException(this.reason);
 
   final String reason;
 
@@ -15,7 +15,7 @@ class _HiddenError extends Error {
 }
 
 class VisibleException implements Exception {
-  VisibleException(this.reason);
+  const VisibleException(this.reason);
 
   final String reason;
 

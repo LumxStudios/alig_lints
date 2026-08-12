@@ -21,7 +21,7 @@ class Holder {
 }
 
 class FieldFormal {
-  FieldFormal(this._value);
+  const FieldFormal(this._value);
 
   final int _value;
 

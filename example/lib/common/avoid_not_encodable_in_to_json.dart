@@ -11,7 +11,7 @@ class Tag {
 }
 
 class Profile {
-  Profile(
+  const Profile(
     this.name,
     this.joined,
     this.status,

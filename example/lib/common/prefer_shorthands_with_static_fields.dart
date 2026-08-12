@@ -8,7 +8,7 @@ class Size {
 }
 
 class Job {
-  Job({required this.size});
+  const Job({required this.size});
 
   final Size size;
 }

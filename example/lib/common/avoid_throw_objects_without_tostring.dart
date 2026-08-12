@@ -1,7 +1,7 @@
 class Plain implements Exception {}
 
 class Described implements Exception {
-  Described(this.reason);
+  const Described(this.reason);
 
   final String reason;
 
