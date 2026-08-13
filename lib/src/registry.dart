@@ -146,7 +146,6 @@ import 'rules/common/prefer_iterable_of.dart';
 import 'rules/common/prefer_match_file_name.dart';
 import 'rules/common/prefer_null_aware_elements.dart';
 import 'rules/common/prefer_null_aware_spread.dart';
-import 'rules/common/prefer_overriding_parent_equality.dart';
 import 'rules/common/prefer_parentheses_with_if_null.dart';
 import 'rules/common/prefer_private_extension_type_field.dart';
 import 'rules/common/prefer_public_exception_classes.dart';
@@ -313,7 +312,6 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferMatchFileName.new,
   PreferNullAwareElements.new,
   PreferNullAwareSpread.new,
-  PreferOverridingParentEquality.new,
   PreferParenthesesWithIfNull.new,
   PreferPrivateExtensionTypeField.new,
   PreferPublicExceptionClasses.new,

@@ -67,7 +67,7 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**164 / 181 rules implemented** — 7 awaiting clarification, 10 covered elsewhere
+**163 / 181 rules implemented** — 7 awaiting clarification, 10 covered elsewhere, 1 deliberately not shipped
 
 | Theme | Settled |
 |---|---|

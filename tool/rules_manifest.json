@@ -119,7 +119,7 @@
       "phase": 4,
       "status": "covered",
       "needsSpec": false,
-      "notes": "Dart's type system rejects the methods typed E, and the built-in collection_methods_unrelated_type lint — enabled in dart_lints.yaml — reports the ones typed Object?. Only containsAll is left uncovered."
+      "notes": "Dart's type system rejects the methods typed E, and the built-in collection_methods_unrelated_type lint \u2014 enabled in dart_lints.yaml \u2014 reports the ones typed Object?. Only containsAll is left uncovered."
     },
     {
       "name": "avoid-commented-out-code",
@@ -1444,7 +1444,7 @@
       "phase": 4,
       "status": "covered",
       "needsSpec": false,
-      "notes": "Emptiness-style length checks are all reported by the built-in prefer_is_empty, measured across List, String and Map. If the rule instead means a length check made redundant by a neighbouring isEmpty/isNotEmpty, that is not covered and should be written — see doc/LIMITATIONS.md."
+      "notes": "Emptiness-style length checks are all reported by the built-in prefer_is_empty, measured across List, String and Map. If the rule instead means a length check made redundant by a neighbouring isEmpty/isNotEmpty, that is not covered and should be written \u2014 see doc/LIMITATIONS.md."
     },
     {
       "name": "avoid-unnecessary-local-late",
@@ -2304,9 +2304,9 @@
       "configurable": false,
       "severity": "warning",
       "phase": 9,
-      "status": "done",
+      "status": "declined",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Deliberately not shipped: removed on request. The advice was unwanted noise in practice \u2014 a class inheriting == from a parent is common and usually intentional, and the rule could not tell the intentional cases apart. See doc/LIMITATIONS.md."
     },
     {
       "name": "prefer-parentheses-with-if-null",

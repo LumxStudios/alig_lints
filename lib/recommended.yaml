@@ -126,7 +126,6 @@ custom_lint:
     - prefer-dedicated-media-query-methods
     - prefer-explicit-function-type
     - prefer-iterable-of
-    - prefer-overriding-parent-equality
     - prefer-parentheses-with-if-null
     - prefer-public-exception-classes
     - prefer-return-await
