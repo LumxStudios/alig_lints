@@ -2403,9 +2403,9 @@
       "configurable": false,
       "severity": "info",
       "phase": 3,
-      "status": "done",
+      "status": "declined",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Deliberately not shipped: removed on request. Same reasoning as prefer-shorthands-with-enums \u2014 a style preference with nothing at stake, reported often enough to cost more than it returned."
     },
     {
       "name": "prefer-shorthands-with-constructors",
