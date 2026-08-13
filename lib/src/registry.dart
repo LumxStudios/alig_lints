@@ -143,7 +143,6 @@ import 'rules/common/prefer_declaring_const_constructor.dart';
 import 'rules/flutter/prefer_dedicated_media_query_methods.dart';
 import 'rules/common/prefer_explicit_function_type.dart';
 import 'rules/common/prefer_iterable_of.dart';
-import 'rules/common/prefer_match_file_name.dart';
 import 'rules/common/prefer_null_aware_elements.dart';
 import 'rules/common/prefer_null_aware_spread.dart';
 import 'rules/common/prefer_parentheses_with_if_null.dart';
@@ -307,7 +306,6 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferDedicatedMediaQueryMethods.new,
   PreferExplicitFunctionType.new,
   PreferIterableOf.new,
-  PreferMatchFileName.new,
   PreferNullAwareElements.new,
   PreferNullAwareSpread.new,
   PreferParenthesesWithIfNull.new,

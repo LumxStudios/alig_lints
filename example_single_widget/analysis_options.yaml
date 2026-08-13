@@ -1,8 +1,8 @@
-# A golden package of its own for the two rules about file layout. Neither can be
-# verified in the main golden packages: every golden there holds several widgets or
-# several types on purpose, and custom_lint resolves rule configuration per package
-# — a nested analysis_options.yaml does not narrow it, measured. Disabling a rule in
-# the package that hosts its golden would also silence its own expect_lint checks,
+# A golden package of its own for prefer-single-widget-per-file. It cannot be
+# verified in the main golden packages: every golden there holds several widgets on
+# purpose, and custom_lint resolves rule configuration per package — a nested
+# analysis_options.yaml does not narrow it, measured. Disabling the rule in the
+# package that hosts its golden would also silence its own expect_lint checks,
 # leaving it unverified.
 analyzer:
   plugins:

@@ -67,7 +67,7 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 ## Progress
 
 <!-- progress:start -->
-**161 / 181 rules implemented** — 7 awaiting clarification, 10 covered elsewhere, 3 deliberately not shipped
+**160 / 181 rules implemented** — 7 awaiting clarification, 10 covered elsewhere, 4 deliberately not shipped
 
 | Theme | Settled |
 |---|---|
@@ -82,15 +82,17 @@ or per file with `// ignore_for_file: avoid-self-assignment`.
 | Unused code, naming, style | 33 / 35 |
 <!-- progress:end -->
 
-**What the three numbers mean.** *Implemented* rules each have a golden that
-asserts where they fire and where they do not. *Covered elsewhere* means the
-defect is already reported — by an analyzer warning that is on by default, by a
-built-in lint this package enables, or by a sibling rule here — and was verified
-by measurement rather than assumed; a second rule would only put two warnings on
-one line. *Awaiting clarification* means the rule's name and description did not
+**What the numbers mean.** *Implemented* rules each have a golden that asserts
+where they fire and where they do not. *Covered elsewhere* means the defect is
+already reported — by an analyzer warning that is on by default, by a built-in
+lint this package enables, or by a sibling rule here — and was verified by
+measurement rather than assumed; a second rule would only put two warnings on one
+line. *Awaiting clarification* means the rule's name and description did not
 settle what it should report, most often because the whole rule is a configured
 name or list; guessing would have produced a rule that either never fires or
-fires on correct code.
+fires on correct code. *Deliberately not shipped* means the rule worked and was
+dropped anyway, because the advice was not worth its volume; the catalogue keeps
+the entry and `tool/rules_manifest.json` records the reason for each.
 
 Every rule's own doc comment states what it deliberately does **not** report, and
 why. That is the first place to look when a rule surprises you.
@@ -112,11 +114,10 @@ why. That is the first place to look when a rule surprises you.
   - `example/` — the `common` rules. `example/test/` holds the goldens for rules
     that need to be under a `test` directory.
   - `example_flutter/` — the Flutter rules.
-  - `example_single_widget/` — the two rules about file layout,
-    `prefer-single-widget-per-file` and `prefer-match-file-name`. They cannot be
+  - `example_single_widget/` — `prefer-single-widget-per-file`. It cannot be
     verified in the other packages, whose goldens deliberately group several
-    widgets or types per file, and disabling a rule in the package that holds its
-    golden would silence its own `expect_lint` checks too.
+    widgets per file, and disabling a rule in the package that holds its golden
+    would silence its own `expect_lint` checks too.
 - A golden must **compile**. The gate analyses each golden package for errors, so
   a golden that does not build fails it — warnings are allowed, since a golden for
   `avoid-duplicate-map-keys` contains duplicate map keys on purpose.

@@ -150,7 +150,6 @@ custom_lint:
     - prefer-dedicated-media-query-methods
     - prefer-explicit-function-type
     - prefer-iterable-of
-    - prefer-match-file-name
     - prefer-null-aware-elements
     - prefer-null-aware-spread
     - prefer-parentheses-with-if-null

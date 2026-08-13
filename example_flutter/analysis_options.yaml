@@ -17,4 +17,3 @@ analyzer:
 custom_lint:
   rules:
     - prefer-single-widget-per-file: false
-    - prefer-match-file-name: false

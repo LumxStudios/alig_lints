@@ -2255,9 +2255,9 @@
       "configurable": true,
       "severity": "info",
       "phase": 9,
-      "status": "done",
+      "status": "declined",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Deliberately not shipped: removed on request. It reported on every file whose single declaration is not named after it, which in a real project includes deliberate layouts \u2014 barrel-adjacent helpers, files named for their role rather than their type \u2014 and the rename it asks for touches every import."
     },
     {
       "name": "prefer-null-aware-elements",
