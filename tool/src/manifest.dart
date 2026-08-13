@@ -43,11 +43,16 @@ class RuleEntry {
   /// Implementation phase, 1 to 9.
   final int phase;
 
-  /// One of `todo`, `done`, or `covered`.
+  /// One of `todo`, `done`, `covered`, or `declined`.
   ///
   /// `covered` means the analyzer already reports this exactly, so implementing
   /// the rule would only add a second message. Those rules have no file of their
   /// own; `doc/LIMITATIONS.md` records which diagnostic covers each.
+  ///
+  /// `declined` means the rule is deliberately not shipped — the advice was not
+  /// wanted here. The entry stays in the catalogue so the decision is recorded
+  /// rather than looking like an oversight, and [notes] says why. Like `covered`,
+  /// these rules have no file of their own and are never picked up as work again.
   String status;
 
   /// Whether the rule's intent could not be inferred and awaits clarification.
@@ -71,8 +76,12 @@ class RuleEntry {
   /// Whether the analyzer already reports this, so no rule is written.
   bool get isCovered => status == 'covered';
 
-  /// Whether this rule needs no further work, whoever reports it.
-  bool get isSettled => isDone || isCovered;
+  /// Whether this rule is deliberately not shipped.
+  bool get isDeclined => status == 'declined';
+
+  /// Whether this rule needs no further work, whoever reports it — including a
+  /// decision not to ship it, which is as settled as an implementation.
+  bool get isSettled => isDone || isCovered || isDeclined;
 
   /// Relative path of this rule's implementation file.
   String get libPath => 'lib/src/rules/$category/$fileName.dart';
@@ -152,6 +161,9 @@ class Manifest {
 
   /// The rules the analyzer already reports.
   List<RuleEntry> get covered => rules.where((r) => r.isCovered).toList();
+
+  /// The rules deliberately not shipped.
+  List<RuleEntry> get declined => rules.where((r) => r.isDeclined).toList();
 
   /// The next rule to implement: lowest phase first, then alphabetical.
   RuleEntry? get next {

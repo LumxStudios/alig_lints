@@ -16,14 +16,16 @@ void main(List<String> args) {
         ? 'x'
         : rule.isCovered
             ? '~'
-            : rule.needsSpec
-                ? '?'
-                : ' ';
+            : rule.isDeclined
+                ? '-'
+                : rule.needsSpec
+                    ? '?'
+                    : ' ';
     stdout.writeln('[$mark] ${rule.name}${rule.hasFix ? '  (has fix)' : ''}');
   }
   stdout.writeln(
     '\n${rules.where((r) => r.isSettled).length} / ${rules.length} settled in '
-    'phase $phase  (x implemented, ~ covered by the analyzer, ? awaiting '
-    'clarification).',
+    'phase $phase  (x implemented, ~ covered by the analyzer, - deliberately '
+    'not shipped, ? awaiting clarification).',
   );
 }

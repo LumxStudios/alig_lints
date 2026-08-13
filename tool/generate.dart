@@ -98,9 +98,11 @@ void _updateReadmeProgress(Manifest manifest) {
   ];
   final needsSpec = manifest.rules.where((r) => r.needsSpec).length;
   final covered = manifest.covered.length;
+  final declined = manifest.declined.length;
   final notes = [
     if (needsSpec > 0) '$needsSpec awaiting clarification',
     if (covered > 0) '$covered covered elsewhere',
+    if (declined > 0) '$declined deliberately not shipped',
   ];
   final suffix = notes.isEmpty ? '' : ' — ${notes.join(', ')}';
 
