@@ -32,8 +32,13 @@ const _meta = AligRuleMeta(
 /// reported. It is a design worth a second look, but it is not a defect, and the
 /// golden for this rule keeps an example of it so the false positive is not a surprise.
 ///
-/// **Disposable types go to `avoid-undisposed-instances`**, whose message says what to
-/// do about them. Reporting them here as well would put two warnings on one line.
+/// **Disposable types are skipped**, so `TextEditingController();` as a statement of
+/// its own goes unreported here. The exclusion was written to avoid a second warning
+/// on a line `avoid-undisposed-instances` already covered; that rule is no longer
+/// shipped, and the exclusion is kept rather than dropped so that removing it does not
+/// quietly hand this rule the reports the removal was meant to stop. `dispose-fields`
+/// and `dispose-class-fields` still cover the case that matters — a disposable kept in
+/// a field and never disposed.
 ///
 /// No quick-fix is offered: deleting the line is right when the construction is inert
 /// and wrong when the constructor is the point, and the rule cannot tell which.

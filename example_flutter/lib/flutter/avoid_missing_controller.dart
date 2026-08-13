@@ -13,7 +13,6 @@ class Sample extends StatelessWidget {
         TextFormField(),
 
         TextField(onChanged: (value) {}),
-        // expect_lint: avoid-undisposed-instances
         TextField(controller: TextEditingController()),
         TextFormField(onSaved: (value) {}),
       ],

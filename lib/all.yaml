@@ -87,7 +87,6 @@ custom_lint:
     - avoid-unassigned-stream-subscriptions
     - avoid-uncaught-future-errors
     - avoid-unconditional-break
-    - avoid-undisposed-instances
     - avoid-unknown-pragma
     - avoid-unnecessary-call
     - avoid-unnecessary-collections

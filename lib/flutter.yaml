@@ -18,7 +18,6 @@ custom_lint:
     - avoid-mounted-in-setstate
     - avoid-recursive-widget-calls
     - avoid-state-constructors
-    - avoid-undisposed-instances
     - avoid-unnecessary-gesture-detector
     - avoid-unnecessary-setstate
     - avoid-unnecessary-stateful-widgets

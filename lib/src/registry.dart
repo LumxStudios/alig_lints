@@ -80,7 +80,6 @@ import 'rules/common/avoid_unassigned_late_fields.dart';
 import 'rules/common/avoid_unassigned_stream_subscriptions.dart';
 import 'rules/common/avoid_uncaught_future_errors.dart';
 import 'rules/common/avoid_unconditional_break.dart';
-import 'rules/flutter/avoid_undisposed_instances.dart';
 import 'rules/common/avoid_unknown_pragma.dart';
 import 'rules/common/avoid_unnecessary_call.dart';
 import 'rules/common/avoid_unnecessary_collections.dart';
@@ -242,7 +241,6 @@ const List<AligRuleFactory> aligRuleFactories = [
   AvoidUnassignedStreamSubscriptions.new,
   AvoidUncaughtFutureErrors.new,
   AvoidUnconditionalBreak.new,
-  AvoidUndisposedInstances.new,
   AvoidUnknownPragma.new,
   AvoidUnnecessaryCall.new,
   AvoidUnnecessaryCollections.new,

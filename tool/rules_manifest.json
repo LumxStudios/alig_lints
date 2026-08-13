@@ -2740,9 +2740,9 @@
       "configurable": true,
       "severity": "warning",
       "phase": 8,
-      "status": "done",
+      "status": "declined",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Deliberately not shipped: removed on request after it reported incorrectly in practice. Deciding that a disposable is never disposed needs to follow the instance out of the expression that made it, which one file does not reliably show \u2014 ownership can be handed to a callee, a collection, or a widget. dispose-fields and dispose-class-fields keep the case that is decidable: a disposable held in a field with no dispose call. See doc/LIMITATIONS.md."
     },
     {
       "name": "avoid-unnecessary-gesture-detector",
