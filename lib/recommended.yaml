@@ -67,7 +67,6 @@ custom_lint:
     - avoid-self-assignment
     - avoid-self-compare
     - avoid-shadowed-extension-methods
-    - avoid-shadowing
     - avoid-state-constructors
     - avoid-stream-tostring
     - avoid-suspicious-global-reference

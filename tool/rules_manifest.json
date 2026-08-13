@@ -1083,9 +1083,9 @@
       "configurable": true,
       "severity": "warning",
       "phase": 9,
-      "status": "done",
+      "status": "declined",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Deliberately not shipped: removed on request. Shadowing a local or parameter in a nested scope is frequently deliberate in Dart, and the rule could not distinguish that from an accident \u2014 it had already been narrowed to one function and given a BuildContext exclusion for exactly that reason. See doc/LIMITATIONS.md."
     },
     {
       "name": "avoid-stream-tostring",
