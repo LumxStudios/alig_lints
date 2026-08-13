@@ -1,6 +1,5 @@
-// This file demonstrates a different rule; its enum and static-field references
-// are written in full for clarity rather than as shorthands.
-// ignore_for_file: prefer-shorthands-with-enums
+// This file demonstrates a different rule; its static-field references are
+// written in full for clarity rather than as shorthands.
 // ignore_for_file: prefer-shorthands-with-static-fields
 
 enum Color { red, green }

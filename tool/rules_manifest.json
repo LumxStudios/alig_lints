@@ -2435,9 +2435,9 @@
       "configurable": false,
       "severity": "info",
       "phase": 3,
-      "status": "done",
+      "status": "declined",
       "needsSpec": false,
-      "notes": ""
+      "notes": "Deliberately not shipped: removed on request. Writing the enum type is often the clearer choice, so the suggestion fired constantly on code that was already fine. The sibling prefer-shorthands-with-static-fields keeps its exclusion of enum values rather than taking them over."
     },
     {
       "name": "prefer-shorthands-with-static-fields",

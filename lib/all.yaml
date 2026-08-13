@@ -158,7 +158,6 @@ custom_lint:
     - prefer-public-exception-classes
     - prefer-return-await
     - prefer-returning-shorthands
-    - prefer-shorthands-with-enums
     - prefer-shorthands-with-static-fields
     - prefer-simpler-boolean-expressions
     - prefer-simpler-patterns-null-check

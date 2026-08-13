@@ -24,8 +24,12 @@ const _meta = AligRuleMeta(
 /// `Job(size: Size.small)` repeats `Size` next to a parameter already declared as
 /// one; `size: .small` reads the same.
 ///
-/// Uses the same context rules as `prefer-shorthands-with-enums`, and covers the
-/// same positions. Enum values are that rule's, so this one skips them.
+/// **Enum values are deliberately not reported.** They were the sibling rule
+/// `prefer-shorthands-with-enums`, which this package no longer ships, and the
+/// exclusion is kept rather than widened: enum shorthands are the case where
+/// writing the type is most often the clearer choice, and the removal was asked
+/// for precisely because the advice was unwanted. `Status.active` therefore stays
+/// quiet; `Size.small` in a parameter typed `Size` does not.
 class PreferShorthandsWithStaticFields extends AligRule {
   /// Suggests dot shorthands for static fields.
   PreferShorthandsWithStaticFields(CustomLintConfigs configs)
@@ -56,7 +60,7 @@ class PreferShorthandsWithStaticFields extends AligRule {
 /// The range of the class name in [node] when the expected type already fixes it.
 SourceRange? _redundantClassNameRangeOf(PrefixedIdentifier node) {
   final owner = node.prefix.element;
-  // Enum values belong to prefer-shorthands-with-enums.
+  // Enum values are excluded on purpose; see the class doc comment.
   if (owner is EnumElement) return null;
   if (owner is! InterfaceElement) return null;
 

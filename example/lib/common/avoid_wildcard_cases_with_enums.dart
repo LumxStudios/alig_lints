@@ -1,7 +1,3 @@
-// This file demonstrates a different rule; its enum references are written in
-// full for clarity rather than as shorthands.
-// ignore_for_file: prefer-shorthands-with-enums
-
 enum Status { active, paused, stopped }
 
 String describeWithWildcard(Status status) {

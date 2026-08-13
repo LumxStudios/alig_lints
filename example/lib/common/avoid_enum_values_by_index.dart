@@ -1,6 +1,5 @@
 // This file demonstrates a different rule; its enum references are written in
 // full for clarity rather than as shorthands.
-// ignore_for_file: prefer-shorthands-with-enums
 // ignore_for_file: prefer-returning-shorthands
 
 enum Status { active, paused, stopped }

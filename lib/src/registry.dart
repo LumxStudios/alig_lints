@@ -151,7 +151,6 @@ import 'rules/common/prefer_private_extension_type_field.dart';
 import 'rules/common/prefer_public_exception_classes.dart';
 import 'rules/common/prefer_return_await.dart';
 import 'rules/common/prefer_returning_shorthands.dart';
-import 'rules/common/prefer_shorthands_with_enums.dart';
 import 'rules/common/prefer_shorthands_with_static_fields.dart';
 import 'rules/common/prefer_simpler_boolean_expressions.dart';
 import 'rules/common/prefer_simpler_patterns_null_check.dart';
@@ -317,7 +316,6 @@ const List<AligRuleFactory> aligRuleFactories = [
   PreferPublicExceptionClasses.new,
   PreferReturnAwait.new,
   PreferReturningShorthands.new,
-  PreferShorthandsWithEnums.new,
   PreferShorthandsWithStaticFields.new,
   PreferSimplerBooleanExpressions.new,
   PreferSimplerPatternsNullCheck.new,
